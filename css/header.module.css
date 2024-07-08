@@ -6,11 +6,9 @@ header .top-bar {
   background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
 }
 header .top-bar ul {
-  padding-top: 6px;
-  padding-bottom: 8px;
   display: flex;
   gap: 120px;
-  padding-right: 112px;
+  padding: 6px 112px 8px 0;
 }
 header .top-bar ul li {
   list-style: none;
@@ -24,7 +22,7 @@ header .header-container_navigation {
 }
 header .header-container_navigation .header-container--logo_l {
   flex-shrink: 0;
-  padding: 5px 0px 21px 31px;
+  padding: 5px 0 21px 31px;
 }
 header .header-container_navigation .header-container--links {
   display: flex;
@@ -35,6 +33,21 @@ header .header-container_navigation .header-container--links {
 header .header-container_navigation .header-container--links ul {
   display: flex;
   gap: 80px;
+}
+header .services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28282A;
+  height: 161px;
+  flex-shrink: 0;
+}
+header .services h2 {
+  padding: 72px 0px 59px 142px;
+}
+header .services .services-lines {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=header.module.css.map */

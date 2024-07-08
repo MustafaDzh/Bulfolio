@@ -7,11 +7,9 @@ header .top-bar {
   background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
 }
 header .top-bar ul {
-  padding-top: 6px;
-  padding-bottom: 8px;
   display: flex;
   gap: 120px;
-  padding-right: 112px;
+  padding: 6px 112px 8px 0;
 }
 header .top-bar ul li {
   list-style: none;
@@ -25,7 +23,7 @@ header .header-container_navigation {
 }
 header .header-container_navigation .header-container--logo_l {
   flex-shrink: 0;
-  padding: 5px 0px 21px 31px;
+  padding: 5px 0 21px 31px;
 }
 header .header-container_navigation .header-container--links {
   display: flex;
@@ -37,45 +35,27 @@ header .header-container_navigation .header-container--links ul {
   display: flex;
   gap: 80px;
 }
-
-@keyframes drawLine {
-  from {
-    stroke-dasharray: 0, 1000;
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dasharray: 1000, 1000;
-    stroke-dashoffset: -1000;
-  }
-}
-.services {
+header .services {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #28282A;
   height: 161px;
-  padding: 0 20px;
+  flex-shrink: 0;
 }
-.services h2 {
+header .services h2 {
   padding: 72px 0px 59px 142px;
-  text-transform: uppercase;
-  font-size: 24px;
 }
-.services .services-lines {
+header .services .services-lines {
   display: flex;
   align-items: center;
-}
-.services .services-lines svg path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-  animation: drawLine 3s infinite linear;
 }
 
 .video {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 50%;
 }
 .video #my-video {
   position: absolute;
@@ -88,6 +68,99 @@ header .header-container_navigation .header-container--links ul {
 
 .video-js .vjs-tech {
   height: auto;
+}
+
+.defence {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.defence .defence-car_first {
+  width: 70%;
+}
+.defence .defence-car_first .defence-car {
+  padding-left: 142px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.defence .defence-car_first .defence-car .defence-car_title {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.defence .defence-car_first .defence-car .montserrat-400 {
+  padding-left: 142px;
+}
+.defence .defence-car_first .defence-car_title-btn {
+  display: flex;
+  padding-left: 272px;
+  padding-top: 50px;
+}
+.defence .defence-car_first .defence-car_title-btn a {
+  width: 75px;
+  height: 75px;
+}
+.defence .defence-car_second {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.defence .defence-car_second .black-div,
+.defence .defence-car_second .grey-div {
+  white-space: nowrap;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.defence .defence-car_second .black-div.black-div,
+.defence .defence-car_second .grey-div.black-div {
+  background-color: #28282A;
+  transform: skewY(1deg);
+}
+.defence .defence-car_second .black-div.grey-div,
+.defence .defence-car_second .grey-div.grey-div {
+  background-color: #EFEFEF;
+}
+.defence .defence-car_second .black-div p,
+.defence .defence-car_second .grey-div p {
+  text-transform: uppercase;
+  padding-left: 13px;
+}
+.defence .defence-car_second .defence-car_title-btn-second {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -105px;
+}
+.defence .defence-car_second .defence-car_title-btn-second a {
+  width: 140px;
+  height: 148px;
+}
+.defence .defence-car_third {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.defence .defence-car_third .card {
+  width: calc(30% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.defence .defence-car_third .card .card-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.defence .defence-car_third .card .montserrat-400 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.defence .defence-car_third .card .montserrat-400 span {
+  font-weight: 700;
+  line-height: 20px;
+  color: #28282A;
 }
 
 * {
@@ -117,9 +190,7 @@ body {
 
 .section {
   max-width: 1920px;
-  width: 93%;
-  display: flex;
-  padding-top: 150px;
+  padding-top: 100px;
   margin: 0 auto;
 }
 
@@ -161,6 +232,17 @@ body {
   font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.abtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 /*# sourceMappingURL=styles.module.css.map */

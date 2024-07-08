@@ -4,9 +4,8 @@ $body-color: #FFF;
 
 
 @import './header.module.scss';
-@import './services.module.scss';
 @import './video.module.scss';
-
+@import './defence.module.scss';
 
 * {
     margin: 0;
@@ -35,9 +34,7 @@ body {
 
 .section {
     max-width: 1920px;
-    width: 93%;
-    display: flex;
-    padding-top: 150px;
+    padding-top: 100px;
     margin: 0 auto;
 }
 
@@ -79,4 +76,15 @@ body {
     font-weight: 800;
     line-height: normal;
     text-transform: uppercase;
+}
+
+.abtn{
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+    border: none; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
 }

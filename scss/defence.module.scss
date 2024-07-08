@@ -1,0 +1,107 @@
+.defence {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    .defence-car_first {
+        width: 70%;
+
+        .defence-car {
+            padding-left: 142px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .defence-car_title {
+                display: flex;
+                gap: 80px;
+                align-items: center;
+            }
+
+            .montserrat-400 {
+                padding-left: 142px;
+            }
+        }
+
+        .defence-car_title-btn {
+            display: flex;
+            padding-left: 272px;
+            padding-top: 50px;
+
+            a {
+                width: 75px;
+                height: 75px;
+            }
+        }
+    }
+
+    .defence-car_second {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .black-div,
+        .grey-div {
+            white-space: nowrap;
+            height: 60px;
+            display: flex;
+            align-items: center;
+
+            &.black-div {
+                background-color: #28282A;
+                transform: skewY(1deg);
+            }
+
+            &.grey-div {
+                background-color: #EFEFEF;
+            }
+
+            p {
+                text-transform: uppercase;
+                padding-left: 13px;
+            }
+        }
+
+        .defence-car_title-btn-second {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -105px;
+
+            a {
+                width: 140px;
+                height: 148px;
+            }
+        }
+    }
+
+    .defence-car_third {
+        display: flex;
+        width: 85%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        .card {
+            width: calc(30% - 10px);
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .card-content {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .montserrat-400 {
+                font-size: 20px;
+                line-height: 28px;
+
+                span {
+                    font-weight: 700;
+                    line-height: 20px;
+                    color: #28282A;
+                }
+            }
+        }
+    }
+}

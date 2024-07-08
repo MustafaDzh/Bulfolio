@@ -1,0 +1,94 @@
+.defence {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.defence .defence-car_first {
+  width: 70%;
+}
+.defence .defence-car_first .defence-car {
+  padding-left: 142px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.defence .defence-car_first .defence-car .defence-car_title {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.defence .defence-car_first .defence-car .montserrat-400 {
+  padding-left: 142px;
+}
+.defence .defence-car_first .defence-car_title-btn {
+  display: flex;
+  padding-left: 272px;
+  padding-top: 50px;
+}
+.defence .defence-car_first .defence-car_title-btn a {
+  width: 75px;
+  height: 75px;
+}
+.defence .defence-car_second {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.defence .defence-car_second .black-div,
+.defence .defence-car_second .grey-div {
+  white-space: nowrap;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.defence .defence-car_second .black-div.black-div,
+.defence .defence-car_second .grey-div.black-div {
+  background-color: #28282A;
+  transform: skewY(1deg);
+}
+.defence .defence-car_second .black-div.grey-div,
+.defence .defence-car_second .grey-div.grey-div {
+  background-color: #EFEFEF;
+}
+.defence .defence-car_second .black-div p,
+.defence .defence-car_second .grey-div p {
+  text-transform: uppercase;
+  padding-left: 13px;
+}
+.defence .defence-car_second .defence-car_title-btn-second {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -105px;
+}
+.defence .defence-car_second .defence-car_title-btn-second a {
+  width: 140px;
+  height: 148px;
+}
+.defence .defence-car_third {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.defence .defence-car_third .card {
+  width: calc(30% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.defence .defence-car_third .card .card-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.defence .defence-car_third .card .montserrat-400 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.defence .defence-car_third .card .montserrat-400 span {
+  font-weight: 700;
+  line-height: 20px;
+  color: #28282A;
+}
+
+/*# sourceMappingURL=defence.module.css.map */
