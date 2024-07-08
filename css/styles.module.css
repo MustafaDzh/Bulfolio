@@ -1,0 +1,116 @@
+header {
+  width: 100%;
+}
+header .top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 0.5px solid #D6D6D6;
+  background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+}
+header .top-bar ul {
+  padding-top: 6px;
+  padding-bottom: 8px;
+  display: flex;
+  gap: 120px;
+  padding-right: 112px;
+}
+header .top-bar ul li {
+  list-style: none;
+}
+header .top-bar ul li a {
+  font-size: 16px;
+}
+header .header-container_navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 21px 34px;
+}
+header .header-container_navigation .header-container--logo_l {
+  flex-shrink: 0;
+}
+header .header-container_navigation .header-container--links {
+  display: flex;
+  align-items: center;
+}
+header .header-container_navigation .header-container--links ul {
+  display: flex;
+  gap: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Noah;
+  color: #fff;
+  font-style: normal;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #FFF;
+  border-radius: 8px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.section {
+  max-width: 1920px;
+  width: 93%;
+  display: flex;
+  padding-top: 150px;
+  margin: 0 auto;
+}
+
+.montserrat-400 {
+  color: #28282A;
+  font-family: Noah;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.montserrat-700 {
+  color: #19D3C5;
+  font-family: Noah;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.montserrat-700_nav {
+  color: #000;
+  font-family: Noah;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.montserrat-800 {
+  color: #28282A;
+  text-align: center;
+  font-family: Noah;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=styles.module.css.map */
