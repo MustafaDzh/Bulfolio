@@ -1,0 +1,17 @@
+.services{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28282A;
+    height: 161px;
+    flex-shrink: 0;
+
+    h2{
+        padding: 142px 72px 59px 0px;
+    }
+
+    .services-lines{
+        display: flex;
+        align-items: center;
+    }
+}
