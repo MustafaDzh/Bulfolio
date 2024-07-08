@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulfolio</title>
+    <link href="https://vjs.zencdn.net/8.12.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Noah:wght@300;400;500;600&display=swap" />
-    <link rel="stylesheet" href="./css/styles.module.css" />
+    <link rel="stylesheet" href="./css/styles.module.css" />   
 </head>
 
 <body>
@@ -82,6 +83,7 @@
             </div>
         </div>
     </header>
+
     <div class="services">
         <h2 class="montserrat-700">Услуги</h2>
         <div class="services-lines">
@@ -122,7 +124,25 @@
         </div>            
     </div>
 
-
+    <div class="video">
+        <video
+          id="my-video"
+          class="video-js"
+          controls
+          preload="auto"
+          data-setup="{}"
+        >
+          <source src="./images/car.mp4" type="video/mp4" />
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+      </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>
 
