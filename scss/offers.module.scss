@@ -1,0 +1,54 @@
+.offers {
+    background-color: $secondary-color;
+
+    .offers-content {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 46px 183px 50px 215px;
+
+        .offers-offer {
+            position: relative;
+            
+            .offers-offer_content {
+                position: relative;
+                height: 427px;
+                width: 349px;
+                flex-shrink: 0;
+            }
+
+            .offers-offer_back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .offer-offer_front {
+                position: absolute;
+                top: 0;
+                left: 20px; 
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                
+                > div {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+        }
+
+        .montserrat-700 {
+            margin-top: 20px;
+            font-weight: 700;
+        }
+    }
+}
