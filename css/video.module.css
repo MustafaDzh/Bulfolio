@@ -1,9 +1,9 @@
-@import "~video.js/dist/video-js.css";
+@import "../js/vendor/video.js/dist/video-js.min.css";
 .video {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-top: 50%;
+  padding-top: 60%;
 }
 .video #my-video {
   position: absolute;
