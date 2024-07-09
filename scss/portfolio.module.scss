@@ -1,0 +1,93 @@
+.portfolio {
+    h2 {
+        text-transform: uppercase;
+        color: #000;
+        font-size: 24px;
+        padding: 0 0 98px 150px;
+    }
+
+    .portfolio-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+
+        &_left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 30%;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 458px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) translate(30%, 30%);
+                transition: transform 0.3s ease;
+                transform-origin: center;
+                width: 100%;
+            }
+
+            &:hover svg {
+                transform: translate(-50%, -50%) translate(30%, 30%) rotate(45deg);
+            }
+        }
+
+        &_right {
+            width: 80%;
+            padding-top: 80px;
+            padding-left: 134px;
+
+            &-container {
+                width: 100%;
+
+                .car-swiper {
+                    width: 100%;
+
+                    .swiper-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+
+                        .swiper-slide {
+                            flex: 0 0 auto;
+                            text-align: left;
+                            width: 70% !important;
+                            margin-right: 95px !important;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                margin-bottom: 20px;
+                            }
+
+                            h3 {
+                                font-size: 24px;
+                                margin-bottom: 10px;
+                            }
+
+                            p {
+                                font-size: 18px;
+                            }
+
+                            &:hover {
+                               #svg {
+                                    transform: translate(-50%, -50%) translate(30%, 30%) rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

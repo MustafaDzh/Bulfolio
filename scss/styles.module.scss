@@ -2,12 +2,12 @@ $primary-color: #19D3C5;
 $secondary-color: #28282A;
 $body-color: #FFF;
 
-
 @import './header.module.scss';
 @import './video.module.scss';
 @import './defence.module.scss';
 @import './offers.module.scss';
 @import './questions.module.scss';
+@import './portfolio.module.scss';
 
 * {
     margin: 0;
