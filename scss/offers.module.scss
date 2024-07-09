@@ -1,54 +1,95 @@
 .offers {
-    background-color: $secondary-color;
+    padding-bottom: 362px;
 
     .offers-content {
+        height: 744px;
+        background-color: $secondary-color;
         display: flex;
-        margin: 0 auto;
         justify-content: space-between;
-        padding: 46px 183px 50px 215px;
+        padding: 86px 244px 3px 211px;
+        margin: 0 auto;
 
         .offers-offer {
+            width: 349px;
             position: relative;
-            
-            .offers-offer_content {
-                position: relative;
-                height: 427px;
-                width: 349px;
-                flex-shrink: 0;
-            }
+            margin-right: 20px;
 
-            .offers-offer_back {
+            .offers-offer_back,
+            .offers-offer_front {
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
+                width: 349px;
+                height: 427px;
             }
 
-            .offer-offer_front {
-                position: absolute;
-                top: 0;
-                left: 20px; 
-                z-index: 2;
+            .offers-offer_front {
+                top: 24px;
+                left: 34px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                height: 100%;
+                z-index: 2;
+            }
+
+            .offer-content {
+                position: relative;
                 width: 100%;
-                
-                > div {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    text-align: center;
+                height: 100%;
+                flex-shrink: 0;
+            }
+
+            .offer-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-style: normal;
+                line-height: normal;
+                text-transform: uppercase;
+
+                .icon {
+                    text-align: start;
+                    margin-bottom: 10px;
+                }
+
+                .percentage {
+                    color: #28282A;
+                    font-size: 96px;
+                    font-weight: 800;
+                }
+
+                .reduce {
+                    color: #28282A;
+                    font-size: 20px;
+                    font-weight: 850;
+                    letter-spacing: 2.3px;
+                }
+
+                .total {
+                    color: #28282A;
+                    font-size: 20px;
+                    font-style: italic;
+                    text-transform: none;
                 }
             }
         }
 
-        .montserrat-700 {
-            margin-top: 20px;
-            font-weight: 700;
+        .offer-detail {
+            color: #FDFDFD;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 10%;
+        }
+
+        @media screen and (max-width: 1600px) {
+            padding: 30px 50px 3px 20px; 
+        }
+
+        @media screen and (max-width: 1200px) {
+            padding: 10px 30px 0 20px; 
         }
     }
 }

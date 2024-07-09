@@ -1,3 +1,14 @@
+@keyframes drawLine {
+    from {
+      stroke-dasharray: 0, 1000;
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dasharray: 1000, 1000;
+      stroke-dashoffset: -1000;
+    }
+  }
+
 header {
     .top-bar {
         display: flex;
@@ -58,6 +69,12 @@ header {
         .services-lines {
             display: flex;
             align-items: center;
+
+            svg path {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 0;
+                animation: drawLine 3s infinite linear;
+              }
         }
     }
 }
