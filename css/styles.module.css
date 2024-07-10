@@ -143,6 +143,14 @@ header .header-container .header-container_navigation .header-container--links .
   display: none !important;
 }
 
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .defence {
   display: flex;
   flex-direction: column;
@@ -186,6 +194,7 @@ header .header-container .header-container_navigation .header-container--links .
   height: 60px;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 .defence .defence-car_second .black-div.black-div,
 .defence .defence-car_second .grey-div.black-div {
@@ -200,15 +209,21 @@ header .header-container .header-container_navigation .header-container--links .
 .defence .defence-car_second .grey-div p {
   text-transform: uppercase;
   padding-left: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  animation: moveText 15s linear infinite;
 }
 .defence .defence-car_second .defence-car_title-btn-second {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -105px;
+  position: fixed;
+  bottom: 50%;
+  right: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
-.defence .defence-car_second .defence-car_title-btn-second a {
-  width: 140px;
-  height: 148px;
+.defence .defence-car_second .defence-car_title-btn-second svg {
+  width: 100%;
+  height: 100%;
 }
 .defence .defence-car_third {
   display: flex;
