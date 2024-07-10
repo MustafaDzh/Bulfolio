@@ -169,15 +169,32 @@
     </section>
 
     <section class="video">
-        <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
-            <source src="./images/car.mp4" type="video/mp4" />
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a
-                web browser that
-                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>
+        <div class="video-container">
+            <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+                <source src="./images/car.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+            <button class="play-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90" fill="none">
+                    <rect width="90" height="90" fill="#28282A"/>
+                    <path d="M28 68V23L63.3571 45.5L28 68ZM34.4286 56.2679L51.3036 45.5L34.4286 34.7321V56.2679Z" fill="url(#paint0_linear_1187_6518)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_1187_6518" x1="45.6786" y1="23" x2="45.6786" y2="68" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0FE96F"/>
+                            <stop offset="1" stop-color="#19D3C5"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </button>
+        </div>
     </section>
+    
+    
+    
 
     <section class="defence">
         <div class="defence-car_first">

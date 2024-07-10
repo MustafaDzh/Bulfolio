@@ -1,6 +1,31 @@
 $(document).ready(function () {
   var player = videojs('my-video');
 
+  function togglePlayButton() {
+    if (player.paused()) {
+        $('.play-btn').fadeIn(); 
+    } else {
+        $('.play-btn').fadeOut(); 
+    }
+}
+
+// Click handler for play button
+$('.play-btn').click(function () {
+    if (player.paused()) {
+        player.play();
+    } else {
+        player.pause();
+    }
+});
+
+player.on('play', function () {
+    togglePlayButton();
+});
+
+player.on('pause', function () {
+    togglePlayButton();
+});
+
   $('.question-text p').hide();
 
   $('.arrow-icon').click(function () {

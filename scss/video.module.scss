@@ -15,8 +15,23 @@
         height: 85%;
         object-fit: cover;
     }
+
+    .play-btn {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        cursor: pointer;
+        border: none;
+        transition: opacity 0.3s ease;
+    }
 }
 
 .video-js .vjs-tech {
     height: auto;
+}
+
+.vjs-big-play-button{
+    display: none !important;
 }
