@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   var swiper = new Swiper('.car-swiper_container', {
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 1.3,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
