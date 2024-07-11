@@ -9,7 +9,6 @@ $(document).ready(function () {
     }
 }
 
-// Click handler for play button
 $('.play-btn').click(function () {
     if (player.paused()) {
         player.play();

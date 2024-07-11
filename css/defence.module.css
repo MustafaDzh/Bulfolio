@@ -1,11 +1,3 @@
-@keyframes moveText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .defence {
   display: flex;
   flex-direction: column;
@@ -43,42 +35,56 @@
   flex-direction: column;
   gap: 30px;
 }
-.defence .defence-car_second .black-div,
-.defence .defence-car_second .grey-div {
+.defence .defence-car_second #container {
+  width: 100%;
+  position: relative;
   white-space: nowrap;
-  height: 60px;
+  height: 40px;
+}
+.defence .defence-car_second #container .black-div,
+.defence .defence-car_second #container .grey-div {
   display: flex;
   align-items: center;
   margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+  height: 60px;
 }
-.defence .defence-car_second .black-div.black-div,
-.defence .defence-car_second .grey-div.black-div {
+.defence .defence-car_second #container .black-div.black-div,
+.defence .defence-car_second #container .grey-div.black-div {
   background-color: #28282A;
   transform: skewY(1deg);
 }
-.defence .defence-car_second .black-div.grey-div,
-.defence .defence-car_second .grey-div.grey-div {
+.defence .defence-car_second #container .black-div.grey-div,
+.defence .defence-car_second #container .grey-div.grey-div {
   background-color: #EFEFEF;
 }
-.defence .defence-car_second .black-div p,
-.defence .defence-car_second .grey-div p {
+.defence .defence-car_second #container .black-div p,
+.defence .defence-car_second #container .grey-div p {
   text-transform: uppercase;
   padding-left: 13px;
+  margin: 0;
+  width: fit-content;
   white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-  animation: moveText 15s linear infinite;
+  animation: loop 40s linear infinite;
+}
+.defence .defence-car_second #container .black-div p::after,
+.defence .defence-car_second #container .grey-div p::after {
+  content: attr(data-text);
 }
 .defence .defence-car_second .defence-car_title-btn-second {
   position: fixed;
   bottom: 50%;
-  right: 20px;
+  right: 0px;
   z-index: 1000;
   transition: transform 0.3s ease;
 }
 .defence .defence-car_second .defence-car_title-btn-second svg {
   width: 100%;
   height: 100%;
+  padding: 45px 40px 44px 41px;
 }
 .defence .defence-car_third {
   display: flex;
@@ -105,6 +111,15 @@
   font-weight: 700;
   line-height: 20px;
   color: #28282A;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /*# sourceMappingURL=defence.module.css.map */

@@ -1,12 +1,3 @@
-@keyframes moveText {
-    0% {
-        transform: translateX(100%); 
-    }
-    100% {
-        transform: translateX(-100%); 
-    }
-}
-
 .defence {
     display: flex;
     flex-direction: column;
@@ -50,43 +41,58 @@
         flex-direction: column;
         gap: 30px;
 
-        .black-div,
-        .grey-div {
+        #container {
+            width: 100%;
+            position: relative;
             white-space: nowrap;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            margin: 0;
+            height: 40px;
 
-            &.black-div {
-                background-color: #28282A;
-                transform: skewY(1deg);
-            }
+            .black-div,
+            .grey-div {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                width: 100%;
+                white-space: nowrap;
+                position: absolute;
+                overflow: hidden;
+                height: 60px;
 
-            &.grey-div {
-                background-color: #EFEFEF;
-            }
+                &.black-div {
+                    background-color: #28282A;
+                    transform: skewY(1deg);
+                }
 
-            p {
-                text-transform: uppercase;
-                padding-left: 13px;
-                white-space: nowrap; 
-                overflow: hidden; 
-                position: relative; 
-                animation: moveText 15s linear infinite;
+                &.grey-div {
+                    background-color: #EFEFEF;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    padding-left: 13px;
+                    margin: 0;
+                    width: fit-content;
+                    white-space: nowrap;
+                    animation: loop 40s linear infinite;
+
+                    &::after {
+                        content: attr(data-text);
+                    }
+                }
             }
         }
 
         .defence-car_title-btn-second {
             position: fixed;
             bottom: 50%;
-            right: 20px;
+            right: 0px;
             z-index: 1000;
             transition: transform 0.3s ease;
 
-            svg{
+            svg {
                 width: 100%;
                 height: 100%;
+                padding: 45px 40px 44px 41px;
             }
         }
     }
@@ -120,5 +126,15 @@
                 }
             }
         }
+    }
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
