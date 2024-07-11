@@ -66,4 +66,14 @@ player.on('pause', function () {
       $('.dropdown-icon').removeClass('rotated');
     }
   });
+
+  $('.offers-offer').hover(
+    function() {
+        $(this).addClass('active');
+        $('.offers-offer').not(this).addClass('inactive'); 
+    },
+    function() {
+        $('.offers-offer').removeClass('inactive'); 
+    }
+);
 });

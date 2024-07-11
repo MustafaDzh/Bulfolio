@@ -15,6 +15,17 @@
             position: relative;
             margin-right: 20px;
 
+            &.active {
+                z-index: 3;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            &.inactive {
+                z-index: 1;
+                opacity: 0.6; 
+                transform: translateY(60px); 
+                transition: transform 0.5s ease, opacity 0.5s ease; 
+            }
+
             .offers-offer_back,
             .offers-offer_front {
                 position: absolute;
