@@ -1,5 +1,6 @@
 .portfolio {
     padding-bottom: 77px;
+
     h2 {
         text-transform: uppercase;
         color: #000;
@@ -20,7 +21,6 @@
             justify-content: flex-start;
             width: 30%;
             position: relative;
-            overflow: hidden;
 
             img {
                 width: 458px;
@@ -60,29 +60,32 @@
                         flex-wrap: nowrap;
 
                         .swiper-slide {
-                            flex: 0 0 auto;
-                            text-align: left;
-                            width: 70% !important;
-                            margin-right: 95px !important;
-
-                            img {
+                            .swiper-wrapper_content {
+                                flex: 0 0 auto;
+                                text-align: left;
                                 width: 100%;
-                                height: auto;
-                                margin-bottom: 20px;
-                            }
+                                height: 100%;
+                                padding-left: 95px;
+                                
 
-                            h3 {
-                                font-size: 24px;
-                                margin-bottom: 10px;
-                            }
+                                .swiper-wrapper_img {
+                                    width: 100%;
+                                    height: auto;
+                                    margin-bottom: 20px;
+                                }
 
-                            p {
-                                font-size: 18px;
-                            }
+                                h3 {
+                                    font-size: 24px;
+                                    margin-bottom: 10px;
+                                }
 
-                            &:hover {
-                               #svg {
-                                    transform: translate(-50%, -50%) translate(30%, 30%) rotate(45deg);
+                                p {
+                                    font-size: 18px;
+                                }
+                                &:hover {
+                                    #svg {
+                                        transform: translate(-50%, -50%) translate(30%, 30%) rotate(45deg);
+                                    }
                                 }
                             }
                         }

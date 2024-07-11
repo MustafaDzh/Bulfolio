@@ -8,10 +8,8 @@
 .video #my-video {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 85%;
-  object-fit: cover;
+  height: 83%;
 }
 .video .play-btn {
   position: absolute;

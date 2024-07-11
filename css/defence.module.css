@@ -33,12 +33,9 @@
 .defence .defence-car_second {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 .defence .defence-car_second #container {
-  width: 100%;
-  position: relative;
-  white-space: nowrap;
   height: 40px;
 }
 .defence .defence-car_second #container .black-div,
@@ -48,7 +45,6 @@
   margin: 0;
   width: 100%;
   white-space: nowrap;
-  position: absolute;
   overflow: hidden;
   height: 60px;
 }

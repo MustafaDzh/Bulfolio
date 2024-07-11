@@ -1,19 +1,30 @@
 .offers {
     padding-bottom: 362px;
+    display: flex;
 
     .offers-content {
-        height: 744px;
+        min-height: 800px;
+        height: 100%;
+        width: 100%;
         background-color: $secondary-color;
-        display: flex;
-        justify-content: space-between;
         padding: 86px 244px 3px 211px;
         margin: 0 auto;
+        display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         .offers-offer {
+            display: flex;
+            flex-direction: column;
+            justify-content: inherit;
             width: 349px;
             position: relative;
-            margin-right: 20px;
+
+            &:hover {
+                .offer-specifics {
+                    display: flex;
+                }
+            }
 
             &.active {
                 z-index: 3;
@@ -21,35 +32,18 @@
             }
             &.inactive {
                 z-index: 1;
-                opacity: 0.6; 
-                transform: translateY(60px); 
-                transition: transform 0.5s ease, opacity 0.5s ease; 
+                opacity: 0.6;
+                transition: transform 0.5s ease, opacity 0.5s ease;
             }
 
             .offers-offer_back,
             .offers-offer_front {
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 349px;
-                height: 427px;
             }
 
             .offers-offer_front {
                 top: 24px;
                 left: 34px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                z-index: 2;
-            }
-
-            .offer-content {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                flex-shrink: 0;
             }
 
             .offer-text {
@@ -64,7 +58,6 @@
 
                 .icon {
                     text-align: start;
-                    margin-bottom: 10px;
                 }
 
                 .percentage {
@@ -89,19 +82,41 @@
             }
         }
 
-        .offer-detail {
-            color: #FDFDFD;
-            text-transform: uppercase;
-            position: absolute;
-            bottom: 10%;
+        .offer-details{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .offer-detail {
+                color: #FDFDFD;
+                text-transform: uppercase;
+                text-align: left;
+                z-index: 3;
+            }
+
+            .line {
+                height: 5px;
+                background-color: #19D3C5;
+                width: 100%; 
+                display: none; 
+            }
+    
+            .offer-specifics {
+                width: 50%;
+                color: #fff;
+                font-size: 16px;
+                flex-direction: column;
+                gap: 10px;
+                z-index: 2;
+            }
         }
 
         @media screen and (max-width: 1600px) {
-            padding: 30px 50px 3px 20px; 
+            padding: 30px 50px 3px 20px;
         }
 
         @media screen and (max-width: 1200px) {
-            padding: 10px 30px 0 20px; 
+            padding: 10px 30px 0 20px;
         }
     }
 }

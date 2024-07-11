@@ -3,36 +3,42 @@ $(document).ready(function () {
 
   function togglePlayButton() {
     if (player.paused()) {
-        $('.play-btn').fadeIn(); 
+      $('.play-btn').fadeIn(); 
     } else {
-        $('.play-btn').fadeOut(); 
+      $('.play-btn').fadeOut(); 
     }
-}
+  }
 
-$('.play-btn').click(function () {
+  $('.play-btn').click(function () {
     if (player.paused()) {
-        player.play();
+      player.play();
     } else {
-        player.pause();
+      player.pause();
     }
-});
+  });
 
-player.on('play', function () {
+  player.on('play', function () {
     togglePlayButton();
-});
+  });
 
-player.on('pause', function () {
+  player.on('pause', function () {
     togglePlayButton();
-});
+  });
 
   $('.question-text p').hide();
 
-  $('.arrow-icon').click(function () {
-    $(this).toggleClass('rotated');
-    var question = $(this).closest('.question');
-    $(this).siblings('.question-text').children('p').slideToggle();
-    question.toggleClass('active');
-    $('.question').not(question).removeClass('active');
+  $('.question').click(function() {
+    var answer = $(this).find('.question-text p');
+    answer.slideToggle();
+
+    $(this).toggleClass('active');
+
+    var arrow = $(this).find('.arrow-icon');
+    arrow.toggleClass('rotated');
+
+    $('.question').not(this).removeClass('active');
+    $('.question').not(this).find('.question-text p').slideUp();
+    $('.question').not(this).find('.arrow-icon').removeClass('rotated');
   });
 
   var swiper = new Swiper('.car-swiper_container', {
@@ -49,7 +55,15 @@ player.on('pause', function () {
     preloadImages: true,
     updateOnImagesReady: true,
     loopAdditionalSlides: 1,
+    on: {
+      slideChange: function () {
+        var activeSlide = swiper.slides.eq(swiper.activeIndex);
+        var newImageSrc = activeSlide.data('image-src');
+        $('#main-image').attr('src', newImageSrc);
+      },
+    },
   });
+
   $('.links-list--item > a').click(function (event) {
     event.preventDefault();
     var $dropdown = $(this).siblings('.dropdown-menu');
@@ -69,11 +83,15 @@ player.on('pause', function () {
 
   $('.offers-offer').hover(
     function() {
-        $(this).addClass('active');
-        $('.offers-offer').not(this).addClass('inactive'); 
+      $(this).addClass('active').removeClass('inactive'); 
+      $('.offers-offer').not(this).addClass('inactive').removeClass('active');
+
+      $(this).find('.offer-specifics').fadeIn();
+      $(this).find('.line').fadeIn();
     },
     function() {
-        $('.offers-offer').removeClass('inactive'); 
+      $('.offer-specifics').fadeOut();
+      $('.line').fadeOut();
     }
-);
+  );
 });

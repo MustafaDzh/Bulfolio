@@ -4,7 +4,7 @@ header .header-container {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #fff;
+  background-color: #fff;
 }
 header .header-container .top-bar {
   display: flex;

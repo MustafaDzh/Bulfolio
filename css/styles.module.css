@@ -5,7 +5,7 @@ header .header-container {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #fff;
+  background-color: #fff;
 }
 header .header-container .top-bar {
   display: flex;
@@ -94,7 +94,7 @@ header .header-container .header-container_navigation .header-container--links .
   background-color: #28282A;
   height: 161px;
   flex-shrink: 0;
-  margin-top: 200px;
+  margin-top: 130px;
 }
 .services h2 {
   padding: 72px 0px 59px 142px;
@@ -119,10 +119,8 @@ header .header-container .header-container_navigation .header-container--links .
 .video #my-video {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 85%;
-  object-fit: cover;
+  height: 83%;
 }
 .video .play-btn {
   position: absolute;
@@ -178,12 +176,9 @@ header .header-container .header-container_navigation .header-container--links .
 .defence .defence-car_second {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 .defence .defence-car_second #container {
-  width: 100%;
-  position: relative;
-  white-space: nowrap;
   height: 40px;
 }
 .defence .defence-car_second #container .black-div,
@@ -193,7 +188,6 @@ header .header-container .header-container_navigation .header-container--links .
   margin: 0;
   width: 100%;
   white-space: nowrap;
-  position: absolute;
   overflow: hidden;
   height: 60px;
 }
@@ -268,20 +262,28 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .offers {
   padding-bottom: 362px;
+  display: flex;
 }
 .offers .offers-content {
-  height: 744px;
+  min-height: 800px;
+  height: 100%;
+  width: 100%;
   background-color: #28282A;
-  display: flex;
-  justify-content: space-between;
   padding: 86px 244px 3px 211px;
   margin: 0 auto;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .offers .offers-content .offers-offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
   width: 349px;
   position: relative;
-  margin-right: 20px;
+}
+.offers .offers-content .offers-offer:hover .offer-specifics {
+  display: flex;
 }
 .offers .offers-content .offers-offer.active {
   z-index: 3;
@@ -290,31 +292,15 @@ header .header-container .header-container_navigation .header-container--links .
 .offers .offers-content .offers-offer.inactive {
   z-index: 1;
   opacity: 0.6;
-  transform: translateY(60px);
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .offers .offers-content .offers-offer .offers-offer_back,
 .offers .offers-content .offers-offer .offers-offer_front {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 349px;
-  height: 427px;
 }
 .offers .offers-content .offers-offer .offers-offer_front {
   top: 24px;
   left: 34px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-.offers .offers-content .offers-offer .offer-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
 }
 .offers .offers-content .offers-offer .offer-text {
   position: absolute;
@@ -328,7 +314,6 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .offers .offers-content .offers-offer .offer-text .icon {
   text-align: start;
-  margin-bottom: 10px;
 }
 .offers .offers-content .offers-offer .offer-text .percentage {
   color: #28282A;
@@ -347,11 +332,30 @@ header .header-container .header-container_navigation .header-container--links .
   font-style: italic;
   text-transform: none;
 }
-.offers .offers-content .offer-detail {
+.offers .offers-content .offer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.offers .offers-content .offer-details .offer-detail {
   color: #FDFDFD;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 10%;
+  text-align: left;
+  z-index: 3;
+}
+.offers .offers-content .offer-details .line {
+  height: 5px;
+  background-color: #19D3C5;
+  width: 100%;
+  display: none;
+}
+.offers .offers-content .offer-details .offer-specifics {
+  width: 50%;
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
 }
 @media screen and (max-width: 1600px) {
   .offers .offers-content {
@@ -365,13 +369,11 @@ header .header-container .header-container_navigation .header-container--links .
 }
 
 .questions {
-  text-align: center;
   padding-bottom: 80px;
 }
 .questions .questions-content {
   width: 82%;
   margin: 0 auto;
-  text-align: left;
 }
 .questions .questions-content h2 {
   color: #000;
@@ -380,10 +382,8 @@ header .header-container .header-container_navigation .header-container--links .
   margin-bottom: 46px;
 }
 .questions .questions-content .question {
-  position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   border-bottom: 3px solid #D9D9D9;
 }
 .questions .questions-content .question.active {
@@ -432,7 +432,6 @@ header .header-container .header-container_navigation .header-container--links .
   justify-content: flex-start;
   width: 30%;
   position: relative;
-  overflow: hidden;
 }
 .portfolio .portfolio-container_left img {
   width: 458px;
@@ -467,25 +466,26 @@ header .header-container .header-container_navigation .header-container--links .
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide {
+.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide .swiper-wrapper_content {
   flex: 0 0 auto;
   text-align: left;
-  width: 70% !important;
-  margin-right: 95px !important;
+  width: 100%;
+  height: 100%;
+  padding-left: 95px;
 }
-.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide img {
+.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide .swiper-wrapper_content .swiper-wrapper_img {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
-.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide h3 {
+.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide .swiper-wrapper_content h3 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide p {
+.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide .swiper-wrapper_content p {
   font-size: 18px;
 }
-.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide:hover #svg {
+.portfolio .portfolio-container_right-container .car-swiper .swiper-wrapper .swiper-slide .swiper-wrapper_content:hover #svg {
   transform: translate(-50%, -50%) translate(30%, 30%) rotate(45deg);
 }
 
