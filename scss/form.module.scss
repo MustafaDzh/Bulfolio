@@ -21,7 +21,6 @@
   
     &-content {
         display: flex;
-        align-items: center;
   
         #svg {
             margin-top: 50px;
@@ -37,12 +36,8 @@
     &-form {
         width: 50%;
         margin: 0 auto;
-        padding-bottom: 50px;
   
         form {
-            display: flex;
-            flex-direction: column;
-  
             .form-left,
             .form-right {
                 width: 46%;
@@ -123,13 +118,9 @@
             }
   
             .textarea-container {
-                position: relative;
-                width: 100%;
                 padding-bottom: 50px;
   
                 .textarea-container_content {
-                    display: flex;
-                    width: 100%;
                     border-bottom: 1px solid #19D3C5;
                 }
   
@@ -151,20 +142,20 @@
   
                 svg {
                     position: absolute;
-                    bottom: 40%;
-                    left: 95%;
+                    bottom: 10%;
+                    left: 94%;
                 }
   
                 .first-svg {
                     position: absolute;
-                    bottom: 35%;
-                    left: 98%;
+                    bottom: 6%;
+                    left: 97%;
                 }
   
                 .second-svg {
                     position: absolute;
-                    bottom: 33%;
-                    left: 99%;
+                    bottom:5%;
+                    left: 98%;
                 }
             }
         }

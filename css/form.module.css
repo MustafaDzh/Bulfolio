@@ -19,7 +19,6 @@
 }
 .form-content {
   display: flex;
-  align-items: center;
 }
 .form-content #svg {
   margin-top: 50px;
@@ -32,11 +31,6 @@
 .form-form {
   width: 50%;
   margin: 0 auto;
-  padding-bottom: 50px;
-}
-.form-form form {
-  display: flex;
-  flex-direction: column;
 }
 .form-form form .form-left,
 .form-form form .form-right {
@@ -103,13 +97,9 @@
   padding-top: 60px;
 }
 .form-form form .textarea-container {
-  position: relative;
-  width: 100%;
   padding-bottom: 50px;
 }
 .form-form form .textarea-container .textarea-container_content {
-  display: flex;
-  width: 100%;
   border-bottom: 1px solid #19D3C5;
 }
 .form-form form .textarea-container textarea {
@@ -128,18 +118,18 @@
 }
 .form-form form .textarea-container svg {
   position: absolute;
-  bottom: 40%;
-  left: 95%;
+  bottom: 10%;
+  left: 94%;
 }
 .form-form form .textarea-container .first-svg {
   position: absolute;
-  bottom: 35%;
-  left: 98%;
+  bottom: 6%;
+  left: 97%;
 }
 .form-form form .textarea-container .second-svg {
   position: absolute;
-  bottom: 33%;
-  left: 99%;
+  bottom: 5%;
+  left: 98%;
 }
 .form-form button {
   width: 251px;

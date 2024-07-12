@@ -41,28 +41,31 @@ $(document).ready(function () {
     $('.question').not(this).find('.arrow-icon').removeClass('rotated');
   });
 
-  var swiper = new Swiper('.car-swiper_container', {
+  var swiper = new Swiper('.swiper-container', {
     loop: true,
-    slidesPerView: 1.3,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
     autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+        delay: 3000,
+        disableOnInteraction: false,
     },
     keyboard: {
-      enabled: true,
-      onlyInViewport: true,
+        enabled: true,
+        onlyInViewport: true,
     },
     preloadImages: true,
     updateOnImagesReady: true,
     loopAdditionalSlides: 1,
     on: {
-      slideChange: function () {
-        var activeSlide = swiper.slides.eq(swiper.activeIndex);
-        var newImageSrc = activeSlide.data('image-src');
-        $('#main-image').attr('src', newImageSrc);
-      },
+        slideChange: function() {
+            var previousSlideIndex = this.previousIndex;
+            var previousSlide = this.slides[previousSlideIndex];
+            var newImageSrc = $(previousSlide).find('.swiper-wrapper_img').attr('data-image-src');
+            $('#main-image').attr('src', newImageSrc);
+        },
     },
-  });
+});
 
   $('.links-list--item > a').click(function (event) {
     event.preventDefault();
