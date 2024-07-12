@@ -591,59 +591,55 @@
                 <form action="submit" method="post" enctype="multipart/form-data" autocomplete="on" novalidate>
                     <div class="form-columns">
                         <div class="form-left">
-                            <label class="montserrat-400" for="name">Три имена<span>*</span></label>
-                            <input type="text" id="name" name="name" required minlength="3" maxlength="50" pattern="[A-Za-z]+">
-                            <label class="montserrat-400"  for="phone">Телефон</label>
-                            <input type="tel" id="phone" name="phone" required minlength="10" maxlength="10" pattern="[0-9]+">
-                            <label class="montserrat-400"  for="email">Емейл<span>*</span></label>
-                            <input type="email" id="email" name="email" required maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                        </div>
+                            <input type="text" id="name" name="name" required minlength="3" maxlength="50" pattern="[A-Za-z]+" placeholder="Три имена*">
+                            <input type="tel" id="phone" name="phone" required minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Телефон">
+                            <input type="email" id="email" name="email" required maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Емейл*">
+                          </div>
                         <div class="form-right">
                             <label class="montserrat-400" for="about">Относно<span>*</span></label>
-                            <div class="checkbox-container">
-                                <div class="checkbox-item">
-                                    <input type="checkbox" class="checkbox-round" id="check1" name="check1">
-                                    <label for="check1" class="montserrat-400">Слънцезащитни фолиа за автомобилни стъкла</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" class="checkbox-round" id="check2" name="check2">
-                                    <label for="check2" class="montserrat-400">Защитни фолиа за автомобилната боя</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" class="checkbox-round" id="check3" name="check3">
-                                    <label for="check3" class="montserrat-400">Детайлинг</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" class="checkbox-round" id="check4" name="check4">
-                                    <label for="check4" class="montserrat-400">Фолиране на автомобил</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" class="checkbox-round" id="check5" name="check5">
-                                    <label for="check5" class="montserrat-400">Фолиране на автомобил</label>
-                                </div>
-                            </div>
+                            <div class="inputs">
+                            <p><input type="radio" id="test1" name="radio-group" checked>
+                                <label class="montserrat-400" for="test1">Слънцезащитни фолиа за автомобилни стъкла</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test2" name="radio-group">
+                                <label class="montserrat-400" for="test2">Защитни фолиа за автомобилната боя</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test3" name="radio-group">
+                                <label class="montserrat-400 for="test3">Детайлинг</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test4" name="radio-group">
+                                <label class="montserrat-400" for="test4">Фолиране на автомобил</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="test5" name="radio-group">
+                                <label class="montserrat-400" for="test5">Фолиране на автомобил</label>
+                            </p>
+                        </div>
                         </div>
                         
                     </div>
                     <div class="textarea-container">
-                        <label class="montserrat-400" id="message-label" for="message">Вашето съобщение<span>*</span></label>
                         <div class="textarea-container_content">
-                            <textarea id="message" name="message" required minlength="5" maxlength="100" pattern="[A-Za-z]+"></textarea>
+                            <textarea id="message" name="message" required minlength="5" maxlength="100" pattern="[A-Za-z]+" placeholder="Вашето съобщение*"></textarea>
                             <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.72917 20.9163C4.13194 20.9163 2.77778 20.3608 1.66667 19.2497C0.555555 18.1386 0 16.7844 0 15.1872V4.24967C0 3.10384 0.407986 2.12294 1.22396 1.30697C2.03993 0.490994 3.02083 0.0830078 4.16667 0.0830078C5.3125 0.0830078 6.2934 0.490994 7.10937 1.30697C7.92535 2.12294 8.33333 3.10384 8.33333 4.24967V14.1455C8.33333 14.8747 8.0816 15.491 7.57812 15.9945C7.07465 16.4979 6.45833 16.7497 5.72917 16.7497C5 16.7497 4.38368 16.4979 3.88021 15.9945C3.37674 15.491 3.125 14.8747 3.125 14.1455V4.24967H4.6875V14.1455C4.6875 14.4406 4.7875 14.6882 4.9875 14.8882C5.1875 15.0882 5.43472 15.1879 5.72917 15.1872C6.02431 15.1872 6.27187 15.0872 6.47188 14.8872C6.67188 14.6872 6.77153 14.44 6.77083 14.1455V4.24967C6.77083 3.52051 6.5191 2.90419 6.01562 2.40072C5.51215 1.89724 4.89583 1.64551 4.16667 1.64551C3.4375 1.64551 2.82118 1.89724 2.31771 2.40072C1.81424 2.90419 1.5625 3.52051 1.5625 4.24967V15.1872C1.5625 16.333 1.97049 17.3139 2.78646 18.1299C3.60243 18.9459 4.58333 19.3538 5.72917 19.3538C6.875 19.3538 7.8559 18.9459 8.67187 18.1299C9.48785 17.3139 9.89583 16.333 9.89583 15.1872V4.24967H11.4583V15.1872C11.4583 16.7844 10.9028 18.1386 9.79167 19.2497C8.68055 20.3608 7.32639 20.9163 5.72917 20.9163Z" fill="#19D3C5"/>
-                                </svg>  
-                                <div class="first-svg">
-                                    <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="0.679908" y1="10.6159" x2="12.6799" y2="0.615889" stroke="#19D3C5"/>
-                                        </svg>
-                                    </div>
-                                    <div class="second-svg">
-                                        <svg id="second-svg" width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line x1="0.679908" y1="5.61589" x2="6.67991" y2="0.615889" stroke="#19D3C5"/>
-                                            </svg>
-                                        </div>                                      
+                            </svg>  
+                            <div class="first-svg">
+                                <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="0.679908" y1="10.6159" x2="12.6799" y2="0.615889" stroke="#19D3C5"/>
+                                </svg>
+                            </div>
+                            <div class="second-svg">
+                                <svg id="second-svg" width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="0.679908" y1="5.61589" x2="6.67991" y2="0.615889" stroke="#19D3C5"/>
+                                </svg>
+                            </div>                                      
                         </div>                    
                     </div>
+                    
                                           
                     <button>
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -652,8 +648,11 @@
                         Изпрати запитване
                     </button>
                     <div class="agrement">
-                        <input type="checkbox" id="agree_terms" name="agree_terms" required>
-                        <label id="terms" for="agree_terms">Съгласявам се с <a href="/terms_and_conditions">Общи условия</a> и <a href="/Policy">Политика за поверителност</a> на Бул-Фолио ООД.</label>
+                        <label class="checkbox-btn">
+                            <input id="agree_terms" name="agree_terms" type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <label id="terms" for="agree_terms">Съгласявам се с <a href="/terms_and_conditions">Общи условия</a> и <a href="/Policy">Политика за поверителност</a> на Бул-Фолио ООД.</label>
+                        </label>
                     </div>
                 </form>
             </div>

@@ -496,7 +496,6 @@ header .header-container .header-container_navigation .header-container--links .
   font-size: 24px;
   color: #000;
   padding: 66px 0 64px 143px;
-  padding-left: 143px;
   text-transform: uppercase;
 }
 .form-content {
@@ -521,26 +520,54 @@ header .header-container .header-container_navigation .header-container--links .
   display: flex;
   flex-direction: column;
 }
+.form-form form .form-left {
+  justify-content: space-between;
+}
+.form-form form .form-left input[type=text],
+.form-form form .form-left input[type=tel],
+.form-form form .form-left input[type=email] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #19D3C5;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.form-form form .form-left input[type=text]::placeholder,
+.form-form form .form-left input[type=tel]::placeholder,
+.form-form form .form-left input[type=email]::placeholder {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.form-form form .form-right label {
+  margin-bottom: 14px;
+}
+.form-form form .form-right .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.form-form form .form-right .inputs p {
+  padding-top: 6px;
+}
+.form-form form .form-right .inputs p input {
+  margin-right: 15px;
+}
+.form-form form .form-right .inputs p input:checked + label {
+  color: black;
+}
+.form-form form .form-right .inputs p input:checked {
+  accent-color: black;
+}
+.form-form form .form-right .inputs p label {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 16px;
+}
 .form-form form .form-columns {
   display: flex;
   justify-content: space-between;
   padding-bottom: 60px;
-}
-.form-form form .checkbox-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 21px;
-  align-items: start;
-  gap: 25px;
-}
-.form-form form .checkbox-container .checkbox-item {
-  gap: 15px;
-  display: flex;
-  align-items: center;
-}
-.form-form form .checkbox-container .checkbox-item label {
-  font-size: 16px;
-  color: #000;
 }
 .form-form form label {
   font-size: 16px;
@@ -550,29 +577,6 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .form-form form label:not(:first-of-type) {
   padding-top: 60px;
-}
-.form-form form input[type=text],
-.form-form form input[type=tel],
-.form-form form input[type=email] {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #19D3C5;
-}
-.form-form form .checkbox-round {
-  width: 12px;
-  height: 12px;
-  background-color: transparent;
-  border-radius: 50%;
-  vertical-align: middle;
-  border: 1px solid #000;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-}
-.form-form form .checkbox-round:checked {
-  background-color: #000;
 }
 .form-form form .textarea-container {
   position: relative;
@@ -590,6 +594,13 @@ header .header-container .header-container_navigation .header-container--links .
   border: none;
   background-color: transparent;
   padding-right: 80px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.75);
+}
+.form-form form .textarea-container textarea::placeholder {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 .form-form form .textarea-container svg {
   position: absolute;
@@ -629,9 +640,51 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form .agrement {
   padding-top: 30px;
 }
-.form-form .agrement input {
-  border: 1px solid #ccc;
-  margin-right: 14px;
+.form-form .agrement .checkbox-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-form .agrement .checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form-form .agrement .checkbox-btn .checkmark {
+  position: relative;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #CCC;
+}
+.form-form .agrement .checkbox-btn input:checked ~ .checkmark {
+  background-color: transparent;
+}
+.form-form .agrement .checkbox-btn .checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 3px;
+  top: 0px;
+  width: 3px;
+  height: 5.5px;
+  border: 2.5px solid #1663a7;
+  border-width: 0 2.5px 2.5px 0;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.form-form .agrement .checkbox-btn input:checked ~ .checkmark:after {
+  visibility: visible;
+  opacity: 1;
 }
 .form-form .agrement #terms,
 .form-form .agrement #terms a {
