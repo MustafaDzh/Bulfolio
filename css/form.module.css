@@ -1,3 +1,13 @@
+@keyframes drawLine {
+  from {
+    stroke-dasharray: 0, 1000;
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dasharray: 1000, 1000;
+    stroke-dashoffset: -1000;
+  }
+}
 .form {
   background-color: #E6EDED;
 }
@@ -13,6 +23,11 @@
 }
 .form-content #svg {
   margin-top: 50px;
+}
+.form-content #svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: drawLine 3s infinite linear;
 }
 .form-form {
   width: 50%;

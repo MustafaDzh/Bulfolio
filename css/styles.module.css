@@ -489,6 +489,16 @@ header .header-container .header-container_navigation .header-container--links .
   transform: translate(-50%, -50%) translate(30%, 30%) rotate(45deg);
 }
 
+@keyframes drawLine {
+  from {
+    stroke-dasharray: 0, 1000;
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dasharray: 1000, 1000;
+    stroke-dashoffset: -1000;
+  }
+}
 .form {
   background-color: #E6EDED;
 }
@@ -504,6 +514,11 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .form-content #svg {
   margin-top: 50px;
+}
+.form-content #svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: drawLine 3s infinite linear;
 }
 .form-form {
   width: 50%;
