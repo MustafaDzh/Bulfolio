@@ -154,6 +154,11 @@
   justify-content: center;
   position: relative;
   padding: 21px 35px 14px 46px;
+  cursor: pointer;
+}
+.form-form button:hover {
+  background: var(--Mint, linear-gradient(90deg, #19D3C5 50%, #0FE99B 100%));
+  transition: 0.3 ease-in;
 }
 .form-form button svg {
   width: 8px;

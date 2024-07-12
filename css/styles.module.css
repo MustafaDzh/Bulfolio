@@ -645,6 +645,11 @@ header .header-container .header-container_navigation .header-container--links .
   justify-content: center;
   position: relative;
   padding: 21px 35px 14px 46px;
+  cursor: pointer;
+}
+.form-form button:hover {
+  background: var(--Mint, linear-gradient(90deg, #19D3C5 50%, #0FE99B 100%));
+  transition: 0.3 ease-in;
 }
 .form-form button svg {
   width: 8px;
@@ -705,6 +710,181 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form .agrement #terms a {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
+}
+
+.footer-section {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #28282A;
+}
+.footer-section .footer-content {
+  width: 83%;
+  margin: 0 auto;
+  padding: 51px 0 30px;
+}
+.footer-section .footer-content .inner-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 50px;
+  padding-bottom: 10px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #19D3C5;
+  padding-bottom: 50px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement {
+  padding-top: 30px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn .checkmark {
+  position: relative;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #CCC;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn input:checked ~ .checkmark {
+  background-color: transparent;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn .checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 3px;
+  top: 0px;
+  width: 3px;
+  height: 5.5px;
+  border: 2.5px solid #1663a7;
+  border-width: 0 2.5px 2.5px 0;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn input:checked ~ .checkmark:after {
+  visibility: visible;
+  opacity: 1;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement #terms {
+  color: #FFF;
+  opacity: 0.5;
+  font-size: 14px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts ul li a {
+  cursor: pointer;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts,
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts ul,
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column ul {
+  list-style: none;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts ul li a,
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column ul li a {
+  text-decoration: none;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts .montserrat-700,
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .montserrat-700 {
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: 2.32px;
+  text-transform: uppercase;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .contacts .montserrat-400 {
+  color: #FFF;
+  font-size: 16px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .input-with-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .input-with-button input {
+  width: calc(100% - 45px);
+  border: 1px solid var(--Mint, #19D3C5);
+  background: #28282A;
+  min-height: 45px;
+  padding: 0 15px;
+  color: #FFF;
+  font-size: 16px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .input-with-button .button-container {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .input-with-button .button-container svg {
+  width: 20px;
+  fill: #FFF;
+}
+.footer-section .footer-content .down-footer {
+  width: 100%;
+}
+.footer-section .footer-content .down-footer .inner-down-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer-section .footer-content .down-footer .inner-down-footer p {
+  font-size: 10px;
+  line-height: 9.95px;
+  letter-spacing: 0.956px;
+  text-transform: uppercase;
+}
+.footer-section .footer-content .down-footer .inner-down-footer ul {
+  list-style-type: none;
+  display: flex;
+  gap: 100px;
+  padding-right: 142px;
+}
+.footer-section .footer-content .down-footer .inner-down-footer ul li {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15.95px;
+}
+.footer-section .footer-content .down-footer .inner-down-footer ul li a {
+  text-decoration: none;
 }
 
 * {

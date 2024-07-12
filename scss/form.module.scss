@@ -182,7 +182,13 @@
             justify-content: center;
             position: relative;
             padding: 21px 35px 14px 46px;
-  
+            cursor: pointer;
+
+            &:hover{
+                background: var(--Mint, linear-gradient(90deg, #19D3C5 50%, #0FE99B 100%));
+                transition: 0.3 ease-in;
+            }
+
             svg {
                 width: 8px;
                 height: 14px;

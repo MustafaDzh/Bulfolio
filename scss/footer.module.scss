@@ -1,0 +1,206 @@
+.footer-section {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #28282A;
+
+    .footer-content {
+        width: 83%;
+        margin: 0 auto;
+        padding: 51px 0 30px;
+
+        .inner-footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 50px;
+            padding-bottom: 10px;
+
+            .footer-items_container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                flex-wrap: wrap;
+                border-bottom: 1px solid #19D3C5;
+                padding-bottom: 50px;
+
+                .footer-column {
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 22px;
+                    }
+
+                    .agreement {
+                        padding-top: 30px;
+              
+                        .checkbox-btn {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            cursor: pointer;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                        }
+              
+                        .checkbox-btn input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                        }
+              
+                        .checkbox-btn .checkmark {
+                            position: relative;
+                            height: 13px;
+                            width: 13px;
+                            border: 1px solid #CCC;
+                        }
+              
+                        .checkbox-btn input:checked ~ .checkmark {
+                            background-color: transparent;
+                        }
+              
+                        .checkbox-btn .checkmark:after {
+                            content: "";
+                            position: absolute;
+                            visibility: hidden;
+                            opacity: 0;
+                            left: 3px;
+                            top: 0px;
+                            width: 3px;
+                            height: 5.5px;
+                            border: 2.5px solid #1663a7;
+                            border-width: 0 2.5px 2.5px 0;
+                            transition: .3s ease-in-out;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+              
+                        .checkbox-btn input:checked ~ .checkmark:after {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+              
+                        #terms{
+                            color: #FFF;
+                            opacity: 0.5;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .contacts {
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 9px;
+
+                        li a{
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .contacts,
+                .footer-column {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    gap: 10px;
+
+                    ul{
+                        list-style: none;
+
+                         li a{
+                            text-decoration: none;
+                         }
+                        }
+
+                    .montserrat-700 {
+                        color: #FFF;
+                        font-size: 16px;
+                        letter-spacing: 2.32px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .contacts {
+                    .montserrat-400 {
+                        color: #FFF;
+                        font-size: 16px;
+                    }
+                }
+
+                .input-with-button {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    input {
+                        width: calc(100% - 45px);
+                        border: 1px solid var(--Mint, #19D3C5);
+                        background: #28282A;
+                        min-height: 45px;
+                        padding: 0 15px;
+                        color: #FFF;
+                        font-size: 16px;
+                    }
+
+                    .button-container {
+                        width: 45px;
+                        height: 45px;
+                        background: linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        svg {
+                            width: 20px;
+                            fill: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+
+        .down-footer {
+            width: 100%;
+        
+            .inner-down-footer {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+        
+                p {
+                    font-size: 10px;
+                    line-height: 9.95px;
+                    letter-spacing: 0.956px;
+                    text-transform: uppercase;
+                }
+        
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    gap: 100px;
+                    padding-right: 142px;
+        
+                    li {
+                        font-size: 11px;
+                        font-weight: 400;
+                        line-height: 15.95px;
+        
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
