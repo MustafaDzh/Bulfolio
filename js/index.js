@@ -41,7 +41,7 @@ $(document).ready(function () {
     $('.question').not(this).find('.arrow-icon').removeClass('rotated');
   });
 
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.portfolio-container_right', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,

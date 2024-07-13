@@ -35,12 +35,13 @@
 .portfolio .main-svg {
   width: 284px;
   height: 283px;
-  position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) translate(30%, 30%);
   transition: transform 0.3s ease;
   transform-origin: center;
+}
+.portfolio .swiper-wrapper {
+  transform: none;
 }
 .portfolio .swiper-wrapper_content {
   text-align: left;
