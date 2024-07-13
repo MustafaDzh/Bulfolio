@@ -46,10 +46,10 @@ $(document).ready(function () {
     slidesPerView: 1,
     spaceBetween: 10,
     centeredSlides: true,
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     keyboard: {
         enabled: true,
         onlyInViewport: true,
