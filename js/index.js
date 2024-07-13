@@ -41,15 +41,15 @@ $(document).ready(function () {
     $('.question').not(this).find('.arrow-icon').removeClass('rotated');
   });
 
-  var swiper = new Swiper('.portfolio-container_right', {
+  var swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
     centeredSlides: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -57,15 +57,8 @@ $(document).ready(function () {
     preloadImages: true,
     updateOnImagesReady: true,
     loopAdditionalSlides: 1,
-    on: {
-        slideChange: function() {
-            var previousSlideIndex = this.previousIndex;
-            var previousSlide = this.slides[previousSlideIndex];
-            var newImageSrc = $(previousSlide).find('.swiper-wrapper_img').attr('data-image-src');
-            $('#main-image').attr('src', newImageSrc);
-        },
-    },
 });
+
 
   $('.links-list--item > a').click(function (event) {
     event.preventDefault();

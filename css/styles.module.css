@@ -412,6 +412,15 @@ header .header-container .header-container_navigation .header-container--links .
 
 .portfolio {
   padding-bottom: 77px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.portfolio svg {
+  display: flex;
+  position: absolute;
+  bottom: 20%;
+  left: 7%;
 }
 .portfolio h2 {
   text-transform: uppercase;
@@ -420,44 +429,73 @@ header .header-container .header-container_navigation .header-container--links .
   padding: 0 0 98px 150px;
 }
 .portfolio .portfolio-container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.portfolio .portfolio-container_left {
-  width: 458px;
-  height: 284px;
-  flex-shrink: 0;
-}
-.portfolio .portfolio-container_right {
-  width: calc(100% - 458px);
-}
 .portfolio .swiper-container {
-  width: 100%;
-}
-.portfolio .swiper-slide {
-  text-align: center;
-}
-.portfolio .main-image {
-  width: 458px;
-  height: auto;
-  margin-bottom: 20px;
-}
-.portfolio .main-svg {
-  width: 284px;
-  height: 283px;
-  left: 50%;
-  top: 50%;
-  transition: transform 0.3s ease;
-  transform-origin: center;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
 }
 .portfolio .swiper-wrapper {
-  transform: none;
+  display: flex;
+}
+.portfolio .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .swiper-slide-prev {
+  width: 458px !important;
+  height: 284px !important;
+  transition: 0.5s ease-in;
+}
+.portfolio .swiper-slide-prev .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .swiper-slide-prev img {
+  width: 100%;
+  flex-shrink: 0;
+}
+.portfolio .swiper-slide-prev .swiper-wrapper_content {
+  text-align: left;
+  padding: 0;
+  margin-left: 10px;
+}
+.portfolio .swiper-slide-prev .swiper-wrapper_img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.portfolio .swiper-slide-prev h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.portfolio .swiper-slide-prev p {
+  font-size: 16px;
+}
+.portfolio .swiper-slide:not(.portfolio .swiper-slide-prev) {
+  padding-top: 100px;
 }
 .portfolio .swiper-wrapper_content {
   text-align: left;
-  padding-left: 95px;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+.portfolio .main-image {
+  width: 100%;
+  height: auto;
 }
 .portfolio .swiper-wrapper_img {
   width: 100%;
