@@ -431,83 +431,39 @@ header .header-container .header-container_navigation .header-container--links .
 .portfolio .portfolio-container {
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 }
-.portfolio .swiper-container {
+.portfolio .portfolio-container .swiper-container {
   width: 50%;
-  height: 100%;
   margin-left: auto;
 }
-.portfolio .swiper-wrapper {
-  display: flex;
-}
-.portfolio .swiper-slide {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.portfolio .swiper-slide-prev {
+.portfolio .portfolio-container .swiper-container .swiper-slide-prev {
   width: 458px !important;
   height: 284px !important;
   transition: 0.5s ease-in;
 }
-.portfolio .swiper-slide-prev .swiper-slide {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.portfolio .swiper-slide-prev img {
+.portfolio .portfolio-container .swiper-container .swiper-slide-prev img {
   width: 100%;
   flex-shrink: 0;
 }
-.portfolio .swiper-slide-prev .swiper-wrapper_content {
+.portfolio .portfolio-container .swiper-container .swiper-slide .swiper-wrapper_content {
   text-align: left;
   padding: 0;
   margin-left: 10px;
 }
-.portfolio .swiper-slide-prev .swiper-wrapper_img {
-  width: 80%;
+.portfolio .portfolio-container .swiper-container .swiper-slide .swiper-wrapper_content img {
+  width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
-.portfolio .swiper-slide-prev h3 {
+.portfolio .portfolio-container .swiper-container .swiper-slide h3 {
   font-size: 20px;
   margin-bottom: 5px;
 }
-.portfolio .swiper-slide-prev p {
+.portfolio .portfolio-container .swiper-container .swiper-slide p {
   font-size: 16px;
 }
-.portfolio .swiper-slide:not(.portfolio .swiper-slide-prev) {
+.portfolio .portfolio-container .swiper-container .swiper-slide:not(.portfolio .portfolio-container .swiper-container .swiper-slide-prev) {
   padding-top: 100px;
-}
-.portfolio .swiper-wrapper_content {
-  text-align: left;
-  padding: 20px;
-  width: 100%;
-  max-width: 100%;
-}
-.portfolio .main-image {
-  width: 100%;
-  height: auto;
-}
-.portfolio .swiper-wrapper_img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-.portfolio h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.portfolio p {
-  font-size: 18px;
 }
 
 @keyframes drawLine {
