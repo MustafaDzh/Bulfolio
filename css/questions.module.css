@@ -31,6 +31,10 @@
   padding: 45px 21px 0px 21px;
   font-size: 16px;
 }
+.questions .questions-content .question .question-text p span {
+  font-weight: bold;
+  color: #000;
+}
 .questions .questions-content .question .arrow-icon {
   flex-shrink: 0;
   margin-left: auto;
