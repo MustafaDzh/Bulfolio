@@ -43,10 +43,10 @@ $(document).ready(function () {
     slidesPerView: 1,
     spaceBetween: 10,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -83,10 +83,10 @@ $(document).ready(function () {
       var $this = $(this);
       $this.addClass('active').removeClass('inactive'); 
       $offers.not($this).addClass('inactive').removeClass('active');
-      $this.find('.offer-specifics, .line').fadeIn();
+      $this.find('.offer-specifics').fadeIn();
     },
     function() {
-      $('.offer-specifics, .line').fadeOut();
+      $('.offer-specifics').fadeOut();
     }
   );
 });

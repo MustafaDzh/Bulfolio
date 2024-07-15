@@ -9,6 +9,7 @@
   position: absolute;
   bottom: 20%;
   left: 7%;
+  transition: transform 0.3s ease;
 }
 .portfolio h2 {
   text-transform: uppercase;
@@ -23,6 +24,9 @@
 .portfolio .portfolio-container .swiper-container {
   width: 50%;
   margin-left: auto;
+}
+.portfolio .portfolio-container .swiper-container .swiper-slide {
+  position: relative;
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide-prev {
   width: 458px !important;
@@ -53,6 +57,9 @@
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide:not(.portfolio .portfolio-container .swiper-container .swiper-slide-prev) {
   padding-top: 100px;
+}
+.portfolio .portfolio-container .swiper-container .swiper-slide:hover ~ .portfolio-svg {
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=portfolio.module.css.map */

@@ -9,6 +9,7 @@
         position: absolute;
         bottom: 20%;
         left: 7%;
+        transition: transform 0.3s ease; // Add transition for smooth rotation
     }
 
     h2 {
@@ -26,44 +27,52 @@
             width: 50%;
             margin-left: auto;
 
-        .swiper-slide {
-            &-prev {
-                width: 458px !important;
-                height: 284px !important;
-                transition: 0.5s ease-in;
-    
-                img {
-                    width: 100%;
-                    flex-shrink: 0;
+            .swiper-slide {
+                position: relative;
+                &-prev {
+                    width: 458px !important;
+                    height: 284px !important;
+                    transition: 0.5s ease-in;
+
+                    img {
+                        width: 100%;
+                        flex-shrink: 0;
+                    }
+                }
+
+                .swiper-wrapper_content {
+                    text-align: left;
+                    padding: 0;
+                    margin-left: 10px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 10px;
+                        object-fit: cover;
+                    }
+                }
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                &:not(&-prev) {
+                    padding-top: 100px;
+                }
+
+                &:hover {
+                    // Rotate the SVG when hovered over a slide
+                    ~ .portfolio-svg {
+                        transform: rotate(45deg); // Adjust the rotation angle as needed
+                    }
                 }
             }
-    
-            .swiper-wrapper_content {
-                text-align: left;
-                padding: 0;
-                margin-left: 10px;
-    
-                img {
-                    width: 100%;
-                    height: auto;
-                    margin-bottom: 10px;
-                    object-fit: cover;
-                }
-            }
-    
-            h3 {
-                font-size: 20px;
-                margin-bottom: 5px;
-            }
-    
-            p {
-                font-size: 16px;
-            }
-    
-            &:not(&-prev) {
-                padding-top: 100px;
-            }
-        }
         }
     }
 }
