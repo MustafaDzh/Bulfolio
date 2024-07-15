@@ -21,9 +21,14 @@ header {
   
           li {
             list-style: none;
-  
+
             a {
               font-size: 16px;
+              transition: color 0.3s ease;
+
+              &:hover {
+                color: #333;
+              }
             }
   
             &:hover .dropdown-menu {
@@ -52,6 +57,13 @@ header {
           ul {
             display: flex;
             gap: 80px;
+            li{
+              a{
+                &:hover {
+                  color: #4e4d4d;
+                }
+              }
+            }
           }
           .dropdown-menu {
             display: none;

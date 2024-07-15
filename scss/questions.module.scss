@@ -23,9 +23,27 @@
 
             .question-text {
                 padding: 45px 0px 46px 21px;
-                h3 {
-                    font-size: 24px;
-                    color: #000;
+                flex: 1;
+
+                .title-wrapper {
+                    display: flex; 
+                    align-items: center; 
+
+                    h3 {
+                        font-size: 24px;
+                        color: #000;
+                        margin-right: auto; 
+                    }
+
+                    .arrow-icon {
+                        flex-shrink: 0;
+                        margin-left: 20px; 
+
+                        &.rotated {
+                            transform: rotate(90deg);
+                            transition: transform 0.3s ease; 
+                        }
+                    }
                 }
 
                 p {
@@ -33,20 +51,10 @@
                     padding: 45px 21px 0px 21px;
                     font-size: 16px;
 
-                    span{
+                    span {
                         font-weight: bold;
                         color: #000;
                     }
-                }
-            }
-
-            .arrow-icon {
-                flex-shrink: 0;
-                margin-left: auto;
-
-                &.rotated {
-                    transform: rotate(90deg);
-                    transition: transform 0.3s ease; 
                 }
             }
         }

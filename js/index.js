@@ -10,7 +10,6 @@ $(document).ready(function () {
   }
 
   var $playBtn = $('.play-btn');
-  var $questions = $('.question');
   var $dropdownMenus = $('.dropdown-menu');
   var $dropdownIcons = $('.dropdown-icon');
   var $offers = $('.offers-offer');
@@ -28,18 +27,16 @@ $(document).ready(function () {
 
   $('.question-text p').hide();
 
-  $questions.click(function() {
-    var $this = $(this);
-    var answer = $this.find('.question-text p');
-    var arrow = $this.find('.arrow-icon');
-
-    answer.slideToggle();
-    $this.toggleClass('active');
-    arrow.toggleClass('rotated');
-
-    $questions.not($this).removeClass('active').find('.question-text p').slideUp();
-    $questions.not($this).find('.arrow-icon').removeClass('rotated');
+  $('.question').click(function() {
+      var $this = $(this);
+      var answer = $this.find('.question-text p');
+      var arrow = $this.find('.arrow-icon');
+  
+      answer.slideToggle();
+      $this.toggleClass('active');
+      arrow.toggleClass('rotated');
   });
+  
 
   var swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -59,17 +56,20 @@ $(document).ready(function () {
     loopAdditionalSlides: 1,
   });
 
-  $('.links-list--item > a').click(function (event) {
-    event.preventDefault();
-    var $this = $(this);
-    var $dropdown = $this.siblings('.dropdown-menu');
-    var $icon = $this.find('.dropdown-icon');
-
-    $dropdownMenus.not($dropdown).slideUp();
-    $dropdown.slideToggle();
-    $icon.toggleClass('rotated');
-    $dropdownIcons.not($icon).removeClass('rotated');
-  });
+  $('.links-list--item').hover(
+    function() {
+        var $dropdown = $(this).find('.dropdown-menu');
+        var $icon = $(this).find('.dropdown-icon');
+        $dropdown.stop(true, true).slideDown();
+        $icon.addClass('rotated');
+    },
+    function() {
+        var $dropdown = $(this).find('.dropdown-menu');
+        var $icon = $(this).find('.dropdown-icon');
+        $dropdown.stop(true, true).slideUp();
+        $icon.removeClass('rotated');
+    }
+);
 
   $(document).click(function (event) {
     if (!$(event.target).closest('.links-list--item').length) {

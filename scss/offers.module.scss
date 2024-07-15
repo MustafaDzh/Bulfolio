@@ -7,7 +7,7 @@
         height: 100%;
         width: 100%;
         background-color: $secondary-color;
-        padding: 86px 244px 3px 211px;
+        padding: 86px 244px 50px 211px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -16,9 +16,12 @@
         .offers-offer {
             display: flex;
             flex-direction: column;
-            justify-content: inherit;
-            width: 349px;
+            justify-content: space-between;
             position: relative;
+            width: calc(33.33% - 20px); 
+            max-width: 380px; 
+            margin-bottom: 20px; 
+            transition: transform 0.5s ease, opacity 0.5s ease;
 
             &:hover {
                 .offer-specifics {
@@ -28,17 +31,20 @@
 
             &.active {
                 z-index: 3;
-                transition: transform 0.5s ease, opacity 0.5s ease;
+                transform: scale(1.1);
+                opacity: 1;
             }
+
             &.inactive {
                 z-index: 1;
                 opacity: 0.6;
-                transition: transform 0.5s ease, opacity 0.5s ease;
             }
 
             .offers-offer_back,
             .offers-offer_front {
                 position: absolute;
+                top: 0;
+                left: 0;
             }
 
             .offers-offer_front {
@@ -61,62 +67,73 @@
                 }
 
                 .percentage {
-                    color: #28282A;
+                    color: #28282a;
                     font-size: 96px;
                     font-weight: 800;
                 }
 
                 .reduce {
-                    color: #28282A;
+                    color: #28282a;
                     font-size: 20px;
                     font-weight: 850;
                     letter-spacing: 2.3px;
                 }
 
                 .total {
-                    color: #28282A;
+                    color: #28282a;
                     font-size: 20px;
                     font-style: italic;
                     text-transform: none;
                 }
             }
-        }
 
-        .offer-details{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            .offer-detail {
-                color: #FDFDFD;
-                text-transform: uppercase;
-                text-align: left;
-                z-index: 3;
-            }
-
-            .line {
-                height: 5px;
-                background-color: #19D3C5;
-                width: 100%; 
-                display: none; 
-            }
-    
-            .offer-specifics {
-                width: 50%;
-                color: #fff;
-                font-size: 16px;
+            .offer-details {
+                display: flex;
                 flex-direction: column;
                 gap: 10px;
-                z-index: 2;
+
+                .offer-detail {
+                    color: #fdfdfd;
+                    text-transform: uppercase;
+                    text-align: left;
+                    z-index: 3;
+                }
+
+                .line {
+                    height: 5px;
+                    background-color: #19d3c5;
+                    width: 100%;
+                    display: none;
+                }
+
+                .offer-specifics {
+                    width: 50%;
+                    color: #fff;
+                    font-size: 16px;
+                    flex-direction: column;
+                    gap: 10px;
+                    z-index: 2;
+                    display: none;
+                }
             }
         }
 
         @media screen and (max-width: 1600px) {
-            padding: 30px 50px 3px 20px;
+            padding: 30px 50px 50px 20px;
         }
 
         @media screen and (max-width: 1200px) {
-            padding: 10px 30px 0 20px;
+            padding: 10px 30px 50px 20px;
+            .offers-offer {
+                width: calc(50% - 20px); 
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 20px 30px 10px;
+            .offers-offer {
+                width: 100%; 
+            }
         }
     }
 }

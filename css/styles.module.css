@@ -24,6 +24,10 @@ header .header-container .top-bar ul li {
 }
 header .header-container .top-bar ul li a {
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+header .header-container .top-bar ul li a:hover {
+  color: #333;
 }
 header .header-container .top-bar ul li:hover .dropdown-menu {
   display: block;
@@ -46,6 +50,9 @@ header .header-container .header-container_navigation .header-container--links {
 header .header-container .header-container_navigation .header-container--links ul {
   display: flex;
   gap: 80px;
+}
+header .header-container .header-container_navigation .header-container--links ul li a:hover {
+  color: #4e4d4d;
 }
 header .header-container .header-container_navigation .header-container--links .dropdown-menu {
   display: none;
@@ -269,7 +276,7 @@ header .header-container .header-container_navigation .header-container--links .
   height: 100%;
   width: 100%;
   background-color: #28282A;
-  padding: 86px 244px 3px 211px;
+  padding: 86px 244px 50px 211px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -278,25 +285,30 @@ header .header-container .header-container_navigation .header-container--links .
 .offers .offers-content .offers-offer {
   display: flex;
   flex-direction: column;
-  justify-content: inherit;
-  width: 349px;
+  justify-content: space-between;
   position: relative;
+  width: calc(33.33% - 20px);
+  max-width: 380px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .offers .offers-content .offers-offer:hover .offer-specifics {
   display: flex;
 }
 .offers .offers-content .offers-offer.active {
   z-index: 3;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1.1);
+  opacity: 1;
 }
 .offers .offers-content .offers-offer.inactive {
   z-index: 1;
   opacity: 0.6;
-  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .offers .offers-content .offers-offer .offers-offer_back,
 .offers .offers-content .offers-offer .offers-offer_front {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .offers .offers-content .offers-offer .offers-offer_front {
   top: 24px;
@@ -316,55 +328,67 @@ header .header-container .header-container_navigation .header-container--links .
   text-align: start;
 }
 .offers .offers-content .offers-offer .offer-text .percentage {
-  color: #28282A;
+  color: #28282a;
   font-size: 96px;
   font-weight: 800;
 }
 .offers .offers-content .offers-offer .offer-text .reduce {
-  color: #28282A;
+  color: #28282a;
   font-size: 20px;
   font-weight: 850;
   letter-spacing: 2.3px;
 }
 .offers .offers-content .offers-offer .offer-text .total {
-  color: #28282A;
+  color: #28282a;
   font-size: 20px;
   font-style: italic;
   text-transform: none;
 }
-.offers .offers-content .offer-details {
+.offers .offers-content .offers-offer .offer-details {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
-.offers .offers-content .offer-details .offer-detail {
-  color: #FDFDFD;
+.offers .offers-content .offers-offer .offer-details .offer-detail {
+  color: #fdfdfd;
   text-transform: uppercase;
   text-align: left;
   z-index: 3;
 }
-.offers .offers-content .offer-details .line {
+.offers .offers-content .offers-offer .offer-details .line {
   height: 5px;
-  background-color: #19D3C5;
+  background-color: #19d3c5;
   width: 100%;
   display: none;
 }
-.offers .offers-content .offer-details .offer-specifics {
+.offers .offers-content .offers-offer .offer-details .offer-specifics {
   width: 50%;
   color: #fff;
   font-size: 16px;
   flex-direction: column;
   gap: 10px;
   z-index: 2;
+  display: none;
 }
 @media screen and (max-width: 1600px) {
   .offers .offers-content {
-    padding: 30px 50px 3px 20px;
+    padding: 30px 50px 50px 20px;
   }
 }
 @media screen and (max-width: 1200px) {
   .offers .offers-content {
-    padding: 10px 30px 0 20px;
+    padding: 10px 30px 50px 20px;
+  }
+  .offers .offers-content .offers-offer {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .offers .offers-content {
+    padding: 10px 20px 30px 10px;
+  }
+  .offers .offers-content .offers-offer {
+    width: 100%;
   }
 }
 
@@ -391,10 +415,24 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .questions .questions-content .question .question-text {
   padding: 45px 0px 46px 21px;
+  flex: 1;
 }
-.questions .questions-content .question .question-text h3 {
+.questions .questions-content .question .question-text .title-wrapper {
+  display: flex;
+  align-items: center;
+}
+.questions .questions-content .question .question-text .title-wrapper h3 {
   font-size: 24px;
   color: #000;
+  margin-right: auto;
+}
+.questions .questions-content .question .question-text .title-wrapper .arrow-icon {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+.questions .questions-content .question .question-text .title-wrapper .arrow-icon.rotated {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
 }
 .questions .questions-content .question .question-text p {
   color: #000;
@@ -404,14 +442,6 @@ header .header-container .header-container_navigation .header-container--links .
 .questions .questions-content .question .question-text p span {
   font-weight: bold;
   color: #000;
-}
-.questions .questions-content .question .arrow-icon {
-  flex-shrink: 0;
-  margin-left: auto;
-}
-.questions .questions-content .question .arrow-icon.rotated {
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
 }
 
 .portfolio {
@@ -482,7 +512,7 @@ header .header-container .header-container_navigation .header-container--links .
   }
 }
 .form {
-  background-color: #E6EDED;
+  background-color: #e6eded;
 }
 .form h2 {
   font-size: 24px;
@@ -492,6 +522,7 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .form-content {
   display: flex;
+  padding-bottom: 50px;
 }
 .form-content #svg {
   margin-top: 50px;
@@ -519,7 +550,7 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form form .form-left input[type=email] {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #19D3C5;
+  border-bottom: 1px solid #19d3c5;
   padding: 10px 0;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
@@ -528,8 +559,8 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form form .form-left input[type=tel]::placeholder,
 .form-form form .form-left input[type=email]::placeholder {
   color: rgba(0, 0, 0, 0.75);
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  border: none;
 }
 .form-form form .form-right label {
   margin-bottom: 14px;
@@ -542,14 +573,22 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form form .form-right .inputs p {
   padding-top: 6px;
 }
-.form-form form .form-right .inputs p input {
+.form-form form .form-right .inputs p input[type=radio] {
   margin-right: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  outline: none;
+  cursor: pointer;
+  padding: 3px;
+  background-clip: content-box;
 }
-.form-form form .form-right .inputs p input:checked + label {
-  color: black;
-}
-.form-form form .form-right .inputs p input:checked {
-  accent-color: black;
+.form-form form .form-right .inputs p input[type=radio]:checked {
+  background-color: #19d3c5;
 }
 .form-form form .form-right .inputs p label {
   color: rgba(0, 0, 0, 0.75);
@@ -573,7 +612,7 @@ header .header-container .header-container_navigation .header-container--links .
   padding-bottom: 50px;
 }
 .form-form form .textarea-container .textarea-container_content {
-  border-bottom: 1px solid #19D3C5;
+  border-bottom: 1px solid #19d3c5;
 }
 .form-form form .textarea-container textarea {
   min-height: 110px;
@@ -586,8 +625,8 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .form-form form .textarea-container textarea::placeholder {
   color: rgba(0, 0, 0, 0.75);
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  border: none;
 }
 .form-form form .textarea-container svg {
   position: absolute;
@@ -611,7 +650,7 @@ header .header-container .header-container_navigation .header-container--links .
   border: none;
   color: #fff;
   font-size: 14px;
-  background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+  background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -620,7 +659,7 @@ header .header-container .header-container_navigation .header-container--links .
   cursor: pointer;
 }
 .form-form button:hover {
-  background: var(--Mint, linear-gradient(90deg, #19D3C5 50%, #0FE99B 100%));
+  background: var(--Mint, linear-gradient(90deg, #19d3c5 50%, #0fe99b 100%));
   transition: 0.3 ease-in;
 }
 .form-form button svg {
@@ -629,10 +668,10 @@ header .header-container .header-container_navigation .header-container--links .
   fill: white;
   margin-right: 20px;
 }
-.form-form .agrement {
+.form-form .agreement {
   padding-top: 30px;
 }
-.form-form .agrement .checkbox-btn {
+.form-form .agreement .checkbox-btn {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -642,23 +681,23 @@ header .header-container .header-container_navigation .header-container--links .
   -ms-user-select: none;
   user-select: none;
 }
-.form-form .agrement .checkbox-btn input {
+.form-form .agreement .checkbox-btn input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.form-form .agrement .checkbox-btn .checkmark {
+.form-form .agreement .checkbox-btn .checkmark {
   position: relative;
   height: 13px;
   width: 13px;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
-.form-form .agrement .checkbox-btn input:checked ~ .checkmark {
+.form-form .agreement .checkbox-btn input:checked ~ .checkmark {
   background-color: transparent;
 }
-.form-form .agrement .checkbox-btn .checkmark:after {
+.form-form .agreement .checkbox-btn .checkmark:after {
   content: "";
   position: absolute;
   visibility: hidden;
@@ -670,16 +709,14 @@ header .header-container .header-container_navigation .header-container--links .
   border: 2.5px solid #1663a7;
   border-width: 0 2.5px 2.5px 0;
   transition: 0.3s ease-in-out;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.form-form .agrement .checkbox-btn input:checked ~ .checkmark:after {
+.form-form .agreement .checkbox-btn input:checked ~ .checkmark:after {
   visibility: visible;
   opacity: 1;
 }
-.form-form .agrement #terms,
-.form-form .agrement #terms a {
+.form-form .agreement #terms,
+.form-form .agreement #terms a {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
