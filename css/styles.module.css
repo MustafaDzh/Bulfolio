@@ -454,6 +454,7 @@ header .header-container .header-container_navigation .header-container--links .
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide h3 {
   font-size: 20px;
