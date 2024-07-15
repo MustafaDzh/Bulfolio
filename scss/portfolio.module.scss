@@ -9,7 +9,6 @@
         position: absolute;
         bottom: 20%;
         left: 7%;
-
     }
 
     h2 {
@@ -22,8 +21,6 @@
     .portfolio-container {
         width: 100%;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
     }
 
     .swiper-container {
@@ -32,31 +29,11 @@
         margin-left: auto;
     }
 
-    .swiper-wrapper {
-        display: flex;
-    }
-
     .swiper-slide {
-        width: 100%; 
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        position: relative; 
-        overflow: hidden; 
-
         &-prev {
             width: 458px !important;
             height: 284px !important;
             transition: 0.5s ease-in;
-
-            .swiper-slide{
-                width: 100%; 
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        position: relative; 
-        overflow: hidden; 
-            }
 
             img{
                 width: 100%; 
@@ -93,27 +70,5 @@
     .swiper-wrapper_content {
         text-align: left;
         padding: 20px;
-        width: 100%;
-        max-width: 100%; 
-    }
-
-    .main-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .swiper-wrapper_img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 18px;
     }
 }
