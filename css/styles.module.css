@@ -52,7 +52,8 @@ header .header-container .header-container_navigation .header-container--links u
   gap: 80px;
 }
 header .header-container .header-container_navigation .header-container--links ul li a:hover {
-  color: #4e4d4d;
+  color: #19D3C5;
+  transition: 0.3s ease-in-out;
 }
 header .header-container .header-container_navigation .header-container--links .dropdown-menu {
   display: none;
@@ -155,10 +156,25 @@ header .header-container .header-container_navigation .header-container--links .
   padding-bottom: 172px;
 }
 .defence .defence-car_first {
-  width: 70%;
+  width: 60%;
+  margin-left: 5%;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+.defence .defence-car_first:hover {
+  background-color: #28282A;
+  cursor: pointer;
+}
+.defence .defence-car_first:hover .montserrat-400 {
+  color: #fff;
+}
+.defence .defence-car_first:hover .defence-car_title-btn .text-container {
+  width: auto;
+  opacity: 1;
+  padding: 10px;
+  transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
 }
 .defence .defence-car_first .defence-car {
-  padding-left: 142px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -173,12 +189,34 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .defence .defence-car_first .defence-car_title-btn {
   display: flex;
-  padding-left: 272px;
+  align-items: center;
   padding-top: 50px;
+  padding-left: 142px;
 }
-.defence .defence-car_first .defence-car_title-btn a {
+.defence .defence-car_first .defence-car_title-btn .svg-container {
   width: 75px;
   height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.defence .defence-car_first .defence-car_title-btn .icon {
+  height: auto;
+  fill: white;
+}
+.defence .defence-car_first .defence-car_title-btn .text-container {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
+  padding-left: 0;
+}
+.defence .defence-car_first .defence-car_title-btn .button-text {
+  color: white;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 .defence .defence-car_second {
   display: flex;
@@ -225,7 +263,7 @@ header .header-container .header-container_navigation .header-container--links .
   bottom: 50%;
   right: 0px;
   z-index: 1000;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 .defence .defence-car_second .defence-car_title-btn-second svg {
   width: 100%;

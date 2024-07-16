@@ -51,7 +51,8 @@ header .header-container .header-container_navigation .header-container--links u
   gap: 80px;
 }
 header .header-container .header-container_navigation .header-container--links ul li a:hover {
-  color: #4e4d4d;
+  color: #19D3C5;
+  transition: 0.3s ease-in-out;
 }
 header .header-container .header-container_navigation .header-container--links .dropdown-menu {
   display: none;

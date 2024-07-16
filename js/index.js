@@ -1,11 +1,20 @@
 $(document).ready(function () {
-  var player = videojs('my-video');
+  var player = videojs('my-video', {
+    autoplay: true,
+    muted: true, 
+    controls: true, 
+    preload: 'auto'
+  });
+
+  player.ready(function() {
+    player.bigPlayButton.hide();
+  });
 
   function togglePlayButton() {
     if (player.paused()) {
-      $playBtn.fadeIn(); 
+      $playBtn.fadeIn();
     } else {
-      $playBtn.fadeOut(); 
+      $playBtn.fadeOut();
     }
   }
 
@@ -21,6 +30,10 @@ $(document).ready(function () {
 
   player.on('play', togglePlayButton);
   player.on('pause', togglePlayButton);
+
+  player.on('ended', function() {
+    $playBtn.fadeIn();
+  });
 
   $('.question-text p').hide();
 

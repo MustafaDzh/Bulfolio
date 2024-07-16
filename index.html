@@ -174,7 +174,7 @@
 
     <section class="video">
         <div class="video-container">
-            <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+            <video id="my-video" class="video-js" controls preload="auto" autoplay muted data-setup="{}">
                 <source src="./images/car.mp4" type="video/mp4" />
                 <p class="vjs-no-js">
                     To view this video please enable JavaScript, and consider upgrading to a
@@ -198,7 +198,7 @@
             </button>
         </div>
     </section>
-
+    
     <section class="defence">
         <div class="defence-car_first">
             <div class="defence-car">
@@ -225,11 +225,16 @@
                     преден капак, странични огледала за задно виждане, брони, врати, калници или целият корпус на
                     автомобила.</div>
             </div>
-            <div data-aos="fade-up" data-aos-once="true" class="defence-car_title-btn">
+            <div class="defence-car_title-btn">
                 <a class="abtn" href="#your-link-url">
-                    <svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.26115 0L0 2.3075L10.4777 13L0 23.6925L2.26115 26L15 13L2.26115 0Z" fill="white" />
-                    </svg>
+                    <div class="svg-container">
+                        <svg class="icon" width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.26115 0L0 2.3075L10.4777 13L0 23.6925L2.26115 26L15 13L2.26115 0Z" fill="white" />
+                        </svg>
+                    </div>
+                    <div class="text-container">
+                        <span class="button-text">Виж Повече</span>
+                    </div>
                 </a>
             </div>
         </div>
