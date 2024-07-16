@@ -10,9 +10,6 @@ $(document).ready(function () {
   }
 
   var $playBtn = $('.play-btn');
-  var $dropdownMenus = $('.dropdown-menu');
-  var $dropdownIcons = $('.dropdown-icon');
-  var $offers = $('.offers-offer');
 
   $playBtn.click(function () {
     if (player.paused()) {
@@ -71,22 +68,13 @@ $(document).ready(function () {
     }
 );
 
-  $(document).click(function (event) {
-    if (!$(event.target).closest('.links-list--item').length) {
-      $dropdownMenus.slideUp();
-      $dropdownIcons.removeClass('rotated');
-    }
-  });
-
-  $offers.hover(
-    function() {
-      var $this = $(this);
-      $this.addClass('active').removeClass('inactive'); 
-      $offers.not($this).addClass('inactive').removeClass('active');
-      $this.find('.offer-specifics').fadeIn();
-    },
-    function() {
-      $('.offer-specifics').fadeOut();
-    }
-  );
+$('.offers-offer').hover(
+  function() {
+    $(this).siblings('.offers-offer').addClass('inactive');
+    $(this).removeClass('inactive').addClass('active');
+  },
+  function() {
+    $('.offers-offer').removeClass('inactive active');
+  }
+);
 });

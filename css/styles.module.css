@@ -268,14 +268,10 @@ header .header-container .header-container_navigation .header-container--links .
   }
 }
 .offers {
-  display: flex;
-  width: 100%;
   background-color: #28282A;
-  padding: 86px 0px 0px 0px;
+  padding-top: 86px;
 }
 .offers .offers-content {
-  min-height: 744px;
-  height: 100%;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -284,10 +280,11 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .offers .offers-content .offers-offer {
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: space-between;
-  width: calc(33.33% - 20px);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  gap: 37px;
+  width: 25%;
+  transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
 }
 .offers .offers-content .offers-offer .offers-offer_content {
   position: relative;
@@ -308,43 +305,38 @@ header .header-container .header-container_navigation .header-container--links .
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  font-style: normal;
-  line-height: normal;
   text-transform: uppercase;
 }
 .offers .offers-content .offers-offer .offer-text .icon {
   text-align: start;
 }
-.offers .offers-content .offers-offer .offer-text .percentage {
-  color: #28282a;
-  font-size: 96px;
-  font-weight: 800;
-}
+.offers .offers-content .offers-offer .offer-text .percentage,
 .offers .offers-content .offers-offer .offer-text .reduce {
   color: #28282a;
+  font-weight: bold;
+}
+.offers .offers-content .offers-offer .offer-text .percentage {
+  font-size: 96px;
+}
+.offers .offers-content .offers-offer .offer-text .reduce {
   font-size: 20px;
-  font-weight: 850;
   letter-spacing: 2.3px;
 }
 .offers .offers-content .offers-offer .offer-text .total {
   color: #28282a;
   font-size: 20px;
   font-style: italic;
-  text-transform: none;
 }
 .offers .offers-content .offers-offer .offer-details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   position: relative;
   width: 100%;
 }
 .offers .offers-content .offers-offer .offer-details .offer-detail {
   color: #fdfdfd;
   text-transform: uppercase;
-  text-align: left;
-  z-index: 3;
+  margin-bottom: 48px;
 }
 .offers .offers-content .offers-offer .offer-details .line {
   height: 5px;
@@ -352,45 +344,39 @@ header .header-container .header-container_navigation .header-container--links .
   width: 100%;
 }
 .offers .offers-content .offers-offer .offer-details .offer-specifics {
-  position: absolute;
   display: flex;
   flex-direction: column;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  max-height: 0;
-  background-color: #28282A;
-  color: #fff;
-  font-size: 16px;
-  gap: 20px;
-  z-index: 2;
+  gap: 30px;
+  align-items: start;
+  width: 50%;
+  opacity: 0;
+  visibility: hidden;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+  height: 0;
   overflow: hidden;
-  padding: 10px;
-  transition: max-height 0.3s ease;
 }
-.offers .offers-content .offers-offer .offer-details:hover .offer-specifics {
-  max-height: 200px;
+.offers .offers-content .offers-offer .offer-details .offer-specifics-text {
+  color: #fff;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
-@media screen and (max-width: 1600px) {
-  .offers .offers-content {
-    padding: 30px 50px 50px 20px;
-  }
+.offers .offers-content .offers-offer.active .offer-specifics {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
 }
-@media screen and (max-width: 1200px) {
-  .offers .offers-content {
-    padding: 10px 30px 50px 20px;
-  }
-  .offers .offers-content .offers-offer {
-    width: calc(50% - 20px);
-  }
+.offers .offers-content .offers-offer.active .offer-specifics-text {
+  transform: translateY(0);
 }
-@media screen and (max-width: 768px) {
-  .offers .offers-content {
-    padding: 10px 20px 30px 10px;
-  }
-  .offers .offers-content .offers-offer {
-    width: 100%;
-  }
+.offers .offers-content .offers-offer.inactive {
+  opacity: 0.5;
+  padding-top: 100px;
+}
+.offers .offers-content .offers-offer:hover ~ .offers-offer {
+  opacity: 0.5;
+  padding-top: 100px;
 }
 
 .questions {
