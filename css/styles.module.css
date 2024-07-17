@@ -318,7 +318,6 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .offers .offers-content .offers-offer {
   display: flex;
-  position: relative;
   flex-direction: column;
   gap: 37px;
   width: 25%;
@@ -365,12 +364,6 @@ header .header-container .header-container_navigation .header-container--links .
   font-size: 20px;
   font-style: italic;
 }
-.offers .offers-content .offers-offer .offer-details {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-}
 .offers .offers-content .offers-offer .offer-details .offer-detail {
   color: #fdfdfd;
   text-transform: uppercase;
@@ -387,9 +380,6 @@ header .header-container .header-container_navigation .header-container--links .
   gap: 30px;
   align-items: start;
   width: 50%;
-  opacity: 0;
-  visibility: hidden;
-  justify-content: center;
   transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
   height: 0;
   overflow: hidden;
@@ -442,6 +432,7 @@ header .header-container .header-container_navigation .header-container--links .
 .questions .questions-content .question .question-text {
   padding: 45px 0px 46px 21px;
   flex: 1;
+  cursor: pointer;
 }
 .questions .questions-content .question .question-text .title-wrapper {
   display: flex;
@@ -471,7 +462,6 @@ header .header-container .header-container_navigation .header-container--links .
 }
 
 .portfolio {
-  padding-bottom: 77px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -479,8 +469,8 @@ header .header-container .header-container_navigation .header-container--links .
 .portfolio svg {
   display: flex;
   position: absolute;
-  bottom: 20%;
-  left: 7%;
+  bottom: 10%;
+  left: 10%;
   transition: transform 0.3s ease;
 }
 .portfolio h2 {
@@ -512,7 +502,6 @@ header .header-container .header-container_navigation .header-container--links .
 .portfolio .portfolio-container .swiper-container .swiper-slide .swiper-wrapper_content {
   text-align: left;
   padding: 0;
-  margin-left: 10px;
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide .swiper-wrapper_content img {
   width: 100%;
@@ -527,12 +516,6 @@ header .header-container .header-container_navigation .header-container--links .
 .portfolio .portfolio-container .swiper-container .swiper-slide p {
   font-size: 16px;
 }
-.portfolio .portfolio-container .swiper-container .swiper-slide:not(.portfolio .portfolio-container .swiper-container .swiper-slide-prev) {
-  padding-top: 100px;
-}
-.portfolio .portfolio-container .swiper-container .swiper-slide:hover ~ .portfolio-svg {
-  transform: rotate(45deg);
-}
 
 @keyframes drawLine {
   from {
@@ -545,6 +528,7 @@ header .header-container .header-container_navigation .header-container--links .
   }
 }
 .form {
+  margin-top: 77px;
   background-color: #e6eded;
 }
 .form h2 {
@@ -578,9 +562,7 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form form .form-left {
   justify-content: space-between;
 }
-.form-form form .form-left input[type=text],
-.form-form form .form-left input[type=tel],
-.form-form form .form-left input[type=email] {
+.form-form form .form-left .form-control {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #19d3c5;
@@ -588,9 +570,13 @@ header .header-container .header-container_navigation .header-container--links .
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
 }
-.form-form form .form-left input[type=text]::placeholder,
-.form-form form .form-left input[type=tel]::placeholder,
-.form-form form .form-left input[type=email]::placeholder {
+.form-form form .form-left .form-control.error {
+  border-bottom: 1px solid red;
+}
+.form-form form .form-left .form-control.success {
+  border-bottom: 1px solid #19d3c5;
+}
+.form-form form .form-left .form-control::placeholder {
   color: rgba(0, 0, 0, 0.75);
   font-weight: 400;
   border: none;
@@ -643,11 +629,13 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .form-form form .textarea-container {
   padding-bottom: 50px;
+  position: relative;
 }
 .form-form form .textarea-container .textarea-container_content {
   border-bottom: 1px solid #19d3c5;
+  position: relative;
 }
-.form-form form .textarea-container textarea {
+.form-form form .textarea-container .textarea-container_content textarea {
   min-height: 110px;
   width: 100%;
   border: none;
@@ -656,25 +644,38 @@ header .header-container .header-container_navigation .header-container--links .
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
 }
-.form-form form .textarea-container textarea::placeholder {
+.form-form form .textarea-container .textarea-container_content textarea::placeholder {
   color: rgba(0, 0, 0, 0.75);
   font-weight: 400;
   border: none;
 }
-.form-form form .textarea-container svg {
+.form-form form .textarea-container .textarea-container_content svg {
   position: absolute;
   bottom: 10%;
   left: 94%;
+  cursor: pointer;
 }
-.form-form form .textarea-container .first-svg {
+.form-form form .textarea-container .textarea-container_content .first-svg {
   position: absolute;
   bottom: 6%;
   left: 97%;
+  cursor: pointer;
 }
-.form-form form .textarea-container .second-svg {
+.form-form form .textarea-container .textarea-container_content .second-svg {
   position: absolute;
   bottom: 5%;
   left: 98%;
+  cursor: pointer;
+}
+.form-form form .textarea-container .uploaded-image-container {
+  margin-top: 20px;
+}
+.form-form form .textarea-container .uploaded-image-container img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  display: inline-block;
 }
 .form-form button {
   width: 251px;
@@ -752,6 +753,15 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form .agreement #terms a {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
+}
+.form-form .error-message {
+  color: red;
+  display: none;
+}
+.form-form #thank-you-message {
+  color: #000;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 .footer-section {

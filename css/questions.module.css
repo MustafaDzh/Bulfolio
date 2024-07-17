@@ -23,6 +23,7 @@
 .questions .questions-content .question .question-text {
   padding: 45px 0px 46px 21px;
   flex: 1;
+  cursor: pointer;
 }
 .questions .questions-content .question .question-text .title-wrapper {
   display: flex;

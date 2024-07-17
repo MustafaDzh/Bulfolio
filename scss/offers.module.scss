@@ -11,7 +11,6 @@
   
       .offers-offer {
         display: flex;
-        position: relative;
         flex-direction: column;
         gap: 37px;
         width: 25%;
@@ -68,10 +67,6 @@
         }
   
         .offer-details {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          width: 100%;
   
           .offer-detail {
             color: #fdfdfd;
@@ -91,9 +86,6 @@
             gap: 30px;
             align-items: start;
             width: 50%;
-            opacity: 0;
-            visibility: hidden;
-            justify-content: center;
             transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
             height: 0;
             overflow: hidden; 

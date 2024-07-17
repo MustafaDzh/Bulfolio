@@ -1,5 +1,4 @@
 .portfolio {
-    padding-bottom: 77px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -7,9 +6,9 @@
     svg {
         display: flex;
         position: absolute;
-        bottom: 20%;
-        left: 7%;
-        transition: transform 0.3s ease; // Add transition for smooth rotation
+        bottom: 10%;
+        left: 10%;
+        transition: transform 0.3s ease;
     }
 
     h2 {
@@ -43,7 +42,7 @@
                 .swiper-wrapper_content {
                     text-align: left;
                     padding: 0;
-                    margin-left: 10px;
+                    // margin-left: 10px;
 
                     img {
                         width: 100%;
@@ -62,16 +61,9 @@
                     font-size: 16px;
                 }
 
-                &:not(&-prev) {
-                    padding-top: 100px;
-                }
-
-                &:hover {
-                    // Rotate the SVG when hovered over a slide
-                    ~ .portfolio-svg {
-                        transform: rotate(45deg); // Adjust the rotation angle as needed
-                    }
-                }
+                // &:not(&-prev) {
+                //     padding-top: 100px;
+                // }
             }
         }
     }
