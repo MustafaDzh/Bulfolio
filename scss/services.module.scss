@@ -1,36 +1,65 @@
+// Keyframes for drawing the lines
 @keyframes drawLine {
-    from {
-      stroke-dasharray: 0, 1000;
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dasharray: 1000, 1000;
-      stroke-dashoffset: -1000;
-    }
+  from {
+    stroke-dasharray: 0, 1000;
+    stroke-dashoffset: 0;
   }
+  to {
+    stroke-dasharray: 1000, 1000;
+    stroke-dashoffset: -1000;
+  }
+}
+
+// Keyframes for the breathing shine effect
+@keyframes breathingShine {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+  }
+}
 
 .services {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #28282A;
-    height: 161px;
-    flex-shrink: 0;
-    margin-top: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28282A;
+  height: 161px;
+  flex-shrink: 0;
+  margin-top: 130px;
 
-    h2 {
-      padding: 72px 0px 59px 142px;
-      text-transform: uppercase;
-    }
-
-    .services-lines {
-      display: flex;
-      align-items: center;
-
-      svg path {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 0;
-        animation: drawLine 3s infinite linear;
-      }
-    }
+  h2 {
+    padding: 72px 0px 59px 142px;
+    text-transform: uppercase;
   }
+
+  .services-lines {
+    display: flex;
+    align-items: center;
+
+    // Target individual lines
+    svg path:nth-of-type(1) {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+      animation: drawLine 2s forwards, breathingShine 3s 2s infinite;
+      animation-delay: 0s;
+    }
+
+    svg path:nth-of-type(2) {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+      animation: drawLine 2s forwards, breathingShine 3s 4s infinite;
+      animation-delay: 2s;
+    }
+
+    svg path:nth-of-type(3) {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+      animation: drawLine 2s forwards, breathingShine 3s 6s infinite;
+      animation-delay: 4s;
+    }
+
+    // Add more paths as needed, increasing the animation-delay accordingly
+  }
+}

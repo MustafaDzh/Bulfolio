@@ -1,127 +1,173 @@
 .offers {
-    background-color: $secondary-color;
-    padding-top: 86px;
-  
-    .offers-content {
-      width: 80%;
-      margin: 0 auto;
+  background-color: $secondary-color;
+  padding-top: 86px;
+
+  .offers-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .offers-offer {
+      position: relative;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-  
-      .offers-offer {
-        display: flex;
-        flex-direction: column;
-        gap: 37px;
-        width: 25%;
-        transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease; 
-  
-        .offers-offer_content {
-          position: relative;
-          width: 383px;
-          height: 451px;
-          flex-shrink: 0;
+      flex-direction: column;
+      gap: 37px;
+      width: 25%;
+      transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
+
+      .offers-offer_content {
+        position: relative;
+        width: 383px;
+        height: 451px;
+        flex-shrink: 0;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1;
+      }
+
+      &::before {
+        left: 0;
+        transform: translateX(-5%);
+      }
+
+      &::after {
+        right: 0;
+        transform: translateX(5%);
+        top: 24px;
+      }
+
+      .offer-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+
+        .icon {
+          text-align: start;
         }
-  
-        .offers-offer_back,
-        .offers-offer_front {
-          position: absolute;
+
+        .percentage,
+        .reduce {
+          color: #28282a;
+          font-weight: bold;
         }
-  
-        .offers-offer_front {
-          top: 24px;
-          left: 34px;
+
+        .percentage {
+          font-size: 96px;
         }
-  
-        .offer-text {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+
+        .reduce {
+          font-size: 20px;
+          letter-spacing: 2.3px;
+        }
+
+        .total {
+          color: #28282a;
+          font-size: 20px;
+          font-style: italic;
+        }
+      }
+
+      .offer-details {
+        .offer-detail {
+          color: #fdfdfd;
           text-transform: uppercase;
-  
-          .icon {
-            text-align: start;
-          }
-  
-          .percentage,
-          .reduce {
-            color: #28282a;
-            font-weight: bold;
-          }
-  
-          .percentage {
-            font-size: 96px;
-          }
-  
-          .reduce {
-            font-size: 20px;
-            letter-spacing: 2.3px;
-          }
-  
-          .total {
-            color: #28282a;
-            font-size: 20px;
-            font-style: italic;
-          }
+          margin-bottom: 48px;
         }
-  
-        .offer-details {
-  
-          .offer-detail {
-            color: #fdfdfd;
-            text-transform: uppercase;
-            margin-bottom: 48px;
-          }
-  
-          .line {
-            height: 5px;
-            background-color: #19d3c5;
-            width: 100%;
-          }
-  
-          .offer-specifics {
+
+        .line {
+          height: 5px;
+          background-color: #19d3c5;
+          width: 100%;
+        }
+
+        .offer-specifics {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          align-items: start;
+          width: 50%;
+          transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+          height: 0;
+          overflow: hidden;
+        }
+
+        .offer-specifics-text {
+          color: #fff;
+          text-align: center;
+          transform: translateY(100%);
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &.active {
+        .offer-specifics {
+          opacity: 1;
+          visibility: visible;
+          height: auto;
+          padding-top: 28px;
+          padding-bottom: 48px;
+
+          li {
             display: flex;
-            flex-direction: column;
-            gap: 30px;
-            align-items: start;
-            width: 50%;
-            transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
-            height: 0;
-            overflow: hidden; 
-          }
-  
-          .offer-specifics-text {
-            color: #fff;
-            text-align: center;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            gap: 16px;
+            align-items: center;
           }
         }
-  
-        &.active {
-          .offer-specifics {
-            opacity: 1;
-            visibility: visible;
-            height: auto; 
-          }
-  
-          .offer-specifics-text {
-            transform: translateY(0);
-          }
+
+        .offer-specifics-text {
+          transform: translateY(0);
         }
-  
-        &.inactive {
+      }
+
+      &.inactive {
+        opacity: 0.5;
+        padding-top: 100px;
+      }
+
+      &:hover {
+        ~ .offers-offer {
           opacity: 0.5;
           padding-top: 100px;
         }
-  
-        &:hover {
-          ~ .offers-offer {
-            opacity: 0.5;
-            padding-top: 100px; 
-          }
-        }
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 1;
+      }
+
+      &::before {
+        left: 0;
+        transform: translateX(-5%);
+      }
+
+      &::after {
+        right: 0;
+        transform: translateX(5%);
+        top: 24px;
+      }
+
+      .offers-offer_back {
+        position: absolute;
+        right: 15%;
+        bottom: 10%; 
       }
     }
-  }  
+  }
+}
