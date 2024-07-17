@@ -8,35 +8,19 @@ $(document).ready(function () {
     preload: 'auto'
   });
 
-  player.ready(function() {
-    player.bigPlayButton.hide();
-  });
+  // player.ready(function() {
+  //   player.bigPlayButton.hide();
+  // });
 
-  function togglePlayButton() {
-    if (player.paused()) {
-      $playBtn.fadeIn();
-    } else {
-      $playBtn.fadeOut();
-    }
-  }
+  // var $playBtn = $('.play-btn');
 
-  var $playBtn = $('.play-btn');
-
-  $playBtn.click(function () {
-    if (player.paused()) {
-      player.play();
-    } else {
-      player.pause();
-    }
-  });
-
-  player.on('play', togglePlayButton);
-  player.on('pause', togglePlayButton);
-
-  player.on('ended', function() {
-    $playBtn.fadeIn();
-  });
-
+  // $playBtn.click(function () {
+  //   if (player.paused()) {
+  //     player.play();
+  //   } else {
+  //     player.pause();
+  //   }
+  // });
 
   //QUESTION OPENING
   $('.question-text p').hide();

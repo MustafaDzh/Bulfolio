@@ -26,11 +26,13 @@
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide {
   position: relative;
+  margin-right: 95px;
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide-prev {
   width: 458px !important;
   height: 284px !important;
   transition: 0.5s ease-in;
+  margin-right: 134px;
 }
 .portfolio .portfolio-container .swiper-container .swiper-slide-prev img {
   width: 100%;

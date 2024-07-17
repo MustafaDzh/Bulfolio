@@ -28,10 +28,12 @@
 
             .swiper-slide {
                 position: relative;
+                margin-right: 95px;
                 &-prev {
                     width: 458px !important;
                     height: 284px !important;
                     transition: 0.5s ease-in;
+                    margin-right: 134px;
 
                     img {
                         width: 100%;
