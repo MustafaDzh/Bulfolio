@@ -11,18 +11,13 @@
         transition: background-color 0.5s ease;
 
         &:hover {
-            background-color: #28282A;
             cursor: pointer;
-
-            .montserrat-400 {
-                color: #fff;
-            }
 
             .defence-car_title-btn {
                 .text-container {
                     width: auto;
                     opacity: 1;
-                    padding: 10px;
+                    padding-right: 30px;
                     transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
                 }
             }
