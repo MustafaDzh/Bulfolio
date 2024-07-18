@@ -37,11 +37,11 @@ $(document).ready(function () {
   
 
   //PORTFOLIO SWIPER
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.portfolio-container', {
     loop: true,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    centeredSlides: true,
+    slidesPerView: 3.34,
+    spaceBetween: 95,
+    // centeredSlides: true,
     // autoplay: {
     //   delay: 3000,
     //   disableOnInteraction: false,
@@ -50,11 +50,7 @@ $(document).ready(function () {
       enabled: true,
       onlyInViewport: true,
     },
-    preloadImages: true,
-    updateOnImagesReady: true,
-    loopAdditionalSlides: 1,
   });
-  
 
   //DROPDOWN MENU
   $('.links-list--item').hover(
