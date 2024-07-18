@@ -36,6 +36,10 @@
               width: auto !important; 
               padding-top: 100px;
           }
+
+          &.swiper-slide-active{
+            margin-left: 39px;
+          }
     
           &-prev{
             transition: all 0.5s ease;

@@ -30,6 +30,9 @@
   width: auto !important;
   padding-top: 100px;
 }
+.portfolio .portfolio-container .swiper-slide.swiper-slide-active {
+  margin-left: 39px;
+}
 .portfolio .portfolio-container .swiper-slide-prev {
   transition: all 0.5s ease;
 }
