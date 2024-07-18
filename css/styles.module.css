@@ -343,7 +343,6 @@ header .header-container .header-container_navigation .header-container--links .
   justify-content: space-between;
 }
 .offers .offers-content .offers-offer {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 37px;
@@ -352,9 +351,6 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .offers .offers-content .offers-offer .offers-offer_content {
   position: relative;
-  width: 383px;
-  height: 451px;
-  flex-shrink: 0;
 }
 .offers .offers-content .offers-offer .offer-text {
   position: absolute;
@@ -362,6 +358,7 @@ header .header-container .header-container_navigation .header-container--links .
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
+  z-index: 3;
 }
 .offers .offers-content .offers-offer .offer-text .icon {
   text-align: start;
@@ -433,9 +430,38 @@ header .header-container .header-container_navigation .header-container--links .
   padding-top: 100px;
 }
 .offers .offers-content .offers-offer .offers-offer_back {
+  position: relative;
+  z-index: 1;
+  width: 330px;
+  height: 427px;
+  top: 0;
+  bottom: 0;
+}
+.offers .offers-content .offers-offer .offers-offer_back::before {
+  content: "";
   position: absolute;
-  right: 15%;
-  bottom: 10%;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #19d3c5;
+  border-radius: 100px;
+  transform: rotate(5deg);
+}
+.offers .offers-content .offers-offer .offers-offer_front {
+  position: absolute;
+  left: 34px;
+  top: 24px;
+  height: 427px;
+  width: 349px;
+  z-index: 2;
+}
+.offers .offers-content .offers-offer .offers-offer_front::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  transform: rotate(5deg);
+  background-color: #19D3C5;
 }
 
 .questions {

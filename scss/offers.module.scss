@@ -1,3 +1,136 @@
+// .offers {
+//   background-color: $secondary-color;
+//   padding-top: 86px;
+
+//   .offers-content {
+//     width: 80%;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+
+//     .offers-offer {
+//       position: relative;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 37px;
+//       width: 25%;
+//       transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
+
+//       .offers-offer_content {
+//         position: relative;
+//         width: 383px;
+//         height: 451px;
+//         flex-shrink: 0;
+//       }
+
+//       .offer-text {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         text-transform: uppercase;
+
+//         .icon {
+//           text-align: start;
+//         }
+
+//         .percentage,
+//         .reduce {
+//           color: #28282a;
+//           font-weight: bold;
+//         }
+
+//         .percentage {
+//           font-size: 96px;
+//         }
+
+//         .reduce {
+//           font-size: 20px;
+//           letter-spacing: 2.3px;
+//         }
+
+//         .total {
+//           color: #28282a;
+//           font-size: 20px;
+//           font-style: italic;
+//         }
+//       }
+
+//       .offer-details {
+//         .offer-detail {
+//           color: #fdfdfd;
+//           text-transform: uppercase;
+//           margin-bottom: 48px;
+//         }
+
+//         .line {
+//           height: 5px;
+//           background-color: #19d3c5;
+//           width: 100%;
+//         }
+
+//         .offer-specifics {
+//           display: flex;
+//           flex-direction: column;
+//           gap: 30px;
+//           align-items: start;
+//           width: 50%;
+//           transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+//           height: 0;
+//           overflow: hidden;
+//         }
+
+//         .offer-specifics-text {
+//           color: #fff;
+//           text-align: center;
+//           transform: translateY(100%);
+//           transition: transform 0.3s ease;
+//         }
+//       }
+
+//       &.active {
+//         .offer-specifics {
+//           opacity: 1;
+//           visibility: visible;
+//           height: auto;
+//           padding-top: 28px;
+//           padding-bottom: 48px;
+
+//           li {
+//             display: flex;
+//             gap: 16px;
+//             align-items: center;
+//           }
+//         }
+
+//         .offer-specifics-text {
+//           transform: translateY(0);
+//         }
+//       }
+
+//       &.inactive {
+//         opacity: 0.5;
+//         padding-top: 100px;
+//       }
+
+//       &:hover {
+//         ~ .offers-offer {
+//           opacity: 0.5;
+//           padding-top: 100px;
+//         }
+//       }
+
+//       .offers-offer_back {
+//         position: absolute;
+//         right: 15%;
+//         bottom: 10%; 
+//       }
+//     }
+//   }
+// }
+
+
 .offers {
   background-color: $secondary-color;
   padding-top: 86px;
@@ -10,7 +143,6 @@
     justify-content: space-between;
 
     .offers-offer {
-      position: relative;
       display: flex;
       flex-direction: column;
       gap: 37px;
@@ -19,9 +151,6 @@
 
       .offers-offer_content {
         position: relative;
-        width: 383px;
-        height: 451px;
-        flex-shrink: 0;
       }
 
       .offer-text {
@@ -30,6 +159,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-transform: uppercase;
+        z-index: 3;
 
         .icon {
           text-align: start;
@@ -115,16 +245,48 @@
       }
 
       &:hover {
-        ~ .offers-offer {
+        ~.offers-offer {
           opacity: 0.5;
           padding-top: 100px;
         }
       }
 
       .offers-offer_back {
+        position: relative;
+        z-index: 1;
+        width: 330px;
+        height: 427px;
+        top: 0;
+        bottom: 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 2px solid #19d3c5;
+          border-radius: 100px;
+          transform: rotate(5deg);
+        }
+      }
+
+      .offers-offer_front {
         position: absolute;
-        right: 15%;
-        bottom: 10%; 
+        left: 34px;
+        top: 24px;
+        height: 427px;
+        width: 349px;
+        z-index: 2;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          transform: rotate(5deg);
+          background-color: #19D3C5;
+        }
       }
     }
   }
