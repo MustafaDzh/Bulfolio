@@ -41,7 +41,7 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: 3.34,
     spaceBetween: 95,
-    // centeredSlides: true,
+    centeredSlides: true, 
     // autoplay: {
     //   delay: 3000,
     //   disableOnInteraction: false,
