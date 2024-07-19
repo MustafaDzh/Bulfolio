@@ -3,6 +3,7 @@
     stroke-dasharray: 0, 1000;
     stroke-dashoffset: 0;
   }
+
   to {
     stroke-dasharray: 1000, 1000;
     stroke-dashoffset: -1000;
@@ -40,6 +41,7 @@
     margin: 0 auto;
 
     form {
+
       .form-left,
       .form-right {
         width: 46%;
@@ -59,12 +61,12 @@
           color: rgba(0, 0, 0, 0.75);
 
           &.error {
-            border-bottom: 1px solid red; 
-        }
+            border-bottom: 1px solid red;
+          }
 
-        &.success {
-            border-bottom: 1px solid #19d3c5; 
-        }
+          &.success {
+            border-bottom: 1px solid #19d3c5;
+          }
 
           &::placeholder {
             color: rgba(0, 0, 0, 0.75);
@@ -181,7 +183,7 @@
 
         .uploaded-image-container {
           margin-top: 20px;
-        
+
           img {
             max-width: 200px;
             max-height: 200px;
@@ -189,31 +191,45 @@
             height: auto;
             display: inline-block;
           }
-        }    
+        }
       }
     }
 
-    button {
-      flex-shrink: 0;
+    .btn-form {
       border: none;
-      color: #fff;
-      font-size: 14px;
-      background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      padding: 21px 35px 14px 18px;
-      cursor: pointer;
-      text-transform: uppercase;
+      background-color: transparent;
+      width: 266px;
+      height: 90px;
+      position: relative;
 
-      svg {
-        width: 8px;
-        height: 14px;
-        fill: white;
-        margin-right: 30px;
-        margin-bottom: 4px;
+      .btn-text {
+        display: flex;
+        background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
+        width: calc(100% - 15px);
+        height: calc(100% - 38px);
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+
+        svg {
+          margin-left: 18px;
+          margin-top: 20px;
+        }
+
+        div {
+          padding-left: 28px;
+          padding-right: 35px;
+          padding-top: 21px;
+          padding-bottom: 14px;
+          color: #FFF;
+          font-size: 14px;
+          text-transform: uppercase;
+        }
       }
     }
+
 
     .agreement {
       padding-top: 30px;
@@ -244,7 +260,7 @@
         border: 1px solid #ccc;
       }
 
-      .checkbox-btn input:checked ~ .checkmark {
+      .checkbox-btn input:checked~.checkmark {
         background-color: transparent;
       }
 
@@ -263,7 +279,7 @@
         transform: rotate(45deg);
       }
 
-      .checkbox-btn input:checked ~ .checkmark:after {
+      .checkbox-btn input:checked~.checkmark:after {
         visibility: visible;
         opacity: 1;
       }
@@ -275,15 +291,15 @@
       }
     }
 
-  .error-message {
+    .error-message {
       color: red;
       display: none;
-  }
+    }
 
-  #thank-you-message{
-    color: #000;
-    font-size: 20px;
-    margin-top: 10px;
-  }
+    #thank-you-message {
+      color: #000;
+      font-size: 20px;
+      margin-top: 10px;
+    }
   }
 }

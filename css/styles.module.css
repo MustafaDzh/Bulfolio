@@ -725,25 +725,36 @@ header .header-container .header-container_navigation .header-container--links .
   height: auto;
   display: inline-block;
 }
-.form-form button {
-  flex-shrink: 0;
+.form-form .btn-form {
   border: none;
-  color: #fff;
-  font-size: 14px;
-  background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding: 21px 35px 14px 18px;
-  cursor: pointer;
-  text-transform: uppercase;
+  background-color: transparent;
+  width: 266px;
+  height: 90px;
+  position: relative;
 }
-.form-form button svg {
-  width: 8px;
-  height: 14px;
-  fill: white;
-  margin-right: 30px;
-  margin-bottom: 4px;
+.form-form .btn-form .btn-text {
+  display: flex;
+  background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
+  width: calc(100% - 15px);
+  height: calc(100% - 38px);
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+}
+.form-form .btn-form .btn-text svg {
+  margin-left: 18px;
+  margin-top: 20px;
+}
+.form-form .btn-form .btn-text div {
+  padding-left: 28px;
+  padding-right: 35px;
+  padding-top: 21px;
+  padding-bottom: 14px;
+  color: #FFF;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .form-form .agreement {
   padding-top: 30px;
