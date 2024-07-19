@@ -203,13 +203,37 @@ header .header-container--mobile .socials-list {
   }
 }
 @media screen and (max-width: 1024px) {
-  header .top-bar,
+  header .header-container .top-bar ul {
+    gap: 30px;
+    padding-right: 5px;
+  }
+  header .header-container--mobile {
+    margin-top: 5%;
+  }
   header .header-container--links {
     display: none !important;
   }
   header .header-container--hamburger {
     display: block !important;
     align-self: center;
+  }
+  header .mobile-top-bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 878px) {
+  header .top-bar {
+    display: none !important;
+  }
+  header .mobile-top-bar {
+    display: block;
+  }
+  header .mobile-top-bar li {
+    display: flex;
+    gap: 10px;
+  }
+  header .header-container--mobile {
+    margin: 0;
   }
 }
 header .dropdown-icon.rotated {

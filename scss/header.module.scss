@@ -261,7 +261,18 @@ header {
 
   @media screen and (max-width: 1024px) {
 
-    .top-bar,
+    .header-container .top-bar {
+      ul {
+        gap: 30px;
+        padding-right: 5px;
+      }
+    }
+
+    .header-container--mobile {
+      margin-top: 5%;
+    }
+
+
     .header-container--links {
       display: none !important;
     }
@@ -271,6 +282,28 @@ header {
       align-self: center;
     }
 
+    .mobile-top-bar{
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width: 878px) {
+    .top-bar{
+      display: none !important;
+    }
+
+    .mobile-top-bar{
+      display: block;
+      li{
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    .header-container--mobile {
+      margin: 0;
+    }
   }
 
   .dropdown-icon.rotated {
