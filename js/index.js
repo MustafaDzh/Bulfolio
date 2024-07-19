@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+  $(document).ready(function () {
+    const $hamburgerBtn = $('#check-icon');
+    const $mobileNav = $('.header-container--mobile');
+    const $bars = $('.bar');
+
+    $hamburgerBtn.on('change', function () {
+        if (this.checked) {
+            $mobileNav.addClass('open');
+            $bars.addClass('cross');
+        } else {
+            $mobileNav.removeClass('open');
+            $bars.removeClass('cross');
+        }
+    });
+});
+
   //VIDEO PLAYER
   var player = videojs('my-video', {
     autoplay: true,
