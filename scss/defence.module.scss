@@ -8,7 +8,6 @@
         width: 60%;
         margin-left: 5%;
         position: relative;
-        transition: background-color 0.7s ease-in-out;
 
         &:hover {
             cursor: pointer;
@@ -18,10 +17,11 @@
                     width: auto;
                     opacity: 1;
                     padding-right: 30px;
-                    transition: width 1.5s cubic-bezier(1, 0.10, 0.2, 1), 
-                                opacity 1.5s ease-in-out, 
-                                padding-left 1.5s cubic-bezier(0.6, 0.05, 0.2, 1),
-                                padding-right 1.5s cubic-bezier(0.6, 0.05, 0.2, 1);
+                    padding-left: 30px;
+                    transition: width 1s ease,
+                        opacity 1s ease,
+                        padding-left 1s ease,
+                        padding-right 1s ease;
                 }
             }
         }
@@ -47,6 +47,7 @@
             align-items: center;
             padding-top: 50px;
             padding-left: 142px;
+            transition: padding-left 1s ease;
 
             .svg-container {
                 width: 75px;
@@ -66,11 +67,10 @@
                 opacity: 0;
                 overflow: hidden;
                 white-space: nowrap;
-                transition: width 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), 
-                            opacity 1.5s ease-in-out, 
-                            padding-left 1.5s cubic-bezier(0.6, 0.05, 0.2, 1),
-                            padding-right 1.5s cubic-bezier(0.6, 0.05, 0.2, 1);
-                padding-left: 0;
+                transition: width 1s ease,
+                    opacity 1s ease,
+                    padding-left 1s ease,
+                    padding-right 1s ease;
             }
 
             .button-text {
