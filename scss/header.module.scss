@@ -346,8 +346,8 @@ header {
 
     .header-container--mobile {
       margin-top: 5%;
+      z-index: 2;
     }
-
 
     .header-container--links {
       display: none !important;
@@ -361,7 +361,6 @@ header {
     .mobile-top-bar {
       display: none;
     }
-
   }
 
   @media screen and (max-width: 878px) {
@@ -403,7 +402,10 @@ header {
 
     .header-container .services{
       padding-top: 73px;
-      height: 170px;
+      height: 150px;
+      div{
+        font-size: 18px;
+      }
     }
   }
 }
