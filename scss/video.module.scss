@@ -30,6 +30,13 @@
             height: 100%;
         }
     }
+
+    @media screen and (max-width: 878px) {
+        .play-btn svg{
+            width: 60%;
+            height: 60%;
+        }
+    }
 }
 
 .video-js .vjs-tech {

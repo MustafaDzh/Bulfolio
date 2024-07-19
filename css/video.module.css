@@ -26,6 +26,12 @@
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 878px) {
+  .video .play-btn svg {
+    width: 60%;
+    height: 60%;
+  }
+}
 
 .video-js .vjs-tech {
   height: auto;
