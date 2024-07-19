@@ -21,6 +21,9 @@ header .header-container .top-bar ul {
 }
 header .header-container .top-bar ul li {
   list-style: none;
+  align-items: center;
+  display: flex;
+  gap: 8px;
 }
 header .header-container .top-bar ul li a {
   font-size: 16px;
@@ -78,7 +81,7 @@ header .header-container .header-container_navigation .header-container--links .
   color: #fff;
 }
 header .header-container .header-container_navigation .header-container--links .dropdown-menu li #en:hover {
-  background-color: #f0f0f0;
+  background-color: #3e3d3d;
 }
 
 .dropdown-icon.rotated {
@@ -189,7 +192,7 @@ header .header-container .header-container_navigation .header-container--links .
   width: 60%;
   margin-left: 5%;
   position: relative;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.7s ease-in-out;
 }
 .defence .defence-car_first:hover {
   cursor: pointer;
@@ -198,7 +201,7 @@ header .header-container .header-container_navigation .header-container--links .
   width: auto;
   opacity: 1;
   padding-right: 30px;
-  transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
+  transition: width 1.5s cubic-bezier(1, 0.1, 0.2, 1), opacity 1.5s ease-in-out, padding-left 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), padding-right 1.5s cubic-bezier(0.6, 0.05, 0.2, 1);
 }
 .defence .defence-car_first .defence-car {
   display: flex;
@@ -235,7 +238,7 @@ header .header-container .header-container_navigation .header-container--links .
   opacity: 0;
   overflow: hidden;
   white-space: nowrap;
-  transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
+  transition: width 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), opacity 1.5s ease-in-out, padding-left 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), padding-right 1.5s cubic-bezier(0.6, 0.05, 0.2, 1);
   padding-left: 0;
 }
 .defence .defence-car_first .defence-car_title-btn .button-text {
@@ -656,6 +659,7 @@ header .header-container .header-container_navigation .header-container--links .
 .form-form form .form-right .inputs p label {
   color: rgba(0, 0, 0, 0.75);
   font-size: 16px;
+  cursor: pointer;
 }
 .form-form form .form-columns {
   display: flex;
@@ -804,8 +808,6 @@ header .header-container .header-container_navigation .header-container--links .
 }
 
 .footer-section {
-  width: 100%;
-  margin: 0 auto;
   background-color: #28282A;
 }
 .footer-section .footer-content {
@@ -816,8 +818,6 @@ header .header-container .header-container_navigation .header-container--links .
 .footer-section .footer-content .inner-footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
   gap: 50px;
   padding-bottom: 10px;
 }
@@ -834,8 +834,19 @@ header .header-container .header-container_navigation .header-container--links .
   flex-direction: column;
   gap: 22px;
 }
-.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement {
-  padding-top: 30px;
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .footer-link:hover {
+  transform: scale(1.1);
 }
 .footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn {
   display: flex;
@@ -900,7 +911,6 @@ header .header-container .header-container_navigation .header-container--links .
 .footer-section .footer-content .inner-footer .footer-items_container .footer-column {
   display: flex;
   flex-direction: column;
-  text-align: left;
   gap: 10px;
 }
 .footer-section .footer-content .inner-footer .footer-items_container .contacts ul,
@@ -924,14 +934,11 @@ header .header-container .header-container_navigation .header-container--links .
 }
 .footer-section .footer-content .inner-footer .footer-items_container .input-with-button {
   display: flex;
-  align-items: center;
-  width: 100%;
 }
 .footer-section .footer-content .inner-footer .footer-items_container .input-with-button input {
   width: calc(100% - 45px);
   border: 1px solid var(--Mint, #19D3C5);
-  background: #28282A;
-  min-height: 45px;
+  background: transparent;
   padding: 0 15px;
   color: #FFF;
   font-size: 16px;
@@ -944,13 +951,6 @@ header .header-container .header-container_navigation .header-container--links .
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-.footer-section .footer-content .inner-footer .footer-items_container .input-with-button .button-container svg {
-  width: 20px;
-  fill: #FFF;
-}
-.footer-section .footer-content .down-footer {
-  width: 100%;
 }
 .footer-section .footer-content .down-footer .inner-down-footer {
   display: flex;

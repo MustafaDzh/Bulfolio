@@ -1,6 +1,4 @@
 .footer-section {
-  width: 100%;
-  margin: 0 auto;
   background-color: #28282A;
 }
 .footer-section .footer-content {
@@ -11,8 +9,6 @@
 .footer-section .footer-content .inner-footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
   gap: 50px;
   padding-bottom: 10px;
 }
@@ -29,8 +25,19 @@
   flex-direction: column;
   gap: 22px;
 }
-.footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement {
-  padding-top: 30px;
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-section .footer-content .inner-footer .footer-items_container .footer-column .footer-link:hover {
+  transform: scale(1.1);
 }
 .footer-section .footer-content .inner-footer .footer-items_container .footer-column .agreement .checkbox-btn {
   display: flex;
@@ -95,7 +102,6 @@
 .footer-section .footer-content .inner-footer .footer-items_container .footer-column {
   display: flex;
   flex-direction: column;
-  text-align: left;
   gap: 10px;
 }
 .footer-section .footer-content .inner-footer .footer-items_container .contacts ul,
@@ -119,14 +125,11 @@
 }
 .footer-section .footer-content .inner-footer .footer-items_container .input-with-button {
   display: flex;
-  align-items: center;
-  width: 100%;
 }
 .footer-section .footer-content .inner-footer .footer-items_container .input-with-button input {
   width: calc(100% - 45px);
   border: 1px solid var(--Mint, #19D3C5);
-  background: #28282A;
-  min-height: 45px;
+  background: transparent;
   padding: 0 15px;
   color: #FFF;
   font-size: 16px;
@@ -139,13 +142,6 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-.footer-section .footer-content .inner-footer .footer-items_container .input-with-button .button-container svg {
-  width: 20px;
-  fill: #FFF;
-}
-.footer-section .footer-content .down-footer {
-  width: 100%;
 }
 .footer-section .footer-content .down-footer .inner-down-footer {
   display: flex;

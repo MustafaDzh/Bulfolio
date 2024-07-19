@@ -8,7 +8,7 @@
   width: 60%;
   margin-left: 5%;
   position: relative;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.7s ease-in-out;
 }
 .defence .defence-car_first:hover {
   cursor: pointer;
@@ -17,7 +17,7 @@
   width: auto;
   opacity: 1;
   padding-right: 30px;
-  transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
+  transition: width 1.5s cubic-bezier(1, 0.1, 0.2, 1), opacity 1.5s ease-in-out, padding-left 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), padding-right 1.5s cubic-bezier(0.6, 0.05, 0.2, 1);
 }
 .defence .defence-car_first .defence-car {
   display: flex;
@@ -54,7 +54,7 @@
   opacity: 0;
   overflow: hidden;
   white-space: nowrap;
-  transition: width 0.5s ease, opacity 0.5s ease, padding-left 0.5s ease;
+  transition: width 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), opacity 1.5s ease-in-out, padding-left 1.5s cubic-bezier(0.6, 0.05, 0.2, 1), padding-right 1.5s cubic-bezier(0.6, 0.05, 0.2, 1);
   padding-left: 0;
 }
 .defence .defence-car_first .defence-car_title-btn .button-text {

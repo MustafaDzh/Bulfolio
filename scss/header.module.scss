@@ -21,6 +21,9 @@ header {
   
           li {
             list-style: none;
+            align-items: center;
+            display: flex;
+            gap: 8px;
 
             a {
               font-size: 16px;
@@ -90,7 +93,7 @@ header {
                         color: #fff;
         
                         &:hover {
-                          background-color: #f0f0f0;
+                          background-color: #3e3d3d;
                         }
                       }
               }
