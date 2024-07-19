@@ -1,4 +1,3 @@
-// Keyframes for drawing the lines
 @keyframes drawLine {
   from {
     stroke-dasharray: 0, 1000;
@@ -10,7 +9,6 @@
   }
 }
 
-// Keyframes for the breathing shine effect
 @keyframes breathingShine {
   0%, 100% {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
@@ -38,28 +36,29 @@
     display: flex;
     align-items: center;
 
-    // Target individual lines
-    svg path:nth-of-type(1) {
+    svg path {
       stroke-dasharray: 1000;
       stroke-dashoffset: 0;
-      animation: drawLine 2s forwards, breathingShine 3s 2s infinite;
-      animation-delay: 0s;
+    }
+
+    svg path:nth-of-type(1) {
+      animation: drawLine 2s forwards, breathingShine 3s 2s forwards;
     }
 
     svg path:nth-of-type(2) {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 0;
-      animation: drawLine 2s forwards, breathingShine 3s 4s infinite;
-      animation-delay: 2s;
+      animation: drawLine 2s 2s forwards, breathingShine 3s 4s forwards;
     }
 
     svg path:nth-of-type(3) {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 0;
-      animation: drawLine 2s forwards, breathingShine 3s 6s infinite;
-      animation-delay: 4s;
+      animation: drawLine 2s 4s forwards, breathingShine 3s 6s forwards;
     }
 
-    // Add more paths as needed, increasing the animation-delay accordingly
+    svg path:nth-of-type(4) {
+      animation: drawLine 2s 6s forwards, breathingShine 3s 8s forwards;
+    }
+
+    svg path:nth-of-type(5) {
+      animation: drawLine 2s 8s forwards, breathingShine 3s 10s forwards;
+    }
   }
 }
