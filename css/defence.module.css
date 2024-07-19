@@ -141,6 +141,117 @@
   line-height: 20px;
   color: #28282A;
 }
+@media screen and (max-width: 1280px) {
+  .defence .defence-car_third {
+    width: 90%;
+  }
+  .defence .defence-car_third .card .card-content {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .defence .defence-car_first {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .defence .defence-car_first .defence-car .defence-car_title {
+    gap: 30px;
+  }
+  .defence .defence-car_first .defence-car .montserrat-400 {
+    padding: 0;
+  }
+  .defence .defence-car_first .defence-car_title-btn {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .defence .defence-car_third {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .defence .defence-car_third .card {
+    width: 100%;
+  }
+  .defence .defence-car_third .card .card-content .card-content-svg svg {
+    width: 90%;
+    height: 90%;
+  }
+  .defence .defence-car_third .card .card-content .title {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .defence .defence-car_first .defence-car .defence-car_title {
+    gap: 20px;
+  }
+  .defence .defence-car .defence-car_title .title {
+    font-size: 26px;
+    text-align: center;
+  }
+  .defence .defence-car .desc {
+    font-size: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 56px;
+    position: relative;
+    transition: max-height 1s ease-out;
+  }
+  .defence .defence-car_first .defence-car_title-btn .svg-container {
+    width: 50px;
+    height: 50px;
+  }
+  .defence .defence-car_second {
+    gap: 20px;
+  }
+  .defence .defence-car_second #container .black-div {
+    height: 40px;
+  }
+  .defence .defence-car_second #container .grey-div {
+    height: 40px;
+  }
+  .defence .defence-car_second .defence-car_title-btn-second svg {
+    padding: 0;
+  }
+  .defence .defence-car_third .card .desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 56px;
+    position: relative;
+    transition: max-height 1s ease-out;
+  }
+  .defence .defence-car_third .card .desc.expanded {
+    max-height: 500px;
+    transition: max-height 1s ease-out;
+  }
+  .defence .defence-car_third .card .desc::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 50%);
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 18px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+  .defence .defence-car_third .card .desc.expanded::after {
+    content: none;
+  }
+  .defence .defence-car_third .card .show-more {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    color: #19D3C5;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+}
 
 @keyframes loop {
   0% {

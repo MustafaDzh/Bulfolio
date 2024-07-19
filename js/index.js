@@ -206,5 +206,30 @@ $('#file-upload').on('change', function(event) {
     $('.inputs').removeClass('error');
     $('#terms-error').hide();
   }
+
+  $('.defence-car_third .card .desc').each(function() {
+    var $desc = $(this);
+    var $showMoreButton = $('<div class="show-more">Покажи повече</div>');
+    $desc.parent().append($showMoreButton);
+
+    function updateButtonVisibility() {
+        var isOverflowing = $desc[0].scrollHeight > $desc[0].clientHeight;
+        $showMoreButton.toggle(isOverflowing);
+    }
+
+    updateButtonVisibility();
+
+    $showMoreButton.on('click', function() {
+        if ($desc.hasClass('expanded')) {
+            $desc.removeClass('expanded');
+            $(this).text('Покажи повече');
+        } else {
+            $desc.addClass('expanded');
+            $(this).text('Покажи по-малко');
+        }
+    });
+
+    $(window).on('resize', updateButtonVisibility);
+});
 });
 
