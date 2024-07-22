@@ -710,6 +710,12 @@ header .dropdown-icon.rotated {
   overflow: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
 }
+.offers .offers-content .no-swiper .offers-offer .offer-details .offer-specifics li::marker,
+.offers .offers-content .swiper-wrapper .offers-offer .offer-details .offer-specifics li::marker,
+.offers .offers-content_swiper .no-swiper .offers-offer .offer-details .offer-specifics li::marker,
+.offers .offers-content_swiper .swiper-wrapper .offers-offer .offer-details .offer-specifics li::marker {
+  content: url("../images/svg/tick.svg");
+}
 .offers .offers-content .no-swiper .offers-offer.active .offer-specifics,
 .offers .offers-content .swiper-wrapper .offers-offer.active .offer-specifics,
 .offers .offers-content_swiper .no-swiper .offers-offer.active .offer-specifics,
@@ -717,14 +723,6 @@ header .dropdown-icon.rotated {
   height: auto;
   padding-top: 28px;
   padding-bottom: 48px;
-}
-.offers .offers-content .no-swiper .offers-offer.active .offer-specifics li,
-.offers .offers-content .swiper-wrapper .offers-offer.active .offer-specifics li,
-.offers .offers-content_swiper .no-swiper .offers-offer.active .offer-specifics li,
-.offers .offers-content_swiper .swiper-wrapper .offers-offer.active .offer-specifics li {
-  display: flex;
-  gap: 16px;
-  align-items: center;
 }
 .offers .offers-content .no-swiper .offers-offer.inactive,
 .offers .offers-content .swiper-wrapper .offers-offer.inactive,
@@ -761,7 +759,6 @@ header .dropdown-icon.rotated {
   height: 100%;
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="349" height="427" viewBox="0 0 349 427" fill="none"%3E%3Cpath d="M29.1935 412.157L29.1817 412.151L29.1697 412.145C10.5715 403.202 1 380.327 1 342.196C1 318.974 5.70936 274.202 14.3185 208.889C22.9282 143.572 29.5826 99.7668 36.2205 76.5513C46.4971 42.4587 61.5765 21.493 81.8148 13.0948L81.9464 13.2234L82.5476 12.9879C103.448 4.80305 142.41 1 202.681 1C232.784 1 257.836 2.15083 277.622 4.34676C297.419 6.54409 311.858 9.77963 320.8 13.9053C338.432 22.8477 348 45.7326 348 83.8556C348 109.796 344.259 154.582 335.654 218.922C327.05 283.245 318.452 326.13 311.808 349.364C301.29 383.797 286.151 404.84 266.44 413.069C245.533 421.388 207.534 426 147.291 426C117.187 426 92.1374 424.849 72.356 422.535C52.5475 420.218 38.1199 416.745 29.1935 412.157Z" stroke="url(%23paint0_linear_670_11631)" stroke-width="2"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_670_11631" x1="71.5" y1="17.5" x2="237.5" y2="427" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%2319D3C5"/%3E%3Cstop offset="1" stop-color="%230FE96F"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E') no-repeat center center;
   background-size: contain;
-  z-index: -1;
 }
 .offers .offers-content .no-swiper .offers-offer .offers-offer_front,
 .offers .offers-content .swiper-wrapper .offers-offer .offers-offer_front,

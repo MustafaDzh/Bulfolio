@@ -24,20 +24,6 @@ $(document).ready(function () {
     preload: 'auto'
   });
 
-  // player.ready(function() {
-  //   player.bigPlayButton.hide();
-  // });
-
-  // var $playBtn = $('.play-btn');
-
-  // $playBtn.click(function () {
-  //   if (player.paused()) {
-  //     player.play();
-  //   } else {
-  //     player.pause();
-  //   }
-  // });
-
   //QUESTION OPENING
   $('.question-text p').hide();
 
@@ -233,7 +219,7 @@ $('#file-upload').on('change', function(event) {
 });
 
  //PORTFOLIO SWIPER
- var swiper = new Swiper('.swiper', {
+ var newSwiper = new Swiper('.offers-content_swiper', {
   loop: false,
   direction: 'horizontal',
   slidesPerView: 1,
