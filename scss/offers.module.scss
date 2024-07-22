@@ -4,155 +4,258 @@ $secondary-color: #28282A;
   background-color: $secondary-color;
   padding-top: 86px;
 
-  .offers-content {
+  .offers-content_swiper {
+    display: none;
+  }
+
+  .offers-content,
+  .offers-content_swiper {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 
-    .offers-offer {
+    .no-swiper,
+    .swiper-wrapper {
       display: flex;
-      flex-direction: column;
-      gap: 37px;
-      width: 25%;
-      position: relative;
-      transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
+      justify-content: space-between;
 
-      .offers-offer_content {
-        position: relative;
-      }
-
-      .offer-details {
-        .offer-detail {
-          color: #fdfdfd;
-          text-transform: uppercase;
-          margin-bottom: 48px;
-        }
-
-        .line {
-          height: 5px;
-          background-color: #19d3c5;
-          width: 100%;
-        }
-
-        .offer-specifics {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          align-items: start;
-          width: 50%;
-          height: 0;
-          overflow: hidden;
-          transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
-        }
-
-        .offer-specifics-text {
-          color: #fff;
-          text-align: center;
-          transform: translateY(100%);
-          transition: transform 0.3s ease;
-        }
-      }
-
-      &.active {
-        .offer-specifics {
-          opacity: 1;
-          visibility: visible;
-          height: auto;
-          padding-top: 28px;
-          padding-bottom: 48px;
-
-          li {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-          }
-        }
-
-        .offer-specifics-text {
-          transform: translateY(0);
-        }
-      }
-
-      &.inactive {
-        opacity: 0.5;
-        padding-top: 100px;
-      }
-
-      &:hover ~ .offers-offer {
-        opacity: 0.5;
-        padding-top: 100px;
-      }
-
-      .offers-offer_back {
-        position: relative;
-        z-index: 1;
-        width: 330px;
-        height: 427px;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="349" height="427" viewBox="0 0 349 427" fill="none"%3E%3Cpath d="M29.1935 412.157L29.1817 412.151L29.1697 412.145C10.5715 403.202 1 380.327 1 342.196C1 318.974 5.70936 274.202 14.3185 208.889C22.9282 143.572 29.5826 99.7668 36.2205 76.5513C46.4971 42.4587 61.5765 21.493 81.8148 13.0948L81.9464 13.2234L82.5476 12.9879C103.448 4.80305 142.41 1 202.681 1C232.784 1 257.836 2.15083 277.622 4.34676C297.419 6.54409 311.858 9.77963 320.8 13.9053C338.432 22.8477 348 45.7326 348 83.8556C348 109.796 344.259 154.582 335.654 218.922C327.05 283.245 318.452 326.13 311.808 349.364C301.29 383.797 286.151 404.84 266.44 413.069C245.533 421.388 207.534 426 147.291 426C117.187 426 92.1374 424.849 72.356 422.535C52.5475 420.218 38.1199 416.745 29.1935 412.157Z" stroke="url(%23paint0_linear_670_11631)" stroke-width="2"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_670_11631" x1="71.5" y1="17.5" x2="237.5" y2="427" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%2319D3C5"/%3E%3Cstop offset="1" stop-color="%230FE96F"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E') no-repeat center center;
-          background-size: contain;
-          z-index: -1;
-        }
-      }
-
-      .offers-offer_front {
-        position: absolute;
-        left: 34px;
-        top: 24px;
-        height: 427px;
-        width: 349px;
-        z-index: 2;
+      .offers-offer {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-
-        .icon {
-          text-align: start;
-        }
-
-        .percentage,
-        .reduce {
-          color: #28282a;
-          font-weight: bold;
-        }
-
-        .percentage {
-          font-size: 96px;
-        }
-
-        .reduce {
-          font-size: 20px;
-          letter-spacing: 2.3px;
-        }
-
-        .total {
-          color: #28282a;
-          font-size: 20px;
-          font-style: italic;
-        }
+        flex-direction: column;
+        gap: 37px;
+        width: 25%;
+        transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
 
         &::after {
           content: "";
+          display: block;
           position: absolute;
-          top: 0;
+          bottom: 0;
           left: 0;
           width: 100%;
-          height: 100%;
-          background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="349" height="427" viewBox="0 0 349 427" fill="none"%3E%3Cpath d="M82.0442 11.9213C61.082 20.3204 45.6728 41.7246 35.2611 76.2694C28.5976 99.5701 21.9341 143.462 13.3271 208.759C4.72006 274.055 0 318.895 0 342.196C0 380.399 9.57886 403.835 28.7364 413.047C46.9221 422.394 87.0418 427 147.291 427C207.54 427 245.716 422.394 266.817 413.995C286.946 405.596 302.217 384.192 312.767 349.647C319.431 326.346 328.038 283.402 336.645 219.054C345.252 154.706 349 109.866 349 83.8556C349 45.6532 339.421 22.217 321.235 13.0051C303.05 4.60595 262.93 0 202.681 0C142.432 0 103.284 3.79314 82.183 12.0568L82.0442 11.9213Z" fill="url(%23paint0_linear_670_11632)"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_670_11632" x1="174.5" y1="0" x2="174.5" y2="427" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%230FE96F"/%3E%3Cstop offset="1" stop-color="%2319D3C5"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E') no-repeat center center;
-          background-size: contain;
-          z-index: -1;
+          height: 5px;
+          background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+        }
+
+        .offers-offer_content {
+          position: relative;
+        }
+
+        .offer-details {
+          .offer-detail {
+            color: #fdfdfd;
+            text-transform: uppercase;
+            margin-bottom: 48px;
+          }
+
+          .offer-specifics {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: start;
+            width: 50%;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+          }
+        }
+
+        &.active {
+          .offer-specifics {
+            height: auto;
+            padding-top: 28px;
+            padding-bottom: 48px;
+
+            li {
+              display: flex;
+              gap: 16px;
+              align-items: center;
+            }
+          }
+        }
+
+        &.inactive {
+          opacity: 0.5;
+          padding-top: 100px;
+        }
+
+        &:hover~.offers-offer {
+          opacity: 0.5;
+          padding-top: 100px;
+        }
+
+        .offers-offer_back {
+          position: relative;
+          z-index: 1;
+          width: 330px;
+          height: 427px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="349" height="427" viewBox="0 0 349 427" fill="none"%3E%3Cpath d="M29.1935 412.157L29.1817 412.151L29.1697 412.145C10.5715 403.202 1 380.327 1 342.196C1 318.974 5.70936 274.202 14.3185 208.889C22.9282 143.572 29.5826 99.7668 36.2205 76.5513C46.4971 42.4587 61.5765 21.493 81.8148 13.0948L81.9464 13.2234L82.5476 12.9879C103.448 4.80305 142.41 1 202.681 1C232.784 1 257.836 2.15083 277.622 4.34676C297.419 6.54409 311.858 9.77963 320.8 13.9053C338.432 22.8477 348 45.7326 348 83.8556C348 109.796 344.259 154.582 335.654 218.922C327.05 283.245 318.452 326.13 311.808 349.364C301.29 383.797 286.151 404.84 266.44 413.069C245.533 421.388 207.534 426 147.291 426C117.187 426 92.1374 424.849 72.356 422.535C52.5475 420.218 38.1199 416.745 29.1935 412.157Z" stroke="url(%23paint0_linear_670_11631)" stroke-width="2"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_670_11631" x1="71.5" y1="17.5" x2="237.5" y2="427" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%2319D3C5"/%3E%3Cstop offset="1" stop-color="%230FE96F"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E') no-repeat center center;
+            background-size: contain;
+            z-index: -1;
+          }
+        }
+
+        .offers-offer_front {
+          position: absolute;
+          left: 34px;
+          top: 24px;
+          height: 427px;
+          width: 349px;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          .percentage,
+          .reduce {
+            color: #28282a;
+            font-weight: bold;
+          }
+
+          .percentage {
+            font-size: 96px;
+          }
+
+          .reduce {
+            font-size: 20px;
+            letter-spacing: 2.3px;
+          }
+
+          .total {
+            color: #28282a;
+            font-size: 20px;
+            font-style: italic;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="349" height="427" viewBox="0 0 349 427" fill="none"%3E%3Cpath d="M82.0442 11.9213C61.082 20.3204 45.6728 41.7246 35.2611 76.2694C28.5976 99.5701 21.9341 143.462 13.3271 208.759C4.72006 274.055 0 318.895 0 342.196C0 380.399 9.57886 403.835 28.7364 413.047C46.9221 422.394 87.0418 427 147.291 427C207.54 427 245.716 422.394 266.817 413.995C286.946 405.596 302.217 384.192 312.767 349.647C319.431 326.346 328.038 283.402 336.645 219.054C345.252 154.706 349 109.866 349 83.8556C349 45.6532 339.421 22.217 321.235 13.0051C303.05 4.60595 262.93 0 202.681 0C142.432 0 103.284 3.79314 82.183 12.0568L82.0442 11.9213Z" fill="url(%23paint0_linear_670_11632)"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_670_11632" x1="174.5" y1="0" x2="174.5" y2="427" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%230FE96F"/%3E%3Cstop offset="1" stop-color="%2319D3C5"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E') no-repeat center center;
+            background-size: contain;
+            z-index: -1;
+          }
         }
       }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 30%;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      // background-color: transparent;
+      border-radius: 50%;
+      opacity: 0.6;
+      transition: opacity 0.3s, background-color 0.3s;
+      border: 1px solid grey;
+    }
+    .swiper-pagination-bullet-active  {
+      opacity: 1;
+      background-color: #0FE96F !important;
+  }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .offers-content {
+      width: 90%;
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .offers-content .no-swiper .offers-offer .offers-offer_front {
+      width: 290px;
+      height: 378px;
+    }
+
+    .offers-content .no-swiper .offers-offer .offers-offer_back {
+      width: 271px;
+      height: 378px;
+    }
+
+    .offers-content {
+      width: 90%;
+      margin-left: 10px;
+    }
+
+    .offers-content .no-swiper .offers-offer .offer-details .offer-detail {
+      font-size: 25px;
+    }
+
+    .offers-content .no-swiper .offers-offer .offers-offer_front {
+      left: 24px;
+      top: 20px;
+    }
+
+    .offers-content .no-swiper .offers-offer .offers-offer_front .percentage {
+      font-size: 76px;
+    }
+  }
+
+  @media screen and (max-width: 878px) {
+    .offers-content {
+      display: none !important;
+    }
+
+    .offers-content_swiper {
+      display: flex !important;
+    }
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front {
+      top: 5%;
+      left: auto;
+    }
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_back {
+      right: 7%;
+      bottom: auto;
+    }
+
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_content {
+      display: flex;
+      justify-content: center;
+    }
+
+    .offers-content_swiper {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+      padding-top: 20px;
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front {
+      width: 260px;
+      height: 348px;
+    }
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_back {
+      width: 241px;
+      height: 348px;
+    }
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offer-details .offer-detail {
+      font-size: 22px;
     }
   }
 }

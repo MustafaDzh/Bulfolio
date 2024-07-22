@@ -231,5 +231,25 @@ $('#file-upload').on('change', function(event) {
 
     $(window).on('resize', updateButtonVisibility);
 });
+
+ //PORTFOLIO SWIPER
+ var swiper = new Swiper('.swiper', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  centeredSlides: true, 
+  dynamicBullets: true,
+  dynamicMainBullets: 3,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  observer: true,
+  observeParents: true,
+});
 });
 

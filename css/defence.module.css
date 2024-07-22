@@ -180,6 +180,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .defence {
+    padding-bottom: 82px;
+  }
   .defence .defence-car_first .defence-car .defence-car_title {
     gap: 20px;
   }
