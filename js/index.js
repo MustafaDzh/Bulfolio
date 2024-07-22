@@ -235,15 +235,17 @@ $('#file-upload').on('change', function(event) {
  //PORTFOLIO SWIPER
  var swiper = new Swiper('.swiper', {
   loop: false,
+  direction: 'horizontal',
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
+    },
   },
   centeredSlides: true, 
-  dynamicBullets: true,
-  dynamicMainBullets: 3,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -251,5 +253,6 @@ $('#file-upload').on('change', function(event) {
   observer: true,
   observeParents: true,
 });
+
 });
 

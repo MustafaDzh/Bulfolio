@@ -817,8 +817,6 @@ header .dropdown-icon.rotated {
   z-index: -1;
 }
 .offers .swiper-pagination {
-  position: absolute;
-  bottom: 10px;
   left: 30%;
   display: flex;
   gap: 8px;
@@ -832,7 +830,7 @@ header .dropdown-icon.rotated {
   transition: opacity 0.3s, background-color 0.3s;
   border: 1px solid grey;
 }
-.offers .swiper-pagination .swiper-pagination-bullet-active {
+.offers .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: #0FE96F !important;
 }
@@ -904,6 +902,12 @@ header .dropdown-icon.rotated {
   .offers .offers-content_swiper .swiper-wrapper .offers-offer .offer-details .offer-detail {
     font-size: 22px;
   }
+  .offers .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front .percentage {
+    font-size: 66px;
+  }
+  .offers .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front .reduce {
+    font-size: 18px;
+  }
 }
 
 .questions {
@@ -958,6 +962,20 @@ header .dropdown-icon.rotated {
 .questions .questions-content .question .question-text p span {
   font-weight: bold;
   color: #000;
+}
+@media screen and (max-width: 1024px) {
+  .questions {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions .questions-content .question .question-text .title-wrapper h3 {
+    font-size: 20px;
+  }
+  .questions .questions-content .question .question-text p {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .portfolio {

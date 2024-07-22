@@ -152,8 +152,6 @@ $secondary-color: #28282A;
   }
 
   .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
     left: 30%;
     display: flex;
     gap: 8px;
@@ -162,17 +160,16 @@ $secondary-color: #28282A;
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
-      // background-color: transparent;
       border-radius: 50%;
       opacity: 0.6;
       transition: opacity 0.3s, background-color 0.3s;
       border: 1px solid grey;
     }
-    .swiper-pagination-bullet-active  {
-      opacity: 1;
-      background-color: #0FE96F !important;
   }
-  }
+  .swiper-pagination-bullet-active  {
+    opacity: 1;
+    background-color: #0FE96F !important;
+}
 
   @media screen and (max-width: 1280px) {
     .offers-content {
@@ -256,6 +253,14 @@ $secondary-color: #28282A;
 
     .offers-content_swiper .swiper-wrapper .offers-offer .offer-details .offer-detail {
       font-size: 22px;
+    }
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front .percentage {
+      font-size: 66px;
+    }
+
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front .reduce{
+      font-size: 18px;
     }
   }
 }

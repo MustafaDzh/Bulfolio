@@ -51,5 +51,19 @@
   font-weight: bold;
   color: #000;
 }
+@media screen and (max-width: 1024px) {
+  .questions {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions .questions-content .question .question-text .title-wrapper h3 {
+    font-size: 20px;
+  }
+  .questions .questions-content .question .question-text p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 /*# sourceMappingURL=questions.module.css.map */
