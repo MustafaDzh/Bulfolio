@@ -325,18 +325,18 @@ header .dropdown-icon.rotated {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-top: 50%;
+  height: 801px;
 }
 .video #my-video {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 83%;
+  height: 100%;
 }
 .video .play-btn {
   position: absolute;
   background-color: transparent;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -349,6 +349,9 @@ header .dropdown-icon.rotated {
   height: 100%;
 }
 @media screen and (max-width: 878px) {
+  .video {
+    height: 400px;
+  }
   .video .play-btn svg {
     width: 60%;
     height: 60%;
@@ -356,7 +359,9 @@ header .dropdown-icon.rotated {
 }
 
 .video-js .vjs-tech {
-  height: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .vjs-big-play-button {
@@ -372,6 +377,7 @@ header .dropdown-icon.rotated {
   flex-direction: column;
   gap: 120px;
   padding-bottom: 172px;
+  padding-top: 134px;
 }
 .defence .defence-car_first {
   width: 60%;
@@ -519,6 +525,9 @@ header .dropdown-icon.rotated {
   }
 }
 @media screen and (max-width: 1024px) {
+  .defence {
+    padding-top: 50px;
+  }
   .defence .defence-car_first {
     width: 90%;
     margin: 0 auto;

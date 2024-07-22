@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 120px;
     padding-bottom: 172px;
+    padding-top: 134px;
 
     .defence-car_first {
         width: 60%;
@@ -181,6 +182,7 @@
     }
 
     @media screen and (max-width: 1024px) {
+        padding-top: 50px;
         .defence-car_first {
             width: 90%;
             margin: 0 auto;
@@ -219,7 +221,7 @@
     }
 
     @media screen and (max-width: 480px) {
-        padding-bottom: 82px ;
+        padding-bottom: 82px;
 
         .defence-car_first .defence-car .defence-car_title {
             gap: 20px;
