@@ -200,6 +200,10 @@
         .defence-car_third .card .card-content {
             gap: 20px;
         }
+
+        .defence-car_second .defence-car_title-btn-second svg{
+            padding: 22px 20px 22px 20.5px;
+        }
     }
 
     @media screen and (max-width: 1024px) {
@@ -241,6 +245,12 @@
         }
     }
 
+    @media screen and (max-width: 878px) {
+        .defence-car_second .defence-car_title-btn-second svg{
+            padding: 11px 10px 11px 10.2px;
+        }
+    }
+ 
     @media screen and (max-width: 480px) {
         padding-bottom: 82px;
 

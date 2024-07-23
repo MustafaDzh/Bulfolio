@@ -15,10 +15,21 @@
 .form-title {
   padding: 66px 0 64px 143px;
 }
+@media screen and (max-width: 878px) {
+  .form-title {
+    text-align: center;
+    padding-left: 0px;
+  }
+}
 .form-title .noah-700 {
   font-size: 24px;
   color: #000;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .form-title .noah-700 {
+    font-size: 22px;
+  }
 }
 .form-content {
   display: flex;
@@ -26,6 +37,11 @@
 }
 .form-content #svg {
   margin-top: 50px;
+}
+@media screen and (max-width: 1280px) {
+  .form-content #svg {
+    display: none;
+  }
 }
 .form-content #svg path {
   stroke-dasharray: 1000;
@@ -36,6 +52,11 @@
   width: 50%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1280px) {
+  .form-form {
+    width: 85%;
+  }
+}
 .form-form form .form-left,
 .form-form form .form-right {
   width: 46%;
@@ -44,6 +65,12 @@
 }
 .form-form form .form-left {
   justify-content: space-between;
+}
+@media screen and (max-width: 878px) {
+  .form-form form .form-left {
+    width: 100%;
+    padding-bottom: 10px;
+  }
 }
 .form-form form .form-left .form-control {
   background-color: transparent;
@@ -66,6 +93,11 @@
 }
 .form-form form .form-right label {
   margin-bottom: 14px;
+}
+@media screen and (max-width: 878px) {
+  .form-form form .form-right {
+    width: 100%;
+  }
 }
 .form-form form .form-right .inputs {
   display: flex;
@@ -101,6 +133,11 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 60px;
+}
+@media screen and (max-width: 878px) {
+  .form-form form .form-columns {
+    flex-direction: column;
+  }
 }
 .form-form form label {
   font-size: 16px;
@@ -179,18 +216,25 @@
   left: 0;
   border: none;
 }
+@media screen and (max-width: 480px) {
+  .form-form .btn-form .btn-text {
+    width: calc(100% - 45px);
+  }
+}
 .form-form .btn-form .btn-text svg {
   margin-left: 18px;
   margin-top: 20px;
 }
 .form-form .btn-form .btn-text div {
-  padding-left: 28px;
-  padding-right: 35px;
-  padding-top: 21px;
-  padding-bottom: 14px;
+  padding: 21px 35px 14px 28px;
   color: #FFF;
   font-size: 14px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .form-form .btn-form .btn-text div {
+    padding-right: 10px;
+  }
 }
 .form-form .agreement {
   padding-top: 30px;

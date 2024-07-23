@@ -10,7 +10,7 @@ $secondary-color: #28282A;
 
   &-content,
   &-content_swiper {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 
     .no-swiper,
@@ -22,8 +22,8 @@ $secondary-color: #28282A;
         display: flex;
         flex-direction: column;
         gap: 37px;
-        width: 25%;
-        transition: transform 0.5s ease, opacity 0.5s ease, padding-top 0.5s ease;
+        align-items: center;
+        text-align: center;;
 
         &::after {
           content: "";
@@ -41,21 +41,27 @@ $secondary-color: #28282A;
         }
 
         .offer-details {
+          width: 50%;
           .offer-detail {
             color: #fdfdfd;
             text-transform: uppercase;
             margin-bottom: 48px;
+            text-align: start;
           }
 
           .offer-specifics {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: start;
             gap: 30px;
-            align-items: start;
-            width: 50%;
             height: 0;
             overflow: hidden;
             transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+
+            li {
+              margin-left: 20px;
+            }
 
             li::marker {
               content: url('../images/svg/tick.svg');
@@ -63,27 +69,53 @@ $secondary-color: #28282A;
           }
         }
 
-        &.active {
+        &:hover {
           .offer-specifics {
             height: auto;
             padding-top: 28px;
             padding-bottom: 48px;
           }
+
+          &::after {
+            background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+          }
+
+          ~ .offers-offer {
+            opacity: 0.5;
+            padding-top: 100px;
+          }
         }
 
-        &.inactive {
-          opacity: 0.5;
-          padding-top: 100px;
-        }
+        @media screen and (max-width: 878px) {
+          &.active {
+            .offer-specifics {
+              height: auto;
+              padding-top: 28px;
+              padding-bottom: 48px;
+              opacity: 1;
+              visibility: visible;
+            }
 
-        &:hover~.offers-offer {
-          opacity: 0.5;
-          padding-top: 100px;
+            &::after {
+              background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+            }
+
+            ~ .offers-offer {
+              opacity: 0.5;
+              padding-top: 100px;
+            }
+          }
+
+          .offers-offer:not(.active) .offer-specifics {
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+          }
         }
 
         .offers-offer_back {
-          position: relative;
-          z-index: 1;
           width: 330px;
           height: 427px;
 
@@ -149,11 +181,6 @@ $secondary-color: #28282A;
   }
 
   .swiper-pagination {
-    left: 30%;
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-
     &-bullet {
       width: 12px;
       height: 12px;
@@ -172,11 +199,7 @@ $secondary-color: #28282A;
   @media screen and (max-width: 1280px) {
     .offers-content {
       width: 90%;
-      margin-left: 10px;
     }
-  }
-
-  @media screen and (max-width: 1024px) {
     .offers-content .no-swiper .offers-offer .offers-offer_front {
       width: 290px;
       height: 378px;
@@ -187,13 +210,29 @@ $secondary-color: #28282A;
       height: 378px;
     }
 
+    .offers-content .no-swiper .offers-offer .offer-details .offer-detail {
+      font-size: 25px;
+    }
+
+  }
+
+  @media screen and (max-width: 1024px) {
+    .offers-content .no-swiper .offers-offer .offers-offer_front {
+      width: 270px;
+      height: 358px;
+    }
+
+    .offers-content .no-swiper .offers-offer .offers-offer_back {
+      width: 251px;
+      height: 358px;
+    }
+
     .offers-content {
       width: 90%;
-      margin-left: 10px;
     }
 
     .offers-content .no-swiper .offers-offer .offer-details .offer-detail {
-      font-size: 25px;
+      font-size: 21px;
     }
 
     .offers-content .no-swiper .offers-offer .offers-offer_front {
@@ -225,7 +264,6 @@ $secondary-color: #28282A;
       bottom: auto;
     }
 
-
     .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_content {
       display: flex;
       justify-content: center;
@@ -233,6 +271,11 @@ $secondary-color: #28282A;
 
     .offers-content_swiper {
       width: 90%;
+    }
+
+    .swiper-wrapper .offers-offer .offer-details .offer-specifics {
+      width: 100%;
+      margin: 0 auto !important;
     }
   }
 

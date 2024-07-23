@@ -62,6 +62,9 @@
   .questions .questions-content .question .question-text .title-wrapper .title-wrapper_question {
     font-size: 20px;
   }
+  .questions .questions-content_title .noah-700 {
+    font-size: 22px;
+  }
   .questions .questions-content .question .question-text .answer {
     padding-left: 0;
     padding-right: 0;
