@@ -5,14 +5,14 @@
     padding-bottom: 172px;
     padding-top: 134px;
 
-    &-car_first {
+    .defence-car_first {
         width: 60%;
         margin-left: 5%;
         position: relative;
-
+    
         &:hover {
             cursor: pointer;
-
+    
             .defence-car_title-btn {
                 .text-container {
                     width: auto;
@@ -23,30 +23,30 @@
                 }
             }
         }
-
+    
         .defence-car {
             display: flex;
             flex-direction: column;
             gap: 30px;
-
+    
             &_title {
                 display: flex;
                 gap: 80px;
                 align-items: center;
             }
-
+    
             .noah-400 {
                 padding-left: 142px;
             }
         }
-
+    
         .defence-car_title-btn {
             display: flex;
             align-items: center;
             padding-top: 50px;
             padding-left: 142px;
             transition: padding-left 1s ease;
-
+    
             .svg-container {
                 width: 75px;
                 height: 75px;
@@ -54,12 +54,12 @@
                 align-items: center;
                 justify-content: center;
             }
-
+    
             .icon {
                 height: auto;
                 fill: white;
             }
-
+    
             .text-container {
                 width: 0;
                 opacity: 0;
@@ -67,15 +67,42 @@
                 white-space: nowrap;
                 transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
             }
-
+    
             .button-text {
                 color: white;
                 font-size: 22px;
                 line-height: 26px;
                 text-transform: uppercase;
             }
+    
+            @media (max-width: 1024px) {
+                &.active .text-container {
+                    width: auto;
+                    opacity: 1;
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+            }
         }
     }
+    
+    @media (min-width: 1025px) {
+        .defence-car_first {
+            &:hover {
+                cursor: pointer;
+    
+                .defence-car_title-btn {
+                    .text-container {
+                        width: auto;
+                        opacity: 1;
+                        padding-right: 30px;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    
 
     &-car_second {
         display: flex;
@@ -193,7 +220,6 @@
 
         .defence-car_first .defence-car_title-btn {
             padding-left: 0;
-            justify-content: center;
         }
 
         .defence-car_third {
