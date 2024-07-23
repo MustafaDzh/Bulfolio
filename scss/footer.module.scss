@@ -6,6 +6,10 @@
         margin: 0 auto;
         padding: 51px 0 30px;
 
+        @media screen and (max-width: 1440px) {
+            width: 93%;
+        }
+
         .inner-footer {
             display: flex;
             flex-direction: column;
@@ -20,17 +24,26 @@
                 border-bottom: 1px solid #19D3C5;
                 padding-bottom: 50px;
 
+                @media screen and (max-width: 878px) {
+                    flex-direction: column;
+                }
+
                 .footer-column {
                     ul {
                         display: flex;
                         flex-direction: column;
                         gap: 22px;
+
+                        @media screen and (max-width: 1440px) {
+                            padding-bottom: 60px;
+                        }
                     }
 
                     form {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
+                        padding-top: 50px;
                     }
 
                     .footer-link {
@@ -115,6 +128,9 @@
                             cursor: pointer;
                         }
                     }
+                    @media screen and (max-width: 878px) {
+                        padding-bottom: 20px;
+                    }
                 }
 
                 .contacts,
@@ -156,6 +172,13 @@
                         padding: 0 15px;
                         color: #FFF;
                         font-size: 16px;
+
+                        @media screen and (max-width: 878px) {
+                            width: 50%;
+                        }
+                        @media screen and (max-width: 480px) {
+                            width: 90%;
+                        }
                     }
 
                     .button-container {
@@ -176,6 +199,7 @@
                 display: flex;
                 justify-content: space-between;
                 margin: 0 auto;
+                align-items: center;
 
                 div {
                     font-size: 10px;
@@ -190,6 +214,16 @@
                     display: flex;
                     gap: 100px;
                     padding-right: 142px;
+
+                    @media screen and (max-width: 878px) {
+                        gap: 20px;
+                        padding-right: 0px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        gap: 5px;
+                        flex-direction: column;
+                    }
 
                     li {
                         font-size: 11px;
