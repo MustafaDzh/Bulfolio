@@ -139,7 +139,7 @@
         padding-bottom: 50px;
         position: relative;
 
-        .textarea-container_content {
+        &_content {
           border-bottom: 1px solid #19d3c5;
           position: relative;
 
@@ -230,7 +230,6 @@
       }
     }
 
-
     .agreement {
       padding-top: 30px;
 
@@ -245,7 +244,7 @@
         user-select: none;
       }
 
-      .checkbox-btn input {
+      & input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -253,18 +252,18 @@
         width: 0;
       }
 
-      .checkbox-btn .checkmark {
+      & .checkmark {
         position: relative;
         height: 13px;
         width: 13px;
         border: 1px solid #ccc;
       }
 
-      .checkbox-btn input:checked~.checkmark {
+      & input:checked~.checkmark {
         background-color: transparent;
       }
 
-      .checkbox-btn .checkmark:after {
+      & .checkmark:after {
         content: "";
         position: absolute;
         visibility: hidden;
@@ -279,7 +278,7 @@
         transform: rotate(45deg);
       }
 
-      .checkbox-btn input:checked~.checkmark:after {
+      & input:checked~.checkmark:after {
         visibility: visible;
         opacity: 1;
       }

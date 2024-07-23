@@ -113,11 +113,11 @@
   padding-bottom: 50px;
   position: relative;
 }
-.form-form form .textarea-container .textarea-container_content {
+.form-form form .textarea-container_content {
   border-bottom: 1px solid #19d3c5;
   position: relative;
 }
-.form-form form .textarea-container .textarea-container_content textarea {
+.form-form form .textarea-container_content textarea {
   min-height: 110px;
   width: 100%;
   border: none;
@@ -126,24 +126,24 @@
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
 }
-.form-form form .textarea-container .textarea-container_content textarea::placeholder {
+.form-form form .textarea-container_content textarea::placeholder {
   color: rgba(0, 0, 0, 0.75);
   font-weight: 400;
   border: none;
 }
-.form-form form .textarea-container .textarea-container_content svg {
+.form-form form .textarea-container_content svg {
   position: absolute;
   bottom: 10%;
   left: 94%;
   cursor: pointer;
 }
-.form-form form .textarea-container .textarea-container_content .first-svg {
+.form-form form .textarea-container_content .first-svg {
   position: absolute;
   bottom: 6%;
   left: 97%;
   cursor: pointer;
 }
-.form-form form .textarea-container .textarea-container_content .second-svg {
+.form-form form .textarea-container_content .second-svg {
   position: absolute;
   bottom: 5%;
   left: 98%;
@@ -203,23 +203,23 @@
   -ms-user-select: none;
   user-select: none;
 }
-.form-form .agreement .checkbox-btn input {
+.form-form .agreement input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.form-form .agreement .checkbox-btn .checkmark {
+.form-form .agreement .checkmark {
   position: relative;
   height: 13px;
   width: 13px;
   border: 1px solid #ccc;
 }
-.form-form .agreement .checkbox-btn input:checked ~ .checkmark {
+.form-form .agreement input:checked ~ .checkmark {
   background-color: transparent;
 }
-.form-form .agreement .checkbox-btn .checkmark:after {
+.form-form .agreement .checkmark:after {
   content: "";
   position: absolute;
   visibility: hidden;
@@ -233,7 +233,7 @@
   transition: 0.3s ease-in-out;
   transform: rotate(45deg);
 }
-.form-form .agreement .checkbox-btn input:checked ~ .checkmark:after {
+.form-form .agreement input:checked ~ .checkmark:after {
   visibility: visible;
   opacity: 1;
 }

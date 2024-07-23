@@ -4,7 +4,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 801px; 
+    height: 801px;
 
     #my-video {
         position: absolute;
@@ -23,8 +23,8 @@
         cursor: pointer;
         border: none;
         transition: opacity 0.3s ease;
-        
-        svg{
+
+        svg {
             width: 100%;
             height: 100%;
         }
@@ -32,7 +32,8 @@
 
     @media screen and (max-width: 878px) {
         height: 400px;
-        .play-btn svg{
+
+        .play-btn svg {
             width: 60%;
             height: 60%;
         }
@@ -45,10 +46,10 @@
     height: 100%;
 }
 
-.vjs-big-play-button{
+.vjs-big-play-button {
     display: none !important;
 }
 
-.vjs-control-bar{
+.vjs-control-bar {
     display: none !important;
 }

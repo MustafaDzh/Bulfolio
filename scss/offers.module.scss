@@ -4,12 +4,12 @@ $secondary-color: #28282A;
   background-color: $secondary-color;
   padding-top: 86px;
 
-  .offers-content_swiper {
+  &-content_swiper {
     display: none;
   }
 
-  .offers-content,
-  .offers-content_swiper {
+  &-content,
+  &-content_swiper {
     width: 80%;
     margin: 0 auto;
 
@@ -55,7 +55,7 @@ $secondary-color: #28282A;
             width: 50%;
             height: 0;
             overflow: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;  
+            transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
 
             li::marker {
               content: url('../images/svg/tick.svg');
@@ -154,18 +154,19 @@ $secondary-color: #28282A;
     gap: 8px;
     z-index: 10;
 
-    .swiper-pagination-bullet {
+    &-bullet {
       width: 12px;
       height: 12px;
       border-radius: 50%;
       opacity: 0.6;
       transition: opacity 0.3s, background-color 0.3s;
       border: 1px solid grey;
+
+      &-active {
+        opacity: 1;
+        background-color: #0FE96F !important;
+      }
     }
-  }
-      .swiper-pagination-bullet-active  {
-      opacity: 1;
-      background-color: #0FE96F !important;
   }
 
   @media screen and (max-width: 1280px) {
@@ -236,7 +237,7 @@ $secondary-color: #28282A;
   }
 
   @media screen and (max-width: 480px) {
-      padding-top: 20px;
+    padding-top: 20px;
 
     .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front {
       width: 260px;
@@ -256,7 +257,7 @@ $secondary-color: #28282A;
       font-size: 66px;
     }
 
-    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front .reduce{
+    .offers-content_swiper .swiper-wrapper .offers-offer .offers-offer_front .reduce {
       font-size: 18px;
     }
   }

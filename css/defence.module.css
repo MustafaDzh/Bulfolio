@@ -5,75 +5,75 @@
   padding-bottom: 172px;
   padding-top: 134px;
 }
-.defence .defence-car_first {
+.defence-car_first {
   width: 60%;
   margin-left: 5%;
   position: relative;
 }
-.defence .defence-car_first:hover {
+.defence-car_first:hover {
   cursor: pointer;
 }
-.defence .defence-car_first:hover .defence-car_title-btn .text-container {
+.defence-car_first:hover .defence-car_title-btn .text-container {
   width: auto;
   opacity: 1;
   padding-right: 30px;
   padding-left: 30px;
   transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
 }
-.defence .defence-car_first .defence-car {
+.defence-car_first .defence-car {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.defence .defence-car_first .defence-car .defence-car_title {
+.defence-car_first .defence-car_title {
   display: flex;
   gap: 80px;
   align-items: center;
 }
-.defence .defence-car_first .defence-car .montserrat-400 {
+.defence-car_first .defence-car .noah-400 {
   padding-left: 142px;
 }
-.defence .defence-car_first .defence-car_title-btn {
+.defence-car_first .defence-car_title-btn {
   display: flex;
   align-items: center;
   padding-top: 50px;
   padding-left: 142px;
   transition: padding-left 1s ease;
 }
-.defence .defence-car_first .defence-car_title-btn .svg-container {
+.defence-car_first .defence-car_title-btn .svg-container {
   width: 75px;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.defence .defence-car_first .defence-car_title-btn .icon {
+.defence-car_first .defence-car_title-btn .icon {
   height: auto;
   fill: white;
 }
-.defence .defence-car_first .defence-car_title-btn .text-container {
+.defence-car_first .defence-car_title-btn .text-container {
   width: 0;
   opacity: 0;
   overflow: hidden;
   white-space: nowrap;
   transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
 }
-.defence .defence-car_first .defence-car_title-btn .button-text {
+.defence-car_first .defence-car_title-btn .button-text {
   color: white;
   font-size: 22px;
   line-height: 26px;
   text-transform: uppercase;
 }
-.defence .defence-car_second {
+.defence-car_second {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.defence .defence-car_second #container {
+.defence-car_second #container {
   height: 40px;
 }
-.defence .defence-car_second #container .black-div,
-.defence .defence-car_second #container .grey-div {
+.defence-car_second #container .black-div,
+.defence-car_second #container .grey-div {
   display: flex;
   align-items: center;
   margin: 0;
@@ -82,17 +82,17 @@
   overflow: hidden;
   height: 60px;
 }
-.defence .defence-car_second #container .black-div.black-div,
-.defence .defence-car_second #container .grey-div.black-div {
+.defence-car_second #container .black-div.black-div,
+.defence-car_second #container .grey-div.black-div {
   background-color: #28282A;
   transform: skewY(1deg);
 }
-.defence .defence-car_second #container .black-div.grey-div,
-.defence .defence-car_second #container .grey-div.grey-div {
+.defence-car_second #container .black-div.grey-div,
+.defence-car_second #container .grey-div.grey-div {
   background-color: #EFEFEF;
 }
-.defence .defence-car_second #container .black-div p,
-.defence .defence-car_second #container .grey-div p {
+.defence-car_second #container .black-div p,
+.defence-car_second #container .grey-div p {
   text-transform: uppercase;
   padding-left: 13px;
   margin: 0;
@@ -100,44 +100,44 @@
   white-space: nowrap;
   animation: loop 40s linear infinite;
 }
-.defence .defence-car_second #container .black-div p::after,
-.defence .defence-car_second #container .grey-div p::after {
+.defence-car_second #container .black-div p::after,
+.defence-car_second #container .grey-div p::after {
   content: attr(data-text);
 }
-.defence .defence-car_second .defence-car_title-btn-second {
+.defence-car_second .defence-car_title-btn-second {
   position: fixed;
   bottom: 50%;
   right: 0px;
   z-index: 1000;
   transition: transform 0.5s ease;
 }
-.defence .defence-car_second .defence-car_title-btn-second svg {
+.defence-car_second .defence-car_title-btn-second svg {
   width: 100%;
   height: 100%;
   padding: 45px 40px 44px 41px;
 }
-.defence .defence-car_third {
+.defence-car_third {
   display: flex;
   width: 85%;
   margin: 0 auto;
   justify-content: space-between;
 }
-.defence .defence-car_third .card {
+.defence-car_third .card {
   width: calc(30% - 10px);
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-.defence .defence-car_third .card .card-content {
+.defence-car_third .card-content {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.defence .defence-car_third .card .montserrat-400 {
+.defence-car_third .card .noah-400 {
   font-size: 20px;
   line-height: 28px;
 }
-.defence .defence-car_third .card .montserrat-400 span {
+.defence-car_third .card .noah-400 span {
   font-weight: 700;
   line-height: 20px;
   color: #28282A;
@@ -161,7 +161,7 @@
   .defence .defence-car_first .defence-car .defence-car_title {
     gap: 30px;
   }
-  .defence .defence-car_first .defence-car .montserrat-400 {
+  .defence .defence-car_first .defence-car .noah-400 {
     padding: 0;
   }
   .defence .defence-car_first .defence-car_title-btn {
