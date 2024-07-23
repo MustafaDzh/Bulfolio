@@ -12,10 +12,12 @@
   margin-top: 77px;
   background-color: #e6eded;
 }
-.form h2 {
+.form-title {
+  padding: 66px 0 64px 143px;
+}
+.form-title .noah-700 {
   font-size: 24px;
   color: #000;
-  padding: 66px 0 64px 143px;
   text-transform: uppercase;
 }
 .form-content {

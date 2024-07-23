@@ -1,11 +1,13 @@
 .portfolio {
   position: relative;
 }
-.portfolio h2 {
+.portfolio-title {
+  padding: 0 0 98px 150px;
+}
+.portfolio-title .noah-700 {
   text-transform: uppercase;
   color: #000;
   font-size: 24px;
-  padding: 0 0 98px 150px;
 }
 .portfolio svg {
   position: absolute;

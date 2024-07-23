@@ -14,11 +14,14 @@
   margin-top: 77px;
   background-color: #e6eded;
 
-  h2 {
-    font-size: 24px;
-    color: #000;
+  &-title {
     padding: 66px 0 64px 143px;
-    text-transform: uppercase;
+
+    .noah-700 {
+      font-size: 24px;
+      color: #000;
+      text-transform: uppercase;
+    }
   }
 
   &-content {

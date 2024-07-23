@@ -6,11 +6,14 @@
         width: 82%;
         margin: 0 auto;
 
-        h2 {
-            color: #000;
-            text-transform: uppercase;
-            font-size: 24px;
-            margin-bottom: 46px;
+        &_title{
+            padding-left: 6px;
+
+            .noah-700 {
+                color: #000;
+                text-transform: uppercase;
+                font-size: 24px;
+            }
         }
 
         .question {

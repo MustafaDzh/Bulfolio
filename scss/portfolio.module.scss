@@ -1,11 +1,14 @@
 .portfolio {
   position: relative;
 
-  h2 {
-    text-transform: uppercase;
-    color: #000;
-    font-size: 24px;
+  &-title {
     padding: 0 0 98px 150px;
+
+    .noah-700 {
+      text-transform: uppercase;
+      color: #000;
+      font-size: 24px;
+    }
   }
 
   svg {
@@ -13,8 +16,6 @@
     top: 50%;
     left: 10%;
   }
-
-  ;
 
   &-container {
     .swiper-slide {
