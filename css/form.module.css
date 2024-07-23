@@ -72,10 +72,10 @@
   flex-direction: column;
   gap: 19px;
 }
-.form-form form .form-right .inputs p {
+.form-form form .form-right .inputs div {
   padding-top: 6px;
 }
-.form-form form .form-right .inputs p input[type=radio] {
+.form-form form .form-right .inputs div input[type=radio] {
   margin-right: 15px;
   appearance: none;
   -webkit-appearance: none;
@@ -89,10 +89,10 @@
   padding: 3px;
   background-clip: content-box;
 }
-.form-form form .form-right .inputs p input[type=radio]:checked {
+.form-form form .form-right .inputs div input[type=radio]:checked {
   background-color: #19d3c5;
 }
-.form-form form .form-right .inputs p label {
+.form-form form .form-right .inputs div label {
   color: rgba(0, 0, 0, 0.75);
   font-size: 16px;
   cursor: pointer;

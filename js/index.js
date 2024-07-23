@@ -74,14 +74,14 @@ $(document).ready(function () {
 );
 
 //OFFERS HOVER
-$('.offers-offer').hover(
-  function() {
-    $(this).addClass('active').siblings('.offers-offer').addClass('inactive');
-  },
-  function() {
-    $('.offers-offer').removeClass('inactive active');
-  }
-);
+// $('.offers-offer').hover(
+//   function() {
+//     $(this).addClass('active').siblings('.offers-offer').addClass('inactive');
+//   },
+//   function() {
+//     $('.offers-offer').removeClass('inactive active');
+//   }
+// );
 
 $('.swiper-slide').hover(
   function() {

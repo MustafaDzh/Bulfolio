@@ -34,7 +34,7 @@
                     display: flex;
                     align-items: center;
 
-                    h3 {
+                    &_question {
                         font-size: 24px;
                         color: #000;
                         margin-right: auto;
@@ -51,7 +51,7 @@
                     }
                 }
 
-                p {
+                .answer {
                     color: #000;
                     padding: 45px 21px 0px 21px;
                     font-size: 16px;
@@ -70,11 +70,11 @@
     }
 
     @media screen and (max-width: 480px) {
-        .questions-content .question .question-text .title-wrapper h3 {
+        .questions-content .question .question-text .title-wrapper .title-wrapper_question {
             font-size: 20px;
         }
 
-        .questions-content .question .question-text p {
+        .questions-content .question .question-text .answer {
             padding-left: 0;
             padding-right: 0;
         }

@@ -110,8 +110,8 @@
 .defence-car_second #container .grey-div.grey-div {
   background-color: #EFEFEF;
 }
-.defence-car_second #container .black-div p,
-.defence-car_second #container .grey-div p {
+.defence-car_second #container .black-div div,
+.defence-car_second #container .grey-div div {
   text-transform: uppercase;
   padding-left: 13px;
   margin: 0;
@@ -119,8 +119,8 @@
   white-space: nowrap;
   animation: loop 40s linear infinite;
 }
-.defence-car_second #container .black-div p::after,
-.defence-car_second #container .grey-div p::after {
+.defence-car_second #container .black-div div::after,
+.defence-car_second #container .grey-div div::after {
   content: attr(data-text);
 }
 .defence-car_second .defence-car_title-btn-second {
