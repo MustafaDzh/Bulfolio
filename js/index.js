@@ -49,17 +49,53 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: 3.34,
     spaceBetween: 95,
-    centeredSlides: true, 
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    centeredSlides: true,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
-  });
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+      },
+      1024: {
+        slidesPerView: 2.8,
+        spaceBetween: 65,
+      },
+      1280: {
+        slidesPerView: 2.9,
+        spaceBetween: 65,
 
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 65,
+      },
+      1540: {
+        slidesPerView: 3.2,
+        spaceBetween: 65,
+      },
+      1740: {
+        slidesPerView: 3.4,
+        spaceBetween: 65,
+      },
+    }
+  });
+  
   // DROPDOWN MENU
   $('.links-list--item').hover(
     function() {
