@@ -50,10 +50,10 @@ $(document).ready(function () {
     slidesPerView: 3,
     spaceBetween: 95,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -63,36 +63,10 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: 0,
       },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        centeredSlides: true,
-      },
       1024: {
         slidesPerView: 3,
         spaceBetween: 65,
-      },
-      1280: {
-        slidesPerView: 3,
-        spaceBetween: 65,
-
-      },
-      1440: {
-        slidesPerView: 3,
-        spaceBetween: 65,
-      },
-      1540: {
-        slidesPerView: 3,
-        spaceBetween: 65,
-      },
-      1740: {
-        slidesPerView: 3,
-        spaceBetween: 65,
-      },
+      }
     }
   });
   

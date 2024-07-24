@@ -17,7 +17,6 @@ $secondary-color: #28282A;
     .swiper-wrapper {
       display: flex;
       justify-content: space-between;
-      position: relative;
 
       .offers-offer {
         display: flex;
@@ -25,19 +24,16 @@ $secondary-color: #28282A;
         gap: 37px;
         align-items: center;
         text-align: center;
-        transition: opacity 0.5s, transform 0.5s;
-        position: relative;
-        opacity: 1; 
-        padding-top: 0; 
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
         &::after {
           content: "";
           display: block;
           position: absolute;
           bottom: 0;
-          left: 0;
-          width: 100%;
+          width: 50%;
           height: 5px;
+          text-align: center;
           background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
         }
 
@@ -63,7 +59,9 @@ $secondary-color: #28282A;
             gap: 30px;
             height: 0;
             overflow: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: opacity 0.5s ease, transform 0.5s ease;
 
             li {
               margin-left: 20px;
@@ -75,20 +73,17 @@ $secondary-color: #28282A;
           }
         }
 
-        &.active {
-          opacity: 1;
-          transform: translateY(-10%);
-        }
-
-        &.inactive {
-          opacity: 0.5;
-          transform: translateY(0);
-        }
-
         &:hover {
-          &.inactive {
-            opacity: 0.5;
-            transform: translateY(0);
+          transform: translateY(-5%);
+
+          .offer-specifics {
+            display: flex;
+            height: auto;
+            padding-top: 28px;
+            padding-bottom: 48px;
+            opacity: 1;
+            transform: scaleY(1);
+            width: 70%;
           }
         }
 
@@ -130,40 +125,56 @@ $secondary-color: #28282A;
           justify-content: center;
           overflow: hidden;
 
-          .percentage,
-          .reduce {
-            color: $secondary-color;
-            font-weight: bold;
-          }
+          .offer-text {
+            display: flex;
+            flex-direction: column;
 
-          .percentage {
-            font-size: 96px;
-          }
+            .icon {
+              z-index: 2;
+              text-align: start;
+            }
 
-          .reduce {
-            font-size: 20px;
-            letter-spacing: 2.3px;
-          }
+            .percentage,
+            .reduce {
+              color: $secondary-color;
+              font-weight: bold;
+              z-index: 2;
+            }
 
-          .total {
-            color: $secondary-color;
-            font-size: 20px;
-            font-style: italic;
-          }
+            .percentage {
+              font-size: 96px;
+            }
 
-          &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('../images/svg/offer-front.svg') no-repeat center center;
-            background-size: contain;
-            z-index: -1;
+            .reduce {
+              font-size: 20px;
+              letter-spacing: 2.3px;
+            }
+
+            .total {
+              color: $secondary-color;
+              font-size: 20px;
+              font-style: italic;
+              z-index: 2;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: url('../images/svg/offer-front.svg') no-repeat center center;
+              background-size: contain;
+            }
           }
         }
       }
+    }
+
+    .no-swiper:hover .offers-offer:not(:hover) {
+      opacity: 0.5;
+      transition: opacity 0.5s ease-in-out;
     }
   }
 
