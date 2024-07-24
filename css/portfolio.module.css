@@ -46,7 +46,8 @@
   .portfolio svg {
     display: none;
   }
-  .portfolio .swiper-slide.swiper-slide-active, .portfolio .swiper-slide.swiper-slide-next {
+  .portfolio .swiper-slide.swiper-slide-active,
+  .portfolio .swiper-slide.swiper-slide-next {
     width: 50% !important;
   }
   .portfolio .portfolio-container .swiper-slide-prev {
@@ -57,7 +58,8 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .portfolio .swiper-slide.swiper-slide-active, .portfolio .swiper-slide.swiper-slide-next {
+  .portfolio .swiper-slide.swiper-slide-active,
+  .portfolio .swiper-slide.swiper-slide-next {
     width: 100% !important;
   }
   .portfolio .portfolio-container .swiper-slide {

@@ -50,10 +50,10 @@ $(document).ready(function () {
     slidesPerView: 3.34,
     spaceBetween: 95,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -109,14 +109,14 @@ $(document).ready(function () {
   );
 
   // OFFERS HOVER for DESKTOP
-  // $('.offers-offer').hover(
-  //   function() {
-  //     $(this).addClass('active').siblings('.offers-offer').addClass('inactive');
-  //   },
-  //   function() {
-  //     $('.offers-offer').removeClass('inactive active');
-  //   }
-  // );
+  $('.offers-offer').hover(
+    function() {
+      $(this).addClass('active').siblings('.offers-offer').addClass('inactive');
+    },
+    function() {
+      $('.offers-offer').removeClass('inactive active');
+    }
+  );
 
   // PORTFOLIO SWIPER SVG EFFECT
   $('.swiper-slide').hover(
@@ -254,7 +254,7 @@ $(document).ready(function () {
     $(window).on('resize', updateButtonVisibility);
   });
 
-  // OFFERS SWIPER
+  // OFFERS SWIPER MOBILE
   var newSwiper = new Swiper('.offers-content_swiper', {
     loop: false,
     direction: 'horizontal',
@@ -297,5 +297,4 @@ $(document).ready(function () {
 
   updateEventHandlers();
   $(window).on('resize', updateEventHandlers);
-
 });

@@ -15,20 +15,21 @@ $body-color: #FFF;
     padding: 0;
     box-sizing: border-box;
     font-family: Noah;
-    color: #fff;
     font-style: normal;
 }
 
 body,
 html {
     overflow-x: hidden;
+    cursor: default;
+    color: #fff;
 }
 
-.no-scroll{
+.no-scroll {
     overflow: hidden;
 }
 
-body {
+.main-page {
     background-color: $body-color;
     border-radius: 8px;
     position: relative;

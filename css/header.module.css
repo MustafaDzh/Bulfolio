@@ -191,7 +191,7 @@ header .header-container .header-container--hamburger-wrapper .hamburger-menu .b
 header .header-container--mobile {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   background-color: #fff;
