@@ -47,13 +47,13 @@ $(document).ready(function () {
   // PORTFOLIO SWIPER
   var swiper = new Swiper('.portfolio-container', {
     loop: true,
-    slidesPerView: 3.34,
+    slidesPerView: 3,
     spaceBetween: 95,
     centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -73,11 +73,11 @@ $(document).ready(function () {
         centeredSlides: true,
       },
       1024: {
-        slidesPerView: 2.8,
+        slidesPerView: 3,
         spaceBetween: 65,
       },
       1280: {
-        slidesPerView: 2.9,
+        slidesPerView: 3,
         spaceBetween: 65,
 
       },
@@ -86,11 +86,11 @@ $(document).ready(function () {
         spaceBetween: 65,
       },
       1540: {
-        slidesPerView: 3.2,
+        slidesPerView: 3,
         spaceBetween: 65,
       },
       1740: {
-        slidesPerView: 3.4,
+        slidesPerView: 3,
         spaceBetween: 65,
       },
     }

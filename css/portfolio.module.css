@@ -19,6 +19,8 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+.portfolio-container .swiper-slide.swiper-slide-prev {
   width: 458px !important;
 }
 .portfolio-container .swiper-slide .noah-400 {
@@ -29,7 +31,7 @@
   font-size: 16px;
 }
 .portfolio-container .swiper-slide.swiper-slide-active, .portfolio-container .swiper-slide.swiper-slide-next {
-  width: auto !important;
+  width: 1011px !important;
   padding-top: 100px;
 }
 .portfolio-container .swiper-slide.swiper-slide-active {
@@ -41,6 +43,15 @@
 .portfolio-container .swiper-wrapper_img {
   max-width: 100%;
   height: auto;
+}
+@media screen and (max-width: 1740px) {
+  .portfolio .swiper-slide.swiper-slide-active,
+  .portfolio .swiper-slide.swiper-slide-next {
+    width: 50% !important;
+  }
+  .portfolio .portfolio-container .swiper-slide-prev {
+    width: 30% !important;
+  }
 }
 @media screen and (max-width: 1440px) {
   .portfolio svg {
