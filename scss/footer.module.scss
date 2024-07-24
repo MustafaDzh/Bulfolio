@@ -34,6 +34,15 @@
                         flex-direction: column;
                         gap: 22px;
 
+                        li {
+                            a {
+                                color: #FFF;
+                                font-size: 16px;
+                                letter-spacing: 2.32px;
+                                text-transform: uppercase;
+                            }
+                        }
+
                         @media screen and (max-width: 1440px) {
                             padding-bottom: 60px;
                         }
@@ -114,6 +123,11 @@
                             color: #FFF;
                             opacity: 0.5;
                             font-size: 14px;
+
+                            a{
+                                color: #FFF;
+                                text-decoration: none;
+                            }
                         }
                     }
                 }
@@ -126,6 +140,8 @@
 
                         li a {
                             cursor: pointer;
+                            font-size: 16px;
+                            color: #FFF;
                         }
                     }
 
