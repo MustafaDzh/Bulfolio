@@ -23,9 +23,9 @@
       flex-direction: column;
       align-items: start;
       justify-content: center;
-     
 
-      &.swiper-slide-prev{
+
+      &.swiper-slide-prev {
         width: 458px !important;
       }
 
@@ -60,6 +60,7 @@
   }
 
   @media screen and (max-width: 1740px) {
+
     .swiper-slide.swiper-slide-active,
     .swiper-slide.swiper-slide-next {
       width: 50% !important;
