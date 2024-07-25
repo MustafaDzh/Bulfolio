@@ -1,14 +1,22 @@
-@keyframes drawLine {
-  from {
-    stroke-dasharray: 0, 1000;
-    stroke-dashoffset: 0;
+@keyframes reveal {
+  0% {
+    opacity: 0;
   }
 
-  to {
-    stroke-dasharray: 1000, 1000;
-    stroke-dashoffset: -1000;
+  100% {
+    opacity: 1;
   }
 }
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+};
 
 .form {
   margin-top: 77px;
@@ -37,23 +45,45 @@
     display: flex;
     padding-bottom: 50px;
 
-    #svg {
-      margin-top: 50px;
+    .services-lines {
+      position: absolute;
+      left: 0;
+      bottom: 0;
 
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: 1440px) {
         display: none;
       }
+  
+      svg path {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: reveal 1s ease forwards, pulse 1.5s ease infinite alternate;
+      }
 
-      path {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 0;
-        animation: drawLine 3s infinite linear;
+      svg path:nth-of-type(1) {
+        animation-delay: 0.2s;
+      }
+
+      svg path:nth-of-type(2) {
+        animation-delay: 0.4s;
+      }
+
+      svg path:nth-of-type(3) {
+        animation-delay: 0.6s;
+      }
+
+      svg path:nth-of-type(4) {
+        animation-delay: 0.8s;
+      }
+
+      svg path:nth-of-type(5) {
+        animation-delay: 1s;
       }
     }
   }
 
   &-form {
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
 
     @media screen and (max-width: 1280px) {

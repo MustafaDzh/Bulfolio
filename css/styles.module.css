@@ -1,20 +1,18 @@
 @import "../js/vendor/video.js/dist/video-js.min.css";
-@keyframes drawLine {
-  from {
-    stroke-dasharray: 0, 1000;
-    stroke-dashoffset: 0;
+@keyframes reveal {
+  0% {
+    opacity: 0;
   }
-  to {
-    stroke-dasharray: 1000, 1000;
-    stroke-dashoffset: -1000;
+  100% {
+    opacity: 1;
   }
 }
-@keyframes breathingShine {
-  0%, 100% {
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
   }
-  50% {
-    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+  100% {
+    opacity: 0.5;
   }
 }
 header .header-container_fixed {
@@ -121,13 +119,16 @@ header .header-container_fixed .header-container_navigation .header-container--l
 }
 header .header-container .services {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #28282A;
   padding-top: 144px;
   flex-shrink: 0;
 }
-header .header-container .services div {
+header .header-container .services-title {
+  padding: 72px 0 59px 142px;
+}
+header .header-container .services-title div {
   text-transform: uppercase;
 }
 header .header-container .services-lines {
@@ -135,33 +136,34 @@ header .header-container .services-lines {
   align-items: center;
 }
 header .header-container .services-lines svg path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 1s ease forwards, pulse 1.5s ease infinite alternate;
 }
 header .header-container .services-lines svg path:nth-of-type(1) {
-  animation: drawLine 2s forwards, breathingShine 3s 2s forwards;
+  animation-delay: 0.2s;
 }
 header .header-container .services-lines svg path:nth-of-type(2) {
-  animation: drawLine 2s 2s forwards, breathingShine 3s 4s forwards;
+  animation-delay: 0.4s;
 }
 header .header-container .services-lines svg path:nth-of-type(3) {
-  animation: drawLine 2s 4s forwards, breathingShine 3s 6s forwards;
+  animation-delay: 0.6s;
 }
 header .header-container .services-lines svg path:nth-of-type(4) {
-  animation: drawLine 2s 6s forwards, breathingShine 3s 8s forwards;
+  animation-delay: 0.8s;
 }
 header .header-container .services-lines svg path:nth-of-type(5) {
-  animation: drawLine 2s 8s forwards, breathingShine 3s 10s forwards;
+  animation-delay: 1s;
 }
-header .header-container .header-container--hamburger {
+header .header-container--hamburger {
   display: none;
 }
-header .header-container .header-container--hamburger-wrapper input {
+header .header-container--hamburger-wrapper input {
   border: none;
   outline: none;
   background-color: transparent;
 }
-header .header-container .header-container--hamburger-wrapper .hamburger-menu {
+header .header-container--hamburger-wrapper .hamburger-menu {
   width: 28px;
   display: flex;
   flex-direction: column;
@@ -169,27 +171,28 @@ header .header-container .header-container--hamburger-wrapper .hamburger-menu {
   gap: 5px;
   position: relative;
 }
-header .header-container .header-container--hamburger-wrapper .hamburger-menu .bar {
+header .header-container--hamburger-wrapper .hamburger-menu .bar {
   position: relative;
   width: 100%;
   border-radius: 0.5rem;
   background-color: #e4b271;
   height: 2px;
 }
-header .header-container .header-container--hamburger-wrapper .hamburger-menu .bar.bar-1 {
+header .header-container--hamburger-wrapper .hamburger-menu .bar.bar-1 {
   top: 0;
   transform: rotate(0);
 }
-header .header-container .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-1 {
+header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-1 {
   transform: translateY(7px) rotate(-45deg);
 }
-header .header-container .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-2 {
+header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-2 {
   opacity: 0;
 }
-header .header-container .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
+header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   transform: translateY(-7px) rotate(45deg);
 }
-header .header-container--mobile {
+
+.header-container--mobile {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -202,142 +205,143 @@ header .header-container--mobile {
   overflow-y: auto;
   z-index: 1001;
 }
-header .header-container--mobile-container {
+.header-container--mobile-container {
   padding-top: 26px;
   display: flex;
   flex-direction: column;
   gap: 48px;
   height: 100%;
 }
-header .header-container--mobile.open {
+.header-container--mobile.open {
   transform: translateX(0);
   transition: 0.5s linear;
 }
-header .header-container--mobile .links-list {
+.header-container--mobile .links-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-header .header-container--mobile .links-list--item a {
+.header-container--mobile .links-list--item a {
   font-size: 26px;
   color: #0b1931;
   text-decoration: none;
 }
-header .header-container--mobile .links-list .lang {
+.header-container--mobile .links-list .lang {
   display: flex;
   width: 100%;
   padding: 0;
   gap: 20px;
   justify-content: center;
 }
-header .header-container--mobile .links-list .lang .lang-bg {
+.header-container--mobile .links-list .lang .lang-bg {
   background-color: #2c3e50;
   color: #ecf0f1;
   border: 1px solid #34495e;
 }
-header .header-container--mobile .links-list .lang .lang-en {
+.header-container--mobile .links-list .lang .lang-en {
   background-color: #bdc3c7;
   color: #2c3e50;
   border: 1px solid #95a5a6;
 }
-header .header-container--mobile .links-list .mobile-top-bar ul {
+.header-container--mobile .links-list .mobile-top-bar ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-header .header-container--mobile .links-list .mobile-top-bar ul li a {
+.header-container--mobile .links-list .mobile-top-bar ul li a {
   font-size: 15px;
 }
-header .header-container--mobile .btn {
+.header-container--mobile .btn {
   font-size: 12px;
   padding: 12px 16px;
   width: fit-content;
 }
-header .header-container--mobile .socials-list {
+.header-container--mobile .socials-list {
   display: flex;
   gap: 16px;
 }
+
 @media screen and (max-width: 1280px) {
-  header .header-container .header-container_fixed .top-bar {
+  .header-container .header-container_fixed .top-bar {
     justify-content: center;
   }
-  header .header-container .header-container_fixed .top-bar ul {
+  .header-container .header-container_fixed .top-bar ul {
     gap: 60px;
     padding-right: 6px;
   }
-  header header .header-container .header-container_navigation {
+  header .header-container .header-container_navigation {
     padding: 0px 10px;
   }
-  header .header-container--links ul {
+  .header-container--links ul {
     gap: 40px !important;
   }
 }
 @media screen and (max-width: 1024px) {
-  header .header-container .header-container_fixed .top-bar ul {
+  .header-container .header-container_fixed .top-bar ul {
     gap: 30px;
     padding-right: 5px;
   }
-  header .header-container .services {
+  .header-container .services {
     padding-top: 132px;
   }
-  header .header-container .services div {
+  .header-container .services div {
     padding-left: 20px;
     font-size: 26px;
   }
-  header .header-container--mobile {
+  .header-container--mobile {
     margin-top: 5%;
     z-index: 2;
   }
-  header .header-container--links {
+  .header-container--links {
     display: none !important;
   }
-  header .header-container--hamburger {
+  .header-container--hamburger {
     display: block !important;
     align-self: center;
   }
-  header .mobile-top-bar {
+  .mobile-top-bar {
     display: none;
   }
 }
 @media screen and (max-width: 878px) {
-  header .header-container .header-container_fixed .top-bar {
+  .header-container .header-container_fixed .top-bar {
     display: none;
   }
-  header .header-container .services {
+  .header-container .services {
     padding-top: 99px;
     justify-content: space-between;
     font-size: 22px;
   }
-  header .mobile-top-bar {
+  .mobile-top-bar {
     display: block;
   }
-  header .mobile-top-bar li {
+  .mobile-top-bar li {
     display: flex;
     gap: 10px;
   }
-  header .header-container--mobile {
+  .header-container--mobile {
     margin: 0;
   }
 }
-header .dropdown-icon.rotated {
+.dropdown-icon.rotated {
   transform: rotate(180deg);
 }
+
 @media screen and (max-width: 480px) {
-  header .header-container .header-container_fixed .header-container_navigation {
+  .header-container .header-container_fixed .header-container_navigation {
     padding: 10px 10px;
   }
-  header .header-container .header-container_fixed .header-container_navigation .header-container--logo_l {
+  .header-container .header-container_fixed .header-container_navigation .header-container--logo_l {
     padding: 0;
   }
-  header .header-container .services {
+  .header-container .services {
     padding-top: 73px;
     height: 150px;
   }
-  header .header-container .services div {
+  .header-container .services div {
     font-size: 18px;
   }
 }
-
 .video {
   width: 100%;
   position: relative;
@@ -1141,14 +1145,20 @@ header .dropdown-icon.rotated {
   }
 }
 
-@keyframes drawLine {
-  from {
-    stroke-dasharray: 0, 1000;
-    stroke-dashoffset: 0;
+@keyframes reveal {
+  0% {
+    opacity: 0;
   }
-  to {
-    stroke-dasharray: 1000, 1000;
-    stroke-dashoffset: -1000;
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
 .form {
@@ -1178,21 +1188,38 @@ header .dropdown-icon.rotated {
   display: flex;
   padding-bottom: 50px;
 }
-.form-content #svg {
-  margin-top: 50px;
+.form-content .services-lines {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
-@media screen and (max-width: 1280px) {
-  .form-content #svg {
+@media screen and (max-width: 1440px) {
+  .form-content .services-lines {
     display: none;
   }
 }
-.form-content #svg path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-  animation: drawLine 3s infinite linear;
+.form-content .services-lines svg path {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 1s ease forwards, pulse 1.5s ease infinite alternate;
+}
+.form-content .services-lines svg path:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.form-content .services-lines svg path:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.form-content .services-lines svg path:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+.form-content .services-lines svg path:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.form-content .services-lines svg path:nth-of-type(5) {
+  animation-delay: 1s;
 }
 .form-form {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
 }
 @media screen and (max-width: 1280px) {
