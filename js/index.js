@@ -50,10 +50,10 @@ $(document).ready(function () {
     slidesPerView: 3,
     spaceBetween: 95,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
