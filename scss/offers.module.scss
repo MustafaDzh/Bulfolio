@@ -26,17 +26,6 @@ $secondary-color: #28282A;
         text-align: center;
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          bottom: 0;
-          width: 50%;
-          height: 5px;
-          text-align: center;
-          background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
-        }
-
         .offers-offer_content {
           position: relative;
         }
@@ -49,6 +38,12 @@ $secondary-color: #28282A;
             text-transform: uppercase;
             margin-bottom: 48px;
             text-align: start;
+          }
+          
+          .line{
+            height: 5px;
+            width: 100%;
+            background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));;
           }
 
           .offer-specifics {

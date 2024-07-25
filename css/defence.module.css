@@ -10,16 +10,6 @@
   margin-left: 5%;
   position: relative;
 }
-.defence .defence-car_first:hover {
-  cursor: pointer;
-}
-.defence .defence-car_first:hover .defence-car_title-btn .text-container {
-  width: auto;
-  opacity: 1;
-  padding-right: 30px;
-  padding-left: 30px;
-  transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
-}
 .defence .defence-car_first .defence-car {
   display: flex;
   flex-direction: column;
@@ -33,50 +23,11 @@
 .defence .defence-car_first .defence-car .noah-400 {
   padding-left: 142px;
 }
-.defence .defence-car_first .defence-car_title-btn {
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  padding-left: 142px;
-  transition: padding-left 1s ease;
-}
-.defence .defence-car_first .defence-car_title-btn .svg-container {
-  width: 75px;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.defence .defence-car_first .defence-car_title-btn .icon {
-  height: auto;
-  fill: white;
-}
-.defence .defence-car_first .defence-car_title-btn .text-container {
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
-}
-.defence .defence-car_first .defence-car_title-btn .button-text {
-  color: white;
-  font-size: 22px;
-  line-height: 26px;
-  text-transform: uppercase;
-}
-@media (max-width: 1024px) {
-  .defence .defence-car_first .defence-car_title-btn.active .text-container {
-    width: auto;
-    opacity: 1;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
 @media (min-width: 1025px) {
   .defence .defence-car_first:hover {
     cursor: pointer;
   }
-  .defence .defence-car_first:hover .defence-car_title-btn .text-container {
+  .defence .defence-car_first:hover .car_title-btn .text-container {
     width: auto;
     opacity: 1;
     padding-right: 30px;
@@ -123,14 +74,15 @@
 .defence-car_second #container .grey-div div::after {
   content: attr(data-text);
 }
-.defence-car_second .defence-car_title-btn-second {
+.defence-car_second .car_title-btn-second {
   position: fixed;
+  background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
   bottom: 50%;
   right: 0px;
   z-index: 1000;
   transition: transform 0.5s ease;
 }
-.defence-car_second .defence-car_title-btn-second svg {
+.defence-car_second .car_title-btn-second svg {
   width: 100%;
   height: 100%;
   padding: 45px 40px 44px 41px;
@@ -168,7 +120,7 @@
   .defence .defence-car_third .card .card-content {
     gap: 20px;
   }
-  .defence .defence-car_second .defence-car_title-btn-second svg {
+  .defence .defence-car_second .car_title-btn-second svg {
     padding: 22px 20px 22px 20.5px;
   }
 }
@@ -186,7 +138,7 @@
   .defence .defence-car_first .defence-car .noah-400 {
     padding: 0;
   }
-  .defence .defence-car_first .defence-car_title-btn {
+  .defence .defence-car_first .car_title-btn {
     padding-left: 0;
   }
   .defence .defence-car_third {
@@ -205,7 +157,7 @@
   }
 }
 @media screen and (max-width: 878px) {
-  .defence .defence-car_second .defence-car_title-btn-second svg {
+  .defence .defence-car_second .car_title-btn-second svg {
     padding: 11px 10px 11px 10.2px;
   }
 }
@@ -229,7 +181,7 @@
     position: relative;
     transition: max-height 1s ease-out;
   }
-  .defence .defence-car_first .defence-car_title-btn .svg-container {
+  .defence .defence-car_first .car_title-btn .svg-container {
     width: 50px;
     height: 50px;
   }
@@ -242,7 +194,7 @@
   .defence .defence-car_second #container .grey-div {
     height: 40px;
   }
-  .defence .defence-car_second .defence-car_title-btn-second svg {
+  .defence .defence-car_second .car_title-btn-second svg {
     padding: 0;
   }
   .defence .defence-car_third .card .desc {

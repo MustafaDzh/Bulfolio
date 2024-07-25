@@ -50,7 +50,7 @@
     width: 50% !important;
   }
   .portfolio .portfolio-container .swiper-slide-prev {
-    width: 30% !important;
+    width: 23% !important;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -62,7 +62,7 @@
     width: 50% !important;
   }
   .portfolio .portfolio-container .swiper-slide-prev {
-    width: 30% !important;
+    width: 21% !important;
   }
   .portfolio .swiper-slide.swiper-slide-active {
     margin-left: 0px;

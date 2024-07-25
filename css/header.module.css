@@ -116,44 +116,6 @@ header .header-container_fixed .header-container_navigation .header-container--l
   opacity: 1;
   transform: scaleY(1);
 }
-header .header-container .services {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #28282A;
-  padding-top: 144px;
-  flex-shrink: 0;
-}
-header .header-container .services-title {
-  padding: 72px 0 59px 142px;
-}
-header .header-container .services-title div {
-  text-transform: uppercase;
-}
-header .header-container .services-lines {
-  display: flex;
-  align-items: center;
-}
-header .header-container .services-lines svg path {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: reveal 1s ease forwards, pulse 1.5s ease infinite alternate;
-}
-header .header-container .services-lines svg path:nth-of-type(1) {
-  animation-delay: 0.2s;
-}
-header .header-container .services-lines svg path:nth-of-type(2) {
-  animation-delay: 0.4s;
-}
-header .header-container .services-lines svg path:nth-of-type(3) {
-  animation-delay: 0.6s;
-}
-header .header-container .services-lines svg path:nth-of-type(4) {
-  animation-delay: 0.8s;
-}
-header .header-container .services-lines svg path:nth-of-type(5) {
-  animation-delay: 1s;
-}
 header .header-container--hamburger {
   display: none;
 }
@@ -280,13 +242,6 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
     gap: 30px;
     padding-right: 5px;
   }
-  .header-container .services {
-    padding-top: 132px;
-  }
-  .header-container .services div {
-    padding-left: 20px;
-    font-size: 26px;
-  }
   .header-container--mobile {
     margin-top: 5%;
     z-index: 2;
@@ -305,11 +260,6 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 @media screen and (max-width: 878px) {
   .header-container .header-container_fixed .top-bar {
     display: none;
-  }
-  .header-container .services {
-    padding-top: 99px;
-    justify-content: space-between;
-    font-size: 22px;
   }
   .mobile-top-bar {
     display: block;
@@ -332,13 +282,6 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   }
   .header-container .header-container_fixed .header-container_navigation .header-container--logo_l {
     padding: 0;
-  }
-  .header-container .services {
-    padding-top: 73px;
-    height: 150px;
-  }
-  .header-container .services div {
-    font-size: 18px;
   }
 }
 

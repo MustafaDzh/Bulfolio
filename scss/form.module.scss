@@ -16,7 +16,9 @@
   100% {
     opacity: 0.5;
   }
-};
+}
+
+;
 
 .form {
   margin-top: 77px;
@@ -54,7 +56,7 @@
       @media screen and (max-width: 1440px) {
         display: none;
       }
-  
+
       svg path {
         opacity: 0;
         animation: reveal 1s ease forwards, pulse 1.5s ease infinite alternate;
@@ -256,49 +258,11 @@
           }
         }
       }
-    }
 
-    .btn-form {
-      border: none;
-      background-color: transparent;
-      width: 266px;
-      height: 90px;
-      position: relative;
-
-      .btn-text {
-        display: flex;
-        background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
-        width: calc(100% - 15px);
-        height: calc(100% - 38px);
+      .car_title-btn{
         padding: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: none;
-
-        @media screen and (max-width: 480px) {
-          width: calc(100% - 45px);
-        }
-
-        svg {
-          margin-left: 18px;
-          margin-top: 20px;
-        }
-
-        div {
-          padding: 21px 35px 14px 28px;
-          color: #FFF;
-          font-size: 14px;
-          text-transform: uppercase;
-
-          @media screen and (max-width: 480px) {
-            padding-right: 10px;
-            ;
-          }
-        }
       }
     }
-
     .agreement {
       padding-top: 30px;
 

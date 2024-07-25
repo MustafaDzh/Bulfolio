@@ -2,6 +2,7 @@ $primary-color: #19D3C5;
 $body-color: #FFF;
 
 @import './header.module.scss';
+@import './services.module.scss';
 @import './video.module.scss';
 @import './defence.module.scss';
 @import './offers.module.scss';
@@ -82,13 +83,61 @@ html {
     text-transform: uppercase;
 }
 
-.abtn {
-    display: inline-flex;
+.car_title-btn {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
-    border: none;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
+    padding-top: 50px;
+    padding-left: 142px;
+    transition: padding-left 1s ease;
+  
+    .abtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+      border: none;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+  
+    .svg-container {
+      width: 75px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .text-container {
+      width: 0;
+      opacity: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
+    }
+  
+    .button-text {
+      color: white;
+      font-size: 22px;
+      line-height: 26px;
+      text-transform: uppercase;
+    }
+  
+    @media (max-width: 1024px) {
+      &.active .text-container {
+        width: auto;
+        opacity: 1;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+    }
+  
+    &:hover .text-container {
+      width: auto;
+      opacity: 1;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  
