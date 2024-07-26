@@ -36,7 +36,6 @@ header .header-container_fixed .top-bar ul li:hover .dropdown-menu {
 header .header-container_fixed .header-container_navigation {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
   background: #FFFFFF;
 }
 header .header-container_fixed .header-container_navigation .header-container--logo_l {
