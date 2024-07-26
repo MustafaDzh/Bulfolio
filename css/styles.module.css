@@ -1,20 +1,4 @@
 @import "../js/vendor/video.js/dist/video-js.min.css";
-@keyframes reveal {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes pulse {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
 header .header-container_fixed {
   position: fixed;
   top: 0;
@@ -283,6 +267,22 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   }
   .header-container .header-container_fixed .header-container_navigation .header-container--logo_l {
     padding: 0;
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
 .services {
