@@ -6,8 +6,6 @@ header {
   z-index: 19;
 
   .header-container {
-    &_fixed {
-
       .top-bar {
         display: flex;
         justify-content: flex-end;
@@ -122,9 +120,6 @@ header {
           }
         }
       }
-    }
-
-
   }
 
   .header-container--hamburger {
