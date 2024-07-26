@@ -157,6 +157,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 .header-container--mobile.open {
   transform: translateX(0);
   transition: 0.5s linear;
+  height: 100vh;
 }
 .header-container--mobile .links-list {
   display: flex;
@@ -214,7 +215,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   header .header-container .header-container_navigation {
     padding: 0px 10px;
   }
-  .header-container--links ul {
+  .header-container_navigation .header-container--links ul {
     gap: 40px !important;
   }
 }
@@ -250,7 +251,8 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
     gap: 10px;
   }
   .header-container--mobile {
-    margin: 0;
+    margin-top: 8%;
+    z-index: 2;
   }
 }
 .dropdown-icon.rotated {
