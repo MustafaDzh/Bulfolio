@@ -40,15 +40,11 @@ header .header-container .header-container_navigation {
   background: #FFFFFF;
   position: relative;
   z-index: 5;
-}
-header .header-container .header-container_navigation .header-container--logo_l {
-  flex-shrink: 0;
-  padding: 5px 0 21px 31px;
-  z-index: 2;
+  padding: 5px 92px 21px 31px;
 }
 header .header-container .header-container_navigation .header-container--links {
-  padding: 34px 21px;
-  margin-right: 30px;
+  display: flex;
+  align-items: flex-end;
 }
 header .header-container .header-container_navigation .header-container--links .links-list {
   display: flex;
@@ -215,10 +211,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
     padding-right: 6px;
   }
   header .header-container .header-container_navigation {
-    padding: 0px 10px;
-  }
-  .header-container_navigation .header-container--links ul {
-    gap: 40px !important;
+    padding: 2px 22px 21px 21px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -235,7 +228,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   }
   .header-container--hamburger {
     display: block !important;
-    align-self: center;
+    align-self: flex-end;
   }
   .mobile-top-bar {
     display: none;
@@ -290,7 +283,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   justify-content: space-between;
   align-items: center;
   background-color: #28282A;
-  padding-top: 121px;
+  padding-top: 111px;
   flex-shrink: 0;
 }
 .services-title {
@@ -299,9 +292,9 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 .services-title div {
   text-transform: uppercase;
 }
-.services-lines {
-  display: flex;
-  align-items: center;
+.services-lines svg {
+  width: 100%;
+  height: 100%;
 }
 .services-lines svg path {
   opacity: 0;
@@ -324,6 +317,9 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   animation-delay: 1s;
 }
 @media screen and (max-width: 1440px) {
+  .services {
+    height: 100%;
+  }
   .services .services-title {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -331,8 +327,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 }
 @media screen and (max-width: 1024px) {
   .services {
-    padding-top: 112px;
-    height: 225px;
+    padding-top: 108px;
   }
   .services div {
     padding-left: 20px;
@@ -341,17 +336,12 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 }
 @media screen and (max-width: 878px) {
   .services {
-    padding-top: 78px;
-    height: 195px;
+    padding-top: 75px;
     justify-content: space-between;
     font-size: 22px;
   }
 }
 @media screen and (max-width: 480px) {
-  .services {
-    padding-top: 73px;
-    height: 150px;
-  }
   .services div {
     font-size: 18px;
   }
@@ -657,13 +647,13 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 }
 .offers {
   background-color: #28282A;
-  padding-top: 86px;
 }
 .offers-content_swiper {
   display: none;
 }
 .offers-content, .offers-content_swiper {
   width: 85%;
+  padding-top: 86px;
   margin: 0 auto;
 }
 .offers-content .no-swiper,
@@ -957,9 +947,6 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   width: 82%;
   margin: 0 auto;
 }
-.questions-content_title {
-  padding-left: 6px;
-}
 .questions-content_title .noah-700 {
   color: #000;
   text-transform: uppercase;
@@ -981,26 +968,24 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
 .questions-content .question-text .title-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .questions-content .question-text .title-wrapper_question {
   font-size: 24px;
   color: #000;
-  margin-right: auto;
-}
-.questions-content .question-text .title-wrapper .arrow-icon {
-  flex-shrink: 0;
-  margin-left: 20px;
 }
 .questions-content .question-text .title-wrapper .arrow-icon.rotated {
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 .questions-content .question-text .answer {
-  color: #000;
   padding: 45px 21px 0px 21px;
-  font-size: 16px;
 }
-.questions-content .question-text .answer span {
+.questions-content .question-text .answer-text {
+  font-size: 16px;
+  color: #000;
+}
+.questions-content .question-text .answer-text span {
   font-weight: bold;
   color: #000;
 }

@@ -2,7 +2,6 @@ $secondary-color: #28282A;
 
 .offers {
   background-color: $secondary-color;
-  padding-top: 86px;
 
   &-content_swiper {
     display: none;
@@ -11,6 +10,7 @@ $secondary-color: #28282A;
   &-content,
   &-content_swiper {
     width: 85%;
+    padding-top: 86px;
     margin: 0 auto;
 
     .no-swiper,

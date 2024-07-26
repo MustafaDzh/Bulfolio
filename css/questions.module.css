@@ -6,9 +6,6 @@
   width: 82%;
   margin: 0 auto;
 }
-.questions-content_title {
-  padding-left: 6px;
-}
 .questions-content_title .noah-700 {
   color: #000;
   text-transform: uppercase;
@@ -30,26 +27,24 @@
 .questions-content .question-text .title-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .questions-content .question-text .title-wrapper_question {
   font-size: 24px;
   color: #000;
-  margin-right: auto;
-}
-.questions-content .question-text .title-wrapper .arrow-icon {
-  flex-shrink: 0;
-  margin-left: 20px;
 }
 .questions-content .question-text .title-wrapper .arrow-icon.rotated {
   transform: rotate(90deg);
   transition: transform 0.3s ease;
 }
 .questions-content .question-text .answer {
-  color: #000;
   padding: 45px 21px 0px 21px;
-  font-size: 16px;
 }
-.questions-content .question-text .answer span {
+.questions-content .question-text .answer-text {
+  font-size: 16px;
+  color: #000;
+}
+.questions-content .question-text .answer-text span {
   font-weight: bold;
   color: #000;
 }

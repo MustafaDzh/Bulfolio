@@ -19,31 +19,31 @@ $(document).ready(function () {
     }
   }
 
-  $hamburgerBtn.on('change', function() {
+  $hamburgerBtn.on('change', function () {
     toggleMenu();
   });
 
   // VIDEO PLAYER
   var player = videojs('my-video', {
     autoplay: true,
-    muted: true, 
-    controls: true, 
+    muted: true,
+    controls: true,
     preload: 'auto'
   });
 
   // QUESTION OPENING
   $('.question-text .answer').hide();
 
-  $('.question').click(function() {
+  $('.question').click(function () {
     var $this = $(this);
     var answer = $this.find('.question-text .answer');
     var arrow = $this.find('.arrow-icon');
-  
+
     answer.slideToggle();
     $this.toggleClass('active');
     arrow.toggleClass('rotated');
   });
-  
+
   // PORTFOLIO SWIPER
   var swiper = new Swiper('.portfolio-container', {
     loop: true,
@@ -69,35 +69,25 @@ $(document).ready(function () {
       }
     }
   });
-  
+
   // DROPDOWN MENU
   $('.links-list--item').hover(
-    function() {
+    function () {
       var $icon = $(this).find('.dropdown-icon');
       $icon.addClass('rotated');
     },
-    function() {
+    function () {
       var $icon = $(this).find('.dropdown-icon');
       $icon.removeClass('rotated');
     }
   );
 
-  // OFFERS HOVER for DESKTOP
-  $('.offers-offer').hover(
-    function() {
-      $(this).addClass('active').siblings('.offers-offer').addClass('inactive');
-    },
-    function() {
-      $('.offers-offer').removeClass('inactive active');
-    }
-  );
-
   // PORTFOLIO SWIPER SVG EFFECT
   $('.swiper-slide').hover(
-    function() {
+    function () {
       $('.portfolio-svg').css('transform', 'rotate(45deg)');
     },
-    function() {
+    function () {
       $('.portfolio-svg').css('transform', 'none');
     }
   );
@@ -105,105 +95,119 @@ $(document).ready(function () {
   // FORM VALIDATION
   $('.upload').on('click', function() {
     $('#file-upload').click();
-  });
+});
 
-  $('#file-upload').on('change', function(event) {
+// Display uploaded image
+$('#file-upload').on('change', function(event) {
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.onload = function(e) {
-      $('#uploaded-image-container').html(`<img src="${e.target.result}" alt="Uploaded Image">`);
+        $('#uploaded-image-container').html(`<img src="${e.target.result}" alt="Uploaded Image">`);
     };
     reader.readAsDataURL(file);
-  });
+});
 
-  $('#contact-form').submit(function(event) {
-    event.preventDefault();
+// Trigger form submission on text-container click
+$('.text-container').on('click', function() {
+    console.log("Text container clicked, validating form...");
+    
     if (validateForm()) {
-      $(this).trigger('reset'); 
-      resetValidationStyles(); 
-      $('#uploaded-image-container').html(''); 
-      $('#thank-you-message').show(); 
+        console.log("Form is valid");
+        $('#contact-form').trigger('reset');
+        resetValidationStyles();
+        $('#uploaded-image-container').html('');
+        $('#thank-you-message').show();
+    } else {
+        console.log("Form is invalid");
     }
-  });
+});
 
-  function validateForm() {
+function validateForm() {
     var isValid = true;
     resetValidationStyles();
 
     // Validate Name
     if ($('#name').val().trim() === '') {
-      isValid = false;
-      $('#name').addClass('error');
+        isValid = false;
+        $('#name').addClass('error').removeClass('valid');
+        console.log("Name is invalid");
     } else {
-      $('#name').removeClass('error');
+        $('#name').removeClass('error').addClass('valid');
     }
 
     // Validate Email
     var email = $('#email').val().trim();
     if (email === '') {
-      isValid = false;
-      $('#email').addClass('error');
-    } else {
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
         isValid = false;
-        $('#email').addClass('error');
-      } else {
-        $('#email').removeClass('error');
-      }
+        $('#email').addClass('error').removeClass('valid');
+        console.log("Email is empty");
+    } else {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            isValid = false;
+            $('#email').addClass('error').removeClass('valid');
+            console.log("Email format is invalid");
+        } else {
+            $('#email').removeClass('error').addClass('valid');
+        }
     }
 
-    // Validate Phone (optional)
+    // Validate Phone (mandatory)
     var phone = $('#phone').val().trim();
     var phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(phone)) {
-      isValid = false;
-      $('#phone').addClass('error');
+    if (phone === '' || !phoneRegex.test(phone)) {
+        isValid = false;
+        $('#phone').addClass('error').removeClass('valid');
+        console.log("Phone is invalid");
     } else {
-      $('#phone').removeClass('error');
+        $('#phone').removeClass('error').addClass('valid');
     }
 
-    var radioChecked = false;
-    $('input[name="radio-group"]').each(function() {
-      if ($(this).is(':checked')) {
-        radioChecked = true;
-      }
-    });
-    if (!radioChecked) {
-      isValid = false;
-      $('.inputs').addClass('error');
-    } else {
-      $('.inputs').removeClass('error');
-    }
-
-    // Validate Message
+    // Validate Message (mandatory)
     var message = $('#message').val().trim();
     if (message === '') {
-      isValid = false;
-      $('#message').addClass('error');
+        isValid = false;
+        $('#message').addClass('error').removeClass('valid');
+        console.log("Message is empty");
     } else {
-      $('#message').removeClass('error');
+        $('#message').removeClass('error').addClass('valid');
+    }
+
+    // Validate Radio Buttons
+    var radioChecked = false;
+    $('input[name="radio-group"]').each(function() {
+        if ($(this).is(':checked')) {
+            radioChecked = true;
+        }
+    });
+    if (!radioChecked) {
+        isValid = false;
+        $('.inputs').addClass('error');
+        console.log("Radio button not selected");
+    } else {
+        $('.inputs').removeClass('error');
     }
 
     // Validate Checkbox (terms agreement)
     if (!$('#agree_terms').is(':checked')) {
-      isValid = false;
-      $('#terms-error').show(); 
+        isValid = false;
+        $('#terms-error').show();
+        console.log("Terms not agreed");
     } else {
-      $('#terms-error').hide();
+        $('#terms-error').hide();
     }
 
     return isValid;
-  }
+}
 
-  function resetValidationStyles() {
-    $('.form-control').removeClass('error');
+function resetValidationStyles() {
+    $('.form-control').removeClass('error valid');
     $('.inputs').removeClass('error');
     $('#terms-error').hide();
-  }
+}
 
   // Show More Button for Defence Cars
-  $('.defence-car_third .card .desc').each(function() {
+  $('.defence-car_third .card .desc').each(function () {
     var $desc = $(this);
     var $showMoreButton = $('<div class="show-more">Покажи повече</div>');
     $desc.parent().append($showMoreButton);
@@ -215,7 +219,7 @@ $(document).ready(function () {
 
     updateButtonVisibility();
 
-    $showMoreButton.on('click', function() {
+    $showMoreButton.on('click', function () {
       if ($desc.hasClass('expanded')) {
         $desc.removeClass('expanded');
         $(this).text('Покажи повече');
@@ -229,7 +233,7 @@ $(document).ready(function () {
   });
 
   // OFFERS SWIPER MOBILE
-  var newSwiper = new Swiper('.offers-content_swiper', {
+  var swiperMobile = new Swiper('.offers-content_swiper', {
     loop: false,
     direction: 'horizontal',
     slidesPerView: 1,
@@ -237,11 +241,11 @@ $(document).ready(function () {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      renderBullet: function (index, className) {
+      renderBullet: function (className) {
         return '<span class="' + className + '"></span>';
       },
     },
-    centeredSlides: true, 
+    centeredSlides: true,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -252,10 +256,9 @@ $(document).ready(function () {
 
   // MOBILE INTERACTIONS
   function handleOffersClick() {
-    $('.offers-offer').off('click').on('click', function() {
+    $('.offers-offer').off('click').on('click', function () {
       var $this = $(this);
 
-      // On mobile, toggle the active class
       $('.offers-offer').not($this).removeClass('active');
       $this.toggleClass('active');
     });

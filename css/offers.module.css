@@ -1,12 +1,12 @@
 .offers {
   background-color: #28282A;
-  padding-top: 86px;
 }
 .offers-content_swiper {
   display: none;
 }
 .offers-content, .offers-content_swiper {
   width: 85%;
+  padding-top: 86px;
   margin: 0 auto;
 }
 .offers-content .no-swiper,
