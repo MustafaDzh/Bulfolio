@@ -37,6 +37,8 @@ header .header-container .header-container_navigation {
   display: flex;
   justify-content: space-between;
   background: #FFFFFF;
+  position: relative;
+  z-index: 5;
 }
 header .header-container .header-container_navigation .header-container--logo_l {
   flex-shrink: 0;
@@ -250,7 +252,7 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
     gap: 10px;
   }
   .header-container--mobile {
-    margin-top: 8%;
+    margin-top: auto;
     z-index: 2;
   }
 }

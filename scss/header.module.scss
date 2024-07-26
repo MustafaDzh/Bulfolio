@@ -44,6 +44,8 @@ header {
       display: flex;
       justify-content: space-between;
       background: #FFFFFF;
+      position: relative;
+      z-index: 5;
 
       .header-container--logo_l {
         flex-shrink: 0;
@@ -315,7 +317,7 @@ header {
     }
   }
   .header-container--mobile {
-    margin-top: 8%;
+    margin-top: auto;
     z-index: 2;
   }
 }
