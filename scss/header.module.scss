@@ -1,12 +1,12 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 19;
+
   .header-container {
     &_fixed {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: #fff;
 
       .top-bar {
         display: flex;
@@ -46,6 +46,7 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 10px 20px;
+        background: #FFFFFF;
 
         .header-container--logo_l {
           flex-shrink: 0;
