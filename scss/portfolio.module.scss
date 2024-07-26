@@ -4,6 +4,11 @@
   &-title {
     padding: 0 0 98px 150px;
 
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+      text-align: center;
+    }
+
     .noah-700 {
       text-transform: uppercase;
       color: #000;
@@ -15,6 +20,10 @@
     position: absolute;
     top: 60%;
     left: 10%;
+
+    @media screen and (max-width: 1440px) {
+      display: none;
+    }
   }
 
   &-container {
@@ -24,9 +33,16 @@
       align-items: start;
       justify-content: center;
 
-
       &.swiper-slide-prev {
         width: 458px !important;
+
+        @media screen and (max-width: 1740px) {
+          width: 23% !important;
+        }
+
+        @media screen and (max-width: 1440px) {
+          width: 21% !important;
+        }
       }
 
       .noah-400 {
@@ -42,10 +58,26 @@
       &.swiper-slide-next {
         width: 1011px !important;
         padding-top: 100px;
+
+        @media screen and (max-width: 1740px) {
+          width: 50% !important;
+        }
+
+        @media screen and (max-width: 1440px) {
+          width: 50% !important;
+        }
+
+        @media screen and (max-width: 1024px) {
+          width: 100% !important;
+        }
       }
 
       &.swiper-slide-active {
         margin-left: 39px;
+
+        @media screen and (max-width: 1440px) {
+          margin-left: 0px !important;
+        }
       }
 
       &-prev {
@@ -59,52 +91,10 @@
     }
   }
 
-  @media screen and (max-width: 1740px) {
-
-    .swiper-slide.swiper-slide-active,
-    .swiper-slide.swiper-slide-next {
-      width: 50% !important;
-    }
-
-    .portfolio-container .swiper-slide-prev {
-      width: 23% !important;
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    svg {
-      display: none;
-    }
-
-    .swiper-slide.swiper-slide-active,
-    .swiper-slide.swiper-slide-next {
-      width: 50% !important;
-    }
-
-    .portfolio-container .swiper-slide-prev {
-      width: 21% !important;
-    }
-
-    .swiper-slide.swiper-slide-active {
-      margin-left: 0px;
-    }
-  }
-
   @media screen and (max-width: 1024px) {
-
-    .swiper-slide.swiper-slide-active,
-    .swiper-slide.swiper-slide-next {
-      width: 100% !important;
-    }
-
     .portfolio-container .swiper-slide {
       width: 100% !important;
       padding-top: 50px !important;
-    }
-
-    .portfolio-title {
-      padding: 0;
-      text-align: center;
     }
   }
 }

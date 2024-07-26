@@ -1,143 +1,141 @@
-$primary-color: #19D3C5;
-$body-color: #FFF;
+$primary-color: #19d3c5;
+$body-color: #fff;
 
-@import './header.module.scss';
-@import './services.module.scss';
-@import './video.module.scss';
-@import './defence.module.scss';
-@import './offers.module.scss';
-@import './questions.module.scss';
-@import './portfolio.module.scss';
-@import './form.module.scss';
-@import './footer.module.scss';
+@import "./header.module.scss";
+@import "./services.module.scss";
+@import "./video.module.scss";
+@import "./defence.module.scss";
+@import "./offers.module.scss";
+@import "./questions.module.scss";
+@import "./portfolio.module.scss";
+@import "./form.module.scss";
+@import "./footer.module.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Noah;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Noah;
+  font-style: normal;
 }
 
 body,
 html {
-    overflow-x: hidden;
-    cursor: default;
-    color: #fff;
+  overflow-x: hidden;
+  cursor: default;
+  color: #fff;
 }
 
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .main-page {
-    background-color: $body-color;
-    border-radius: 8px;
-    position: relative;
+  background-color: $body-color;
+  border-radius: 8px;
+  position: relative;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .section {
-    max-width: 1920px;
-    padding-top: 100px;
-    margin: 0 auto;
+  max-width: 1920px;
+  padding-top: 100px;
+  margin: 0 auto;
 }
 
 .noah-400 {
-    color: #28282A;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
+  color: #28282a;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
 .noah-700 {
-    color: #19D3C5;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #19d3c5;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .noah-700_nav {
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
 }
 
 .noah-800 {
-    color: #28282A;
-    text-align: center;
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    text-transform: uppercase;
+  color: #28282a;
+  text-align: center;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .car_title-btn {
+  display: flex;
+  align-items: center;
+  transition: padding-left 1s ease;
+
+  .abtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .svg-container {
+    width: 75px;
+    height: 75px;
     display: flex;
     align-items: center;
-    padding-top: 50px;
-    padding-left: 142px;
-    transition: padding-left 1s ease;
-  
-    .abtn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
-      border: none;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-  
-    .svg-container {
-      width: 75px;
-      height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .text-container {
-      width: 0;
-      opacity: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      transition: width 1s ease, opacity 1s ease, padding-left 1s ease, padding-right 1s ease;
-    }
-  
-    .button-text {
-      color: white;
-      font-size: 22px;
-      line-height: 26px;
-      text-transform: uppercase;
-    }
-  
-    @media (max-width: 1024px) {
-      &.active .text-container {
-        width: auto;
-        opacity: 1;
-        padding-right: 30px;
-        padding-left: 30px;
-      }
-    }
-  
-    &:hover .text-container {
+    justify-content: center;
+  }
+
+  .text-container {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 1s ease, opacity 1s ease, padding-left 1s ease,
+      padding-right 1s ease;
+  }
+
+  .button-text {
+    color: white;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1024px) {
+    &.active .text-container {
       width: auto;
       opacity: 1;
       padding-right: 30px;
       padding-left: 30px;
     }
   }
-  
+
+  &:hover .text-container {
+    width: auto;
+    opacity: 1;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

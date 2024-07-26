@@ -1,3 +1,13 @@
+@keyframes loop {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .defence {
     display: flex;
     flex-direction: column;
@@ -5,45 +15,68 @@
     padding-bottom: 172px;
     padding-top: 134px;
 
+    @media screen and (max-width: 1024px) {
+        padding-top: 50px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-bottom: 82px;
+    }
+
     .defence-car_first {
-        width: 60%;
+        width: 55%;
         margin-left: 5%;
-        position: relative;
+
+        @media screen and (max-width: 1024px) {
+            width: 90%;
+            margin: 0 auto;
+        }
 
         .defence-car {
             display: flex;
             flex-direction: column;
             gap: 30px;
 
+            @media screen and (max-width: 480px) {
+                gap: 20px;
+            }
+
             &_title {
                 display: flex;
                 gap: 80px;
                 align-items: center;
+
+                @media screen and (max-width: 1024px) {
+                    gap: 30px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    gap: 20px;
+                }
             }
 
-            .noah-400 {
-                padding-left: 142px;
-            }
-        }
-    }
+            &_desc {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                padding-left: 15%;
 
-    @media (min-width: 1025px) {
-        .defence-car_first {
-            &:hover {
-                cursor: pointer;
+                @media screen and (max-width:1025px) {
+                    padding-left: 0px;
+                }
 
-                .car_title-btn {
-                    .text-container {
-                        width: auto;
-                        opacity: 1;
-                        padding-right: 30px;
-                        padding-left: 30px;
-                    }
+                @media screen and (max-width: 480px) {
+                    font-size: 22px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    position: relative;
+                    transition: max-height 1s ease-out;
                 }
             }
         }
     }
-
 
     &-car_second {
         display: flex;
@@ -57,11 +90,11 @@
             .grey-div {
                 display: flex;
                 align-items: center;
-                margin: 0;
-                width: 100%;
-                white-space: nowrap;
-                overflow: hidden;
                 height: 60px;
+
+                @media screen and (max-width: 480px) {
+                    height: 40px;
+                }
 
                 &.black-div {
                     background-color: #28282A;
@@ -72,7 +105,7 @@
                     background-color: #EFEFEF;
                 }
 
-                div {
+                .item {
                     text-transform: uppercase;
                     padding-left: 13px;
                     margin: 0;
@@ -93,12 +126,23 @@
             bottom: 50%;
             right: 0px;
             z-index: 1000;
-            transition: transform 0.5s ease;
 
             svg {
                 width: 100%;
                 height: 100%;
                 padding: 45px 40px 44px 41px;
+
+                @media screen and (max-width: 1280px) {
+                    padding: 22px 20px 22px 20.5px;
+                }
+
+                @media screen and (max-width: 878px) {
+                    padding: 11px 10px 11px 10.2px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    padding: 0px;
+                }
             }
         }
     }
@@ -109,21 +153,98 @@
         margin: 0 auto;
         justify-content: space-between;
 
+        @media screen and (max-width: 1280px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+
         .card {
             width: calc(30% - 10px);
             display: flex;
             flex-direction: column;
             gap: 50px;
 
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            .show-more {
+                @media screen and (max-width: 480px) {
+                    display: block;
+                    text-align: right;
+                    font-size: 18px;
+                    color: #19D3C5;
+                    cursor: pointer;
+                    margin-top: 10px;
+                }
+            }
+
             &-content {
                 display: flex;
                 align-items: center;
                 gap: 50px;
+
+                @media screen and (max-width: 1280px) {
+                    gap: 20px;
+                }
+
+                &-svg {
+                    svg {
+                        @media screen and (max-width: 1024px) {
+                            width: 90%;
+                            height: 90%;
+                        }
+                    }
+                }
             }
 
-            .noah-400 {
+            .desc {
                 font-size: 20px;
                 line-height: 28px;
+
+                @media screen and (max-width: 480px) {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-height: 56px;
+                    position: relative;
+                    transition: max-height 1s ease-out;
+                }
+
+                &.expanded {
+                    @media screen and (max-width: 480px) {
+                        max-height: 500px;
+                        transition: max-height 1s ease-out;
+                    }
+
+                    &::after {
+                        @media screen and (max-width: 480px) {
+                            content: none;
+                        }
+                    }
+                }
+
+                &::after {
+                    @media screen and (max-width: 480px) {
+                        content: '...';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+                        display: block;
+                        width: 100%;
+                        text-align: right;
+                        font-size: 18px;
+                        padding-right: 10px;
+                        box-sizing: border-box;
+                        pointer-events: none;
+                    }
+                }
 
                 span {
                     font-weight: 700;
@@ -131,162 +252,17 @@
                     color: #28282A;
                 }
             }
+
+            .title {
+                @media screen and (max-width: 1024px) {
+                    font-size: 26px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    font-size: 26px;
+                    text-align: center;
+                }
+            }
         }
-    }
-
-    @media screen and (max-width: 1280px) {
-        .defence-car_third {
-            width: 90%;
-        }
-
-        .defence-car_third .card .card-content {
-            gap: 20px;
-        }
-
-        .defence-car_second .car_title-btn-second svg {
-            padding: 22px 20px 22px 20.5px;
-        }
-    }
-
-    @media screen and (max-width: 1024px) {
-        padding-top: 50px;
-
-        .defence-car_first {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .defence-car_first .defence-car .defence-car_title {
-            gap: 30px;
-        }
-
-        .defence-car_first .defence-car .noah-400 {
-            padding: 0;
-        }
-
-        .defence-car_first .car_title-btn {
-            padding-left: 0;
-        }
-
-        .defence-car_third {
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .defence-car_third .card {
-            width: 100%;
-        }
-
-        .defence-car_third .card .card-content .card-content-svg svg {
-            width: 90%;
-            height: 90%;
-        }
-
-        .defence-car_third .card .card-content .title {
-            font-size: 26px;
-        }
-    }
-
-    @media screen and (max-width: 878px) {
-        .defence-car_second .car_title-btn-second svg {
-            padding: 11px 10px 11px 10.2px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        padding-bottom: 82px;
-
-        .defence-car_first .defence-car .defence-car_title {
-            gap: 20px;
-        }
-
-        .defence-car .defence-car_title .title {
-            font-size: 26px;
-            text-align: center;
-        }
-
-        .defence-car .desc {
-            font-size: 22px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            position: relative;
-            transition: max-height 1s ease-out;
-        }
-
-        .defence-car_first .car_title-btn .svg-container {
-            width: 50px;
-            height: 50px;
-        }
-
-        .defence-car_second {
-            gap: 20px;
-        }
-
-        .defence-car_second #container .black-div {
-            height: 40px;
-        }
-
-        .defence-car_second #container .grey-div {
-            height: 40px;
-        }
-
-        .defence-car_second .car_title-btn-second svg {
-            padding: 0;
-        }
-
-        .defence-car_third .card .desc {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-height: 56px;
-            position: relative;
-            transition: max-height 1s ease-out;
-        }
-
-        .defence-car_third .card .desc.expanded {
-            max-height: 500px;
-            transition: max-height 1s ease-out;
-        }
-
-        .defence-car_third .card .desc::after {
-            content: '...';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
-            display: block;
-            width: 100%;
-            text-align: right;
-            font-size: 18px;
-            padding-right: 10px;
-            box-sizing: border-box;
-            pointer-events: none;
-        }
-
-        .defence-car_third .card .desc.expanded::after {
-            content: none;
-        }
-
-        .defence-car_third .card .show-more {
-            display: block;
-            text-align: right;
-            font-size: 18px;
-            color: #19D3C5;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-    }
-}
-
-@keyframes loop {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
     }
 }

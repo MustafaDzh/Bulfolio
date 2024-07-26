@@ -1,3 +1,11 @@
+@keyframes loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .defence {
   display: flex;
   flex-direction: column;
@@ -5,33 +13,71 @@
   padding-bottom: 172px;
   padding-top: 134px;
 }
+@media screen and (max-width: 1024px) {
+  .defence {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .defence {
+    padding-bottom: 82px;
+  }
+}
 .defence .defence-car_first {
-  width: 60%;
+  width: 55%;
   margin-left: 5%;
-  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .defence .defence-car_first {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .defence .defence-car_first .defence-car {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (max-width: 480px) {
+  .defence .defence-car_first .defence-car {
+    gap: 20px;
+  }
+}
 .defence .defence-car_first .defence-car_title {
   display: flex;
   gap: 80px;
   align-items: center;
 }
-.defence .defence-car_first .defence-car .noah-400 {
-  padding-left: 142px;
-}
-@media (min-width: 1025px) {
-  .defence .defence-car_first:hover {
-    cursor: pointer;
+@media screen and (max-width: 1024px) {
+  .defence .defence-car_first .defence-car_title {
+    gap: 30px;
   }
-  .defence .defence-car_first:hover .car_title-btn .text-container {
-    width: auto;
-    opacity: 1;
-    padding-right: 30px;
-    padding-left: 30px;
+}
+@media screen and (max-width: 480px) {
+  .defence .defence-car_first .defence-car_title {
+    gap: 20px;
+  }
+}
+.defence .defence-car_first .defence-car_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 15%;
+}
+@media screen and (max-width: 1025px) {
+  .defence .defence-car_first .defence-car_desc {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .defence .defence-car_first .defence-car_desc {
+    font-size: 22px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: max-height 1s ease-out;
   }
 }
 .defence-car_second {
@@ -46,11 +92,13 @@
 .defence-car_second #container .grey-div {
   display: flex;
   align-items: center;
-  margin: 0;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
   height: 60px;
+}
+@media screen and (max-width: 480px) {
+  .defence-car_second #container .black-div,
+  .defence-car_second #container .grey-div {
+    height: 40px;
+  }
 }
 .defence-car_second #container .black-div.black-div,
 .defence-car_second #container .grey-div.black-div {
@@ -61,8 +109,8 @@
 .defence-car_second #container .grey-div.grey-div {
   background-color: #EFEFEF;
 }
-.defence-car_second #container .black-div div,
-.defence-car_second #container .grey-div div {
+.defence-car_second #container .black-div .item,
+.defence-car_second #container .grey-div .item {
   text-transform: uppercase;
   padding-left: 13px;
   margin: 0;
@@ -70,8 +118,8 @@
   white-space: nowrap;
   animation: loop 40s linear infinite;
 }
-.defence-car_second #container .black-div div::after,
-.defence-car_second #container .grey-div div::after {
+.defence-car_second #container .black-div .item::after,
+.defence-car_second #container .grey-div .item::after {
   content: attr(data-text);
 }
 .defence-car_second .car_title-btn-second {
@@ -80,12 +128,26 @@
   bottom: 50%;
   right: 0px;
   z-index: 1000;
-  transition: transform 0.5s ease;
 }
 .defence-car_second .car_title-btn-second svg {
   width: 100%;
   height: 100%;
   padding: 45px 40px 44px 41px;
+}
+@media screen and (max-width: 1280px) {
+  .defence-car_second .car_title-btn-second svg {
+    padding: 22px 20px 22px 20.5px;
+  }
+}
+@media screen and (max-width: 878px) {
+  .defence-car_second .car_title-btn-second svg {
+    padding: 11px 10px 11px 10.2px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .defence-car_second .car_title-btn-second svg {
+    padding: 0px;
+  }
 }
 .defence-car_third {
   display: flex;
@@ -93,111 +155,60 @@
   margin: 0 auto;
   justify-content: space-between;
 }
+@media screen and (max-width: 1280px) {
+  .defence-car_third {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .defence-car_third {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .defence-car_third .card {
   width: calc(30% - 10px);
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
+@media screen and (max-width: 1024px) {
+  .defence-car_third .card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .defence-car_third .card .show-more {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    color: #19D3C5;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+}
 .defence-car_third .card-content {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.defence-car_third .card .noah-400 {
-  font-size: 20px;
-  line-height: 28px;
-}
-.defence-car_third .card .noah-400 span {
-  font-weight: 700;
-  line-height: 20px;
-  color: #28282A;
-}
 @media screen and (max-width: 1280px) {
-  .defence .defence-car_third {
-    width: 90%;
-  }
-  .defence .defence-car_third .card .card-content {
+  .defence-car_third .card-content {
     gap: 20px;
-  }
-  .defence .defence-car_second .car_title-btn-second svg {
-    padding: 22px 20px 22px 20.5px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .defence {
-    padding-top: 50px;
-  }
-  .defence .defence-car_first {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .defence .defence-car_first .defence-car .defence-car_title {
-    gap: 30px;
-  }
-  .defence .defence-car_first .defence-car .noah-400 {
-    padding: 0;
-  }
-  .defence .defence-car_first .car_title-btn {
-    padding-left: 0;
-  }
-  .defence .defence-car_third {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .defence .defence-car_third .card {
-    width: 100%;
-  }
-  .defence .defence-car_third .card .card-content .card-content-svg svg {
+  .defence-car_third .card-content-svg svg {
     width: 90%;
     height: 90%;
   }
-  .defence .defence-car_third .card .card-content .title {
-    font-size: 26px;
-  }
 }
-@media screen and (max-width: 878px) {
-  .defence .defence-car_second .car_title-btn-second svg {
-    padding: 11px 10px 11px 10.2px;
-  }
+.defence-car_third .card .desc {
+  font-size: 20px;
+  line-height: 28px;
 }
 @media screen and (max-width: 480px) {
-  .defence {
-    padding-bottom: 82px;
-  }
-  .defence .defence-car_first .defence-car .defence-car_title {
-    gap: 20px;
-  }
-  .defence .defence-car .defence-car_title .title {
-    font-size: 26px;
-    text-align: center;
-  }
-  .defence .defence-car .desc {
-    font-size: 22px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: relative;
-    transition: max-height 1s ease-out;
-  }
-  .defence .defence-car_first .car_title-btn .svg-container {
-    width: 50px;
-    height: 50px;
-  }
-  .defence .defence-car_second {
-    gap: 20px;
-  }
-  .defence .defence-car_second #container .black-div {
-    height: 40px;
-  }
-  .defence .defence-car_second #container .grey-div {
-    height: 40px;
-  }
-  .defence .defence-car_second .car_title-btn-second svg {
-    padding: 0;
-  }
-  .defence .defence-car_third .card .desc {
+  .defence-car_third .card .desc {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -206,11 +217,20 @@
     position: relative;
     transition: max-height 1s ease-out;
   }
-  .defence .defence-car_third .card .desc.expanded {
+}
+@media screen and (max-width: 480px) {
+  .defence-car_third .card .desc.expanded {
     max-height: 500px;
     transition: max-height 1s ease-out;
   }
-  .defence .defence-car_third .card .desc::after {
+}
+@media screen and (max-width: 480px) {
+  .defence-car_third .card .desc.expanded::after {
+    content: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .defence-car_third .card .desc::after {
     content: "...";
     position: absolute;
     bottom: 0;
@@ -224,25 +244,21 @@
     box-sizing: border-box;
     pointer-events: none;
   }
-  .defence .defence-car_third .card .desc.expanded::after {
-    content: none;
-  }
-  .defence .defence-car_third .card .show-more {
-    display: block;
-    text-align: right;
-    font-size: 18px;
-    color: #19D3C5;
-    cursor: pointer;
-    margin-top: 10px;
+}
+.defence-car_third .card .desc span {
+  font-weight: 700;
+  line-height: 20px;
+  color: #28282A;
+}
+@media screen and (max-width: 1024px) {
+  .defence-car_third .card .title {
+    font-size: 26px;
   }
 }
-
-@keyframes loop {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
+@media screen and (max-width: 480px) {
+  .defence-car_third .card .title {
+    font-size: 26px;
+    text-align: center;
   }
 }
 

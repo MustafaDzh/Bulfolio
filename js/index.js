@@ -50,10 +50,10 @@ $(document).ready(function () {
     slidesPerView: 3,
     spaceBetween: 95,
     centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -93,118 +93,139 @@ $(document).ready(function () {
   );
 
   // FORM VALIDATION
-  $('.upload').on('click', function() {
+  $('.upload').on('click', function () {
     $('#file-upload').click();
-});
+  });
 
-// Display uploaded image
-$('#file-upload').on('change', function(event) {
+  // Display uploaded image
+  $('#file-upload').on('change', function (event) {
     const file = event.target.files[0];
     const reader = new FileReader();
-    reader.onload = function(e) {
-        $('#uploaded-image-container').html(`<img src="${e.target.result}" alt="Uploaded Image">`);
+    reader.onload = function (e) {
+      $('#uploaded-image-container').html(`<img src="${e.target.result}" alt="Uploaded Image">`);
     };
     reader.readAsDataURL(file);
-});
+  });
 
-// Trigger form submission on text-container click
-$('.text-container').on('click', function() {
+  // Trigger form submission on text-container click
+  $('.text-container').on('click', function () {
     console.log("Text container clicked, validating form...");
-    
-    if (validateForm()) {
-        console.log("Form is valid");
-        $('#contact-form').trigger('reset');
-        resetValidationStyles();
-        $('#uploaded-image-container').html('');
-        $('#thank-you-message').show();
-    } else {
-        console.log("Form is invalid");
-    }
-});
 
-function validateForm() {
+    if (validateForm()) {
+      console.log("Form is valid");
+      $('#contact-form').trigger('reset');
+      resetValidationStyles();
+      $('#uploaded-image-container').html('');
+      $('#thank-you-message').show();
+    } else {
+      console.log("Form is invalid");
+    }
+  });
+
+  // Real-time validation
+  $('#name, #email, #phone, #message').on('input blur', function () {
+    validateField($(this));
+  });
+
+  $('input[name="radio-group"]').on('change', function () {
+    validateRadio();
+  });
+
+  $('#agree_terms').on('change', function () {
+    validateCheckbox();
+  });
+
+  function validateForm() {
     var isValid = true;
     resetValidationStyles();
 
-    // Validate Name
-    if ($('#name').val().trim() === '') {
-        isValid = false;
-        $('#name').addClass('error').removeClass('valid');
-        console.log("Name is invalid");
-    } else {
-        $('#name').removeClass('error').addClass('valid');
-    }
+    // Validate each field
+    if (!validateField($('#name'))) isValid = false;
+    if (!validateField($('#email'))) isValid = false;
+    if (!validateField($('#phone'))) isValid = false;
+    if (!validateField($('#message'))) isValid = false;
+    if (!validateRadio()) isValid = false;
+    if (!validateCheckbox()) isValid = false;
 
-    // Validate Email
-    var email = $('#email').val().trim();
-    if (email === '') {
-        isValid = false;
-        $('#email').addClass('error').removeClass('valid');
-        console.log("Email is empty");
-    } else {
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            isValid = false;
-            $('#email').addClass('error').removeClass('valid');
-            console.log("Email format is invalid");
+    return isValid;
+  }
+
+  function validateField(field) {
+    var isValid = true;
+    var id = field.attr('id');
+    var value = field.val().trim();
+
+    switch (id) {
+      case 'name':
+        if (value === '') {
+          isValid = false;
+          field.addClass('error').removeClass('valid');
         } else {
-            $('#email').removeClass('error').addClass('valid');
+          field.removeClass('error').addClass('valid');
         }
-    }
-
-    // Validate Phone (mandatory)
-    var phone = $('#phone').val().trim();
-    var phoneRegex = /^[0-9]{10}$/;
-    if (phone === '' || !phoneRegex.test(phone)) {
-        isValid = false;
-        $('#phone').addClass('error').removeClass('valid');
-        console.log("Phone is invalid");
-    } else {
-        $('#phone').removeClass('error').addClass('valid');
-    }
-
-    // Validate Message (mandatory)
-    var message = $('#message').val().trim();
-    if (message === '') {
-        isValid = false;
-        $('#message').addClass('error').removeClass('valid');
-        console.log("Message is empty");
-    } else {
-        $('#message').removeClass('error').addClass('valid');
-    }
-
-    // Validate Radio Buttons
-    var radioChecked = false;
-    $('input[name="radio-group"]').each(function() {
-        if ($(this).is(':checked')) {
-            radioChecked = true;
+        break;
+      case 'email':
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (value === '' || !emailRegex.test(value)) {
+          isValid = false;
+          field.addClass('error').removeClass('valid');
+        } else {
+          field.removeClass('error').addClass('valid');
         }
-    });
-    if (!radioChecked) {
-        isValid = false;
-        $('.inputs').addClass('error');
-        console.log("Radio button not selected");
-    } else {
-        $('.inputs').removeClass('error');
-    }
-
-    // Validate Checkbox (terms agreement)
-    if (!$('#agree_terms').is(':checked')) {
-        isValid = false;
-        $('#terms-error').show();
-        console.log("Terms not agreed");
-    } else {
-        $('#terms-error').hide();
+        break;
+      case 'phone':
+        var phoneRegex = /^[0-9]{10}$/;
+        if (value === '' || !phoneRegex.test(value)) {
+          isValid = false;
+          field.addClass('error').removeClass('valid');
+        } else {
+          field.removeClass('error').addClass('valid');
+        }
+        break;
+      case 'message':
+        if (value === '') {
+          isValid = false;
+          field.addClass('error').removeClass('valid');
+        } else {
+          field.removeClass('error').addClass('valid');
+        }
+        break;
     }
 
     return isValid;
-}
+  }
 
-function resetValidationStyles() {
+  function validateRadio() {
+    var isValid = true;
+    var radioChecked = $('input[name="radio-group"]:checked').length > 0;
+
+    if (!radioChecked) {
+      isValid = false;
+      $('.inputs').addClass('error');
+    } else {
+      $('.inputs').removeClass('error');
+    }
+
+    return isValid;
+  }
+
+  function validateCheckbox() {
+    var isValid = $('#agree_terms').is(':checked');
+
+    if (!isValid) {
+      $('#terms-error').show();
+    } else {
+      $('#terms-error').hide();
+    }
+
+    return isValid;
+  }
+
+  function resetValidationStyles() {
     $('.form-control').removeClass('error valid');
     $('.inputs').removeClass('error');
     $('#terms-error').hide();
-}
+  }
 
   // Show More Button for Defence Cars
   $('.defence-car_third .card .desc').each(function () {

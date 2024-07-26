@@ -8,17 +8,16 @@
   }
 }
 
-@keyframes pulse {
+@keyframes loop {
   0% {
-    opacity: 0.8;
+    transform: translateX(0%);
   }
 
   100% {
-    opacity: 0.5;
+    transform: translateX(-50%);
   }
 }
 
-;
 
 .form {
   margin-top: 77px;
@@ -259,10 +258,11 @@
         }
       }
 
-      .car_title-btn{
+      .car_title-btn {
         padding: 0;
       }
     }
+
     .agreement {
       padding-top: 30px;
 

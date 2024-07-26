@@ -12,10 +12,31 @@ header .header-container .top-bar {
   border-bottom: 0.5px solid #D6D6D6;
   background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
 }
+@media screen and (max-width: 1280px) {
+  header .header-container .top-bar {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 878px) {
+  header .header-container .top-bar {
+    display: none;
+  }
+}
 header .header-container .top-bar ul {
   display: flex;
   gap: 120px;
   padding: 6px 112px 8px 0;
+}
+@media screen and (max-width: 1280px) {
+  header .header-container .top-bar ul {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .header-container .top-bar ul {
+    gap: 30px;
+    padding-right: 5px;
+  }
 }
 header .header-container .top-bar ul li {
   list-style: none;
@@ -41,9 +62,24 @@ header .header-container .header-container_navigation {
   z-index: 5;
   padding: 5px 92px 21px 31px;
 }
+@media screen and (max-width: 1280px) {
+  header .header-container .header-container_navigation {
+    padding: 2px 22px 21px 21px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .header-container .header-container_navigation {
+    padding: 10px 10px;
+  }
+}
 header .header-container .header-container_navigation .header-container--links {
   display: flex;
   align-items: flex-end;
+}
+@media screen and (max-width: 1024px) {
+  header .header-container .header-container_navigation .header-container--links {
+    display: none;
+  }
 }
 header .header-container .header-container_navigation .header-container--links .links-list {
   display: flex;
@@ -97,6 +133,12 @@ header .header-container .header-container_navigation .header-container--links .
 header .header-container--hamburger {
   display: none;
 }
+@media screen and (max-width: 1024px) {
+  header .header-container--hamburger {
+    display: block;
+    align-self: flex-end;
+  }
+}
 header .header-container--hamburger-wrapper input {
   border: none;
   outline: none;
@@ -144,6 +186,18 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   overflow-y: auto;
   z-index: 1001;
 }
+@media screen and (max-width: 1024px) {
+  .header-container--mobile {
+    margin-top: 5%;
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 878px) {
+  .header-container--mobile {
+    margin-top: auto;
+    z-index: 2;
+  }
+}
 .header-container--mobile-container {
   padding-top: 26px;
   display: flex;
@@ -183,10 +237,26 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   color: #2c3e50;
   border: 1px solid #95a5a6;
 }
+@media screen and (max-width: 1024px) {
+  .header-container--mobile .links-list .mobile-top-bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 878px) {
+  .header-container--mobile .links-list .mobile-top-bar {
+    display: block;
+  }
+}
 .header-container--mobile .links-list .mobile-top-bar ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+@media screen and (max-width: 878px) {
+  .header-container--mobile .links-list .mobile-top-bar ul li {
+    display: flex;
+    gap: 10px;
+  }
 }
 .header-container--mobile .links-list .mobile-top-bar ul li a {
   font-size: 15px;
@@ -201,65 +271,8 @@ header .header-container--hamburger-wrapper .hamburger-menu .bar.cross.bar-3 {
   gap: 16px;
 }
 
-@media screen and (max-width: 1280px) {
-  header .header-container .top-bar {
-    justify-content: center;
-  }
-  header .header-container .top-bar ul {
-    gap: 60px;
-    padding-right: 6px;
-  }
-  header .header-container .header-container_navigation {
-    padding: 2px 22px 21px 21px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  header .header-container .top-bar ul {
-    gap: 30px;
-    padding-right: 5px;
-  }
-  .header-container--mobile {
-    margin-top: 5%;
-    z-index: 2;
-  }
-  .header-container--links {
-    display: none !important;
-  }
-  .header-container--hamburger {
-    display: block !important;
-    align-self: flex-end;
-  }
-  .mobile-top-bar {
-    display: none;
-  }
-}
-@media screen and (max-width: 878px) {
-  header .header-container .top-bar {
-    display: none;
-  }
-  .mobile-top-bar {
-    display: block;
-  }
-  .mobile-top-bar li {
-    display: flex;
-    gap: 10px;
-  }
-  .header-container--mobile {
-    margin-top: auto;
-    z-index: 2;
-  }
-}
 .dropdown-icon.rotated {
   transform: rotate(180deg);
-}
-
-@media screen and (max-width: 480px) {
-  .header-container .header-container_navigation {
-    padding: 10px 10px;
-  }
-  .header-container .header-container_navigation .header-container--logo_l {
-    padding: 0;
-  }
 }
 
 /*# sourceMappingURL=header.module.css.map */
