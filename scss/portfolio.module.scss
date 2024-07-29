@@ -98,7 +98,7 @@
     }
 
     .swiper-paginationP {
-      transform: unset;
+      transform: unset !important;
 
       @media screen and (min-width:1023px) {
         display: none !important;

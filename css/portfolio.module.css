@@ -94,7 +94,7 @@
   height: auto;
 }
 .portfolio-container .swiper-paginationP {
-  transform: unset;
+  transform: unset !important;
 }
 @media screen and (min-width: 1023px) {
   .portfolio-container .swiper-paginationP {
