@@ -139,20 +139,36 @@ html {
     padding-left: 30px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 878px) {
+    .svg-container {
+      width: 55px;
+      height: 60px;
+    }
+
     .text-container {
       width: auto;
       opacity: 1;
-      padding-right: 30px;
-      padding-left: 30px;
+      padding: 0px 15px;
       transition: none;
+
+      .button-text {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .svg-container {
+      width: 45px;
+      height: 50px;
     }
 
-    &:hover .text-container {
-      width: auto;
-      opacity: 1;
-      padding-right: 30px;
-      padding-left: 30px;
+    .text-container {
+      padding: 0px 10px;
+
+      .button-text {
+        font-size: 18px;
+      }
     }
   }
 }

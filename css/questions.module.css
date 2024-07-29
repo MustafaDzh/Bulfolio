@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 .questions-content .question-text .title-wrapper_question {
   font-size: 24px;
@@ -46,6 +47,24 @@
 @media screen and (max-width: 480px) {
   .questions-content .question-text .title-wrapper_question {
     font-size: 20px;
+  }
+}
+.questions-content .question-text .title-wrapper_icon {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  height: 100%;
+}
+@media screen and (max-width: 878px) {
+  .questions-content .question-text .title-wrapper_icon svg {
+    width: 17px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions-content .question-text .title-wrapper_icon svg {
+    width: 13px;
+    height: 26px;
   }
 }
 .questions-content .question-text .title-wrapper .arrow-icon.rotated {

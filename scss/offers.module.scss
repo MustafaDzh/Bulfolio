@@ -8,6 +8,7 @@ $secondary-color: #28282a;
 
     @media screen and (max-width: 878px) {
       display: flex;
+      flex-direction: column-reverse;
     }
   }
 
@@ -59,7 +60,7 @@ $secondary-color: #28282a;
           .offer-detail {
             color: #fdfdfd;
             text-transform: uppercase;
-            margin-bottom: 48px;
+            padding-bottom: 48px;
             text-align: start;
 
             @media screen and (max-width: 1280px) {
@@ -70,6 +71,10 @@ $secondary-color: #28282a;
               font-size: 21px;
             }
 
+            @media screen and (max-width: 878px) {
+              padding-bottom: 0px;
+            }
+
             @media screen and (max-width: 480px) {
               font-size: 20px;
             }
@@ -78,10 +83,8 @@ $secondary-color: #28282a;
           .line {
             height: 5px;
             width: 100%;
-            background: var(
-              --Mint,
-              linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%)
-            );
+            background: var(--Mint,
+                linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
           }
 
           .offer-specifics {
@@ -120,8 +123,29 @@ $secondary-color: #28282a;
 
             @media screen and (max-width: 768px) {
               width: 100%;
-              padding-bottom: 0px;
+              padding-bottom: 0;
             }
+          }
+        }
+
+        @media screen and (max-width: 878px) {
+          &:hover {
+            transform: none;
+          }
+
+          .offer-specifics {
+            display: flex !important;
+            height: auto !important;
+            opacity: 1 !important;
+            transform: scaleY(1) !important;
+            width: 100% !important;
+            padding-top: 28px;
+            padding-bottom: 48px;
+          }
+
+          .no-swiper:hover .offers-offer:not(:hover) {
+            opacity: 1 !important;
+            transition: none;
           }
         }
 
@@ -156,8 +180,7 @@ $secondary-color: #28282a;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url("../images/svg/offer-back.svg") no-repeat center
-              center;
+            background: url("../images/svg/offer-back.svg") no-repeat center center;
             background-size: contain;
           }
         }
@@ -247,8 +270,7 @@ $secondary-color: #28282a;
               left: 0;
               width: 100%;
               height: 100%;
-              background: url("../images/svg/offer-front.svg") no-repeat center
-                center;
+              background: url("../images/svg/offer-front.svg") no-repeat center center;
               background-size: contain;
             }
           }
@@ -259,6 +281,22 @@ $secondary-color: #28282a;
     .no-swiper:hover .offers-offer:not(:hover) {
       opacity: 0.5;
       transition: opacity 0.5s ease-in-out;
+    }
+  }
+
+  .offer-swiper-navigation_buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 48px;
+
+    &-prev,
+    &-next {
+      cursor: pointer;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 

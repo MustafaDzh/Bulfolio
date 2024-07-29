@@ -54,16 +54,24 @@ $(document).ready(function () {
     //   delay: 3000,
     //   disableOnInteraction: false,
     // },
+    pagination: {
+      el: '.swiper-paginationP',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '"></span>';
+      },
+      dynamicBullets: true,
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
     breakpoints: {
-      320: {
+      300: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 65,
       },
-      1024: {
+      1025: {
         slidesPerView: 3,
         spaceBetween: 65,
       }
@@ -71,16 +79,16 @@ $(document).ready(function () {
   });
 
   // DROPDOWN MENU
-  $('.links-list--item').hover(
-    function () {
-      var $icon = $(this).find('.dropdown-icon');
-      $icon.addClass('rotated');
-    },
-    function () {
-      var $icon = $(this).find('.dropdown-icon');
-      $icon.removeClass('rotated');
-    }
-  );
+  // $('.links-list--item').hover(
+  //   function () {
+  //     var $icon = $(this).find('.dropdown-icon');
+  //     $icon.addClass('rotated');
+  //   },
+  //   function () {
+  //     var $icon = $(this).find('.dropdown-icon');
+  //     $icon.removeClass('rotated');
+  //   }
+  // );
 
   // PORTFOLIO SWIPER SVG EFFECT
   $('.swiper-slide').hover(
@@ -255,14 +263,25 @@ $(document).ready(function () {
 
   // OFFERS SWIPER MOBILE
   var swiperMobile = new Swiper('.offers-content_swiper', {
+    effect: 'cube',
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94
+    },
     loop: false,
     direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 20,
+    navigation: {
+      nextEl: '.offer-swiper-navigation_buttons-next',
+      prevEl: '.offer-swiper-navigation_buttons-prev',
+  },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      renderBullet: function (className) {
+      renderBullet: function (index, className) {
         return '<span class="' + className + '"></span>';
       },
     },
@@ -271,8 +290,7 @@ $(document).ready(function () {
       enabled: true,
       onlyInViewport: true,
     },
-    observer: true,
-    observeParents: true,
+    speed: 800,
   });
 
   // MOBILE INTERACTIONS

@@ -123,6 +123,11 @@
   right: 0px;
   z-index: 2;
 }
+@media screen and (max-width: 480px) {
+  .defence-car_second .car_title-btn-second {
+    width: 10%;
+  }
+}
 .defence-car_second .car_title-btn-second svg {
   width: 100%;
   height: 100%;
@@ -252,7 +257,6 @@
 @media screen and (max-width: 480px) {
   .defence-car_third .card .title {
     font-size: 26px;
-    text-align: center;
   }
 }
 

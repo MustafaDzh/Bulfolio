@@ -18,7 +18,6 @@
   }
 }
 
-
 .form {
   margin-top: 77px;
   background-color: #e6eded;
@@ -105,7 +104,7 @@
 
         @media screen and (max-width: 878px) {
           width: 100%;
-          padding-bottom: 10px;
+          gap: 15px;
         }
 
         .form-control {
@@ -133,9 +132,7 @@
       }
 
       .form-right {
-        label {
-          margin-bottom: 14px;
-        }
+        gap: 14px;
 
         @media screen and (max-width: 878px) {
           width: 100%;
@@ -146,8 +143,13 @@
           flex-direction: column;
           gap: 19px;
 
+          @media screen and (max-width: 878px) {
+            gap: 15px;
+          }
+
           div {
-            padding-top: 6px;
+            display: flex;
+            align-items: center;
 
             input[type="radio"] {
               margin-right: 15px;
@@ -184,6 +186,8 @@
 
         @media screen and (max-width: 878px) {
           flex-direction: column;
+          gap: 40px;
+          padding-bottom: 40px;
         }
       }
 
@@ -202,6 +206,10 @@
       .textarea-container {
         padding-bottom: 50px;
         position: relative;
+
+        @media screen and (max-width: 878px) {
+          padding-bottom: 40px;
+        }
 
         &_content {
           border-bottom: 1px solid #19d3c5;
@@ -305,7 +313,7 @@
         top: 0px;
         width: 3px;
         height: 5.5px;
-        border: 2.5px solid #19D3C5;
+        border: 2.5px solid #19d3c5;
         border-width: 0 2.5px 2.5px 0;
         transition: 0.3s ease-in-out;
         transform: rotate(45deg);
@@ -318,7 +326,7 @@
 
       #terms,
       #terms a {
-        color: rgba(0, 0, 0, 0.50);
+        color: rgba(0, 0, 0, 0.5);
         font-size: 14px;
       }
     }
