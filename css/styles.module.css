@@ -1066,6 +1066,9 @@ header .header-container--mobile .socials-list {
   opacity: 1;
   background-color: #0fe96f !important;
 }
+.offers .swiper-button-disabled {
+  opacity: 0.5;
+}
 
 .questions {
   padding-bottom: 80px;

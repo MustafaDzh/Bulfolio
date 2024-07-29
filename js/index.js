@@ -290,7 +290,7 @@ $(document).ready(function () {
       enabled: true,
       onlyInViewport: true,
     },
-    speed: 800,
+    speed: 600,
   });
 
   // MOBILE INTERACTIONS
