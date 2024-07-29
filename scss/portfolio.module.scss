@@ -40,11 +40,15 @@
       background-position: center;
       background-size: cover;
 
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+
       &.swiper-slide-prev {
         width: 458px !important;
 
         @media screen and (max-width: 1740px) {
-          width: 23% !important;
+          width: 23%;
         }
 
         @media screen and (max-width: 1440px) {
@@ -69,21 +73,13 @@
         @media screen and (max-width: 1740px) {
           width: 50% !important;
         }
-
-        @media screen and (max-width: 1440px) {
-          width: 50% !important;
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: 100% !important;
-        }
       }
 
       &.swiper-slide-active {
         margin-left: 39px;
 
         @media screen and (max-width: 1440px) {
-          margin-left: 0px !important;
+          margin-left: 0px;
         }
       }
 
@@ -101,7 +97,7 @@
       transform: unset !important;
 
       @media screen and (min-width:1023px) {
-        display: none !important;
+        display: none;
       }
     }
 

@@ -50,10 +50,11 @@ $(document).ready(function () {
     slidesPerView: 3,
     spaceBetween: 95,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    direction: 'horizontal',
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-paginationP',
       clickable: true,
@@ -277,7 +278,7 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.offer-swiper-navigation_buttons-next',
       prevEl: '.offer-swiper-navigation_buttons-prev',
-  },
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

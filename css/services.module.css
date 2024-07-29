@@ -59,7 +59,7 @@
 }
 @media screen and (max-width: 480px) {
   .services-title div {
-    font-size: 18px !important;
+    font-size: 18px;
   }
 }
 .services-lines svg {

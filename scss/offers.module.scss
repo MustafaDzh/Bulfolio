@@ -119,7 +119,7 @@ $secondary-color: #28282a;
             padding-bottom: 48px;
             opacity: 1;
             transform: scaleY(1);
-            width: 70%;
+            width: 100%;
 
             @media screen and (max-width: 768px) {
               width: 100%;
@@ -134,18 +134,10 @@ $secondary-color: #28282a;
           }
 
           .offer-specifics {
-            display: flex !important;
             height: auto !important;
-            opacity: 1 !important;
             transform: scaleY(1) !important;
-            width: 100% !important;
             padding-top: 28px;
             padding-bottom: 48px;
-          }
-
-          .no-swiper:hover .offers-offer:not(:hover) {
-            opacity: 1 !important;
-            transition: none;
           }
         }
 
@@ -311,11 +303,12 @@ $secondary-color: #28282a;
 
       &-active {
         opacity: 1;
-        background-color: #0fe96f !important;
+        background-color: #0fe96f;
       }
     }
   }
+
   .swiper-button-disabled {
     opacity: 0.5;
-}
+  }
 }

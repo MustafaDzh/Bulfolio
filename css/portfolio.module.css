@@ -39,12 +39,17 @@
   background-position: center;
   background-size: cover;
 }
+@media screen and (max-width: 1024px) {
+  .portfolio-container .swiper-slide {
+    width: 100%;
+  }
+}
 .portfolio-container .swiper-slide.swiper-slide-prev {
   width: 458px !important;
 }
 @media screen and (max-width: 1740px) {
   .portfolio-container .swiper-slide.swiper-slide-prev {
-    width: 23% !important;
+    width: 23%;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -68,22 +73,12 @@
     width: 50% !important;
   }
 }
-@media screen and (max-width: 1440px) {
-  .portfolio-container .swiper-slide.swiper-slide-active, .portfolio-container .swiper-slide.swiper-slide-next {
-    width: 50% !important;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .portfolio-container .swiper-slide.swiper-slide-active, .portfolio-container .swiper-slide.swiper-slide-next {
-    width: 100% !important;
-  }
-}
 .portfolio-container .swiper-slide.swiper-slide-active {
   margin-left: 39px;
 }
 @media screen and (max-width: 1440px) {
   .portfolio-container .swiper-slide.swiper-slide-active {
-    margin-left: 0px !important;
+    margin-left: 0px;
   }
 }
 .portfolio-container .swiper-slide-prev {
@@ -98,7 +93,7 @@
 }
 @media screen and (min-width: 1023px) {
   .portfolio-container .swiper-paginationP {
-    display: none !important;
+    display: none;
   }
 }
 .portfolio-container .swiper-pagination {

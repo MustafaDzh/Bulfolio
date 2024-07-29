@@ -145,7 +145,7 @@
   padding-bottom: 48px;
   opacity: 1;
   transform: scaleY(1);
-  width: 70%;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .offers-content .no-swiper .offers-offer:hover .offer-specifics,
@@ -164,19 +164,10 @@
   .offers-content .no-swiper .offers-offer .offer-specifics,
   .offers-content .swiper-wrapper .offers-offer .offer-specifics, .offers-content_swiper .no-swiper .offers-offer .offer-specifics,
   .offers-content_swiper .swiper-wrapper .offers-offer .offer-specifics {
-    display: flex !important;
     height: auto !important;
-    opacity: 1 !important;
     transform: scaleY(1) !important;
-    width: 100% !important;
     padding-top: 28px;
     padding-bottom: 48px;
-  }
-  .offers-content .no-swiper .offers-offer .no-swiper:hover .offers-offer:not(:hover),
-  .offers-content .swiper-wrapper .offers-offer .no-swiper:hover .offers-offer:not(:hover), .offers-content_swiper .no-swiper .offers-offer .no-swiper:hover .offers-offer:not(:hover),
-  .offers-content_swiper .swiper-wrapper .offers-offer .no-swiper:hover .offers-offer:not(:hover) {
-    opacity: 1 !important;
-    transition: none;
   }
 }
 .offers-content .no-swiper .offers-offer .offers-offer_back,
@@ -379,7 +370,7 @@
 }
 .offers .swiper-pagination-bullet-active {
   opacity: 1;
-  background-color: #0fe96f !important;
+  background-color: #0fe96f;
 }
 .offers .swiper-button-disabled {
   opacity: 0.5;
