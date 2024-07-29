@@ -72,12 +72,6 @@
 @media screen and (max-width: 480px) {
   .defence .defence-car_first .defence-car_desc {
     font-size: 22px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: relative;
-    transition: max-height 1s ease-out;
   }
 }
 .defence-car_second {
@@ -102,12 +96,12 @@
 }
 .defence-car_second #container .black-div.black-div,
 .defence-car_second #container .grey-div.black-div {
-  background-color: #28282A;
+  background-color: #28282a;
   transform: skewY(1deg);
 }
 .defence-car_second #container .black-div.grey-div,
 .defence-car_second #container .grey-div.grey-div {
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 .defence-car_second #container .black-div .item,
 .defence-car_second #container .grey-div .item {
@@ -124,7 +118,7 @@
 }
 .defence-car_second .car_title-btn-second {
   position: fixed;
-  background: var(--Mint, linear-gradient(180deg, #19D3C5 0%, #0FE99B 100%));
+  background: var(--Mint, linear-gradient(180deg, #19d3c5 0%, #0fe99b 100%));
   bottom: 50%;
   right: 0px;
   z-index: 2;
@@ -182,7 +176,7 @@
     display: block;
     text-align: right;
     font-size: 18px;
-    color: #19D3C5;
+    color: #19d3c5;
     cursor: pointer;
     margin-top: 10px;
   }
@@ -248,7 +242,7 @@
 .defence-car_third .card .desc span {
   font-weight: 700;
   line-height: 20px;
-  color: #28282A;
+  color: #28282a;
 }
 @media screen and (max-width: 1024px) {
   .defence-car_third .card .title {

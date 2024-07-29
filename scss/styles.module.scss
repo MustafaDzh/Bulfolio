@@ -138,4 +138,21 @@ html {
     padding-right: 30px;
     padding-left: 30px;
   }
+
+  @media (max-width: 480px) {
+    .text-container {
+      width: auto;
+      opacity: 1;
+      padding-right: 30px;
+      padding-left: 30px;
+      transition: none;
+    }
+
+    &:hover .text-container {
+      width: auto;
+      opacity: 1;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
 }
